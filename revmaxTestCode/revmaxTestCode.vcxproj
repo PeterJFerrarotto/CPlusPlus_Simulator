@@ -65,6 +65,24 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RequestManager.cpp" />
+    <ClCompile Include="RideRequest.cpp" />
+    <ClCompile Include="Vehicle.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dirent.h" />
+    <ClInclude Include="mathHelper.h" />
+    <ClInclude Include="rapidxml.hpp" />
+    <ClInclude Include="rapidxml_iterators.hpp" />
+    <ClInclude Include="rapidxml_print.hpp" />
+    <ClInclude Include="rapidxml_utils.hpp" />
+    <ClInclude Include="RequestManager.h" />
+    <ClInclude Include="RideRequest.h" />
+    <ClInclude Include="Vehicle.h" />
+    <ClInclude Include="xmlTester.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="XML\testData.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

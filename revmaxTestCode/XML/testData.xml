@@ -1,0 +1,22 @@
+<Parameters>
+  <RequestManager></RequestManager>
+  <Requests>
+    <Request>
+      <Location lat="3" long="2"></Location>
+      <Destination lat="5" long="8"></Destination>
+    </Request>
+    <Request>
+      <Location lat="12" long="18"></Location>
+      <Destination lat="3" long="1"></Destination>
+    </Request>
+    <Request>
+      <Location lat="13" long="20"></Location>
+      <Destination lat="16" long="8"></Destination>
+    </Request>
+  </Requests>
+  <Vehicles>
+    <Vehicle>
+      <Location lat="10" long="20"></Location>
+    </Vehicle>
+  </Vehicles>
+</Parameters>
