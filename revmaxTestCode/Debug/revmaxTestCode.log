@@ -1,9 +1,13 @@
-﻿Build started 12/13/2016 5:27:18 PM.
+﻿Build started 12/16/2016 12:21:28 PM.
      1>Project "C:\Users\peter\Documents\revmaxTestCode\revmaxTestCode\revmaxTestCode.vcxproj" on node 2 (Build target(s)).
      1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\peter\Documents\revmaxTestCode\Debug\revmaxTestCode.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\peter\Documents\revmaxTestCode\Debug\revmaxTestCode.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\peter\Documents\revmaxTestCode\Debug\revmaxTestCode.lib" /MACHINE:X86 Debug\main.obj
+         Debug\RequestManager.obj
+         Debug\RideRequest.obj
+         Debug\Vehicle.obj
          revmaxTestCode.vcxproj -> C:\Users\peter\Documents\revmaxTestCode\Debug\revmaxTestCode.exe
      1>Done Building Project "C:\Users\peter\Documents\revmaxTestCode\revmaxTestCode\revmaxTestCode.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.06
+Time Elapsed 00:00:00.46

@@ -3,6 +3,8 @@
 
 RideRequest::RideRequest()
 {
+	distanceOfRequestCalculated = false;
+	pickedUp = false;
 }
 
 
@@ -24,6 +26,19 @@ void RideRequest::setPickedUp(bool pickedUp){
 	this->pickedUp = pickedUp;
 }
 
+void RideRequest::setDistanceToRequest(long distanceToRequest){
+	this->distanceToRequest = distanceToRequest;
+}
+
+void RideRequest::setDistanceOfRequest(long distanceOfRequest){
+	this->distanceOfRequest = distanceOfRequest;
+	distanceOfRequestCalculated = true;
+}
+
+void RideRequest::setRequestsAtDestination(unsigned requestsAtDestination){
+	this->requestsAtDestination = requestsAtDestination;
+}
+
 std::pair<long, long> RideRequest::getLocation(){
 	return location;
 }
@@ -34,4 +49,20 @@ std::pair<long, long> RideRequest::getDestination(){
 
 bool RideRequest::getPickedUp(){
 	return pickedUp;
+}
+
+long RideRequest::getDistanceToRequest(){
+	return distanceToRequest;
+}
+
+long RideRequest::getDistanceOfRequest(){
+	return distanceOfRequest;
+}
+
+bool RideRequest::getDistanceOfRequestCalculated(){
+	return distanceOfRequestCalculated;
+}
+
+unsigned RideRequest::getRequestsAtDestination(){
+	return requestsAtDestination;
 }

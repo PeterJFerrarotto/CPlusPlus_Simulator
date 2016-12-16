@@ -10,6 +10,9 @@ protected:
 	std::pair<long, long> currentLocation;
 
 	std::pair<long, long> getLastDestination();
+
+	long distanceWithPassenger;
+	long distanceWithoutPassenger;
 public:
 	Vehicle();
 	~Vehicle();
@@ -22,6 +25,9 @@ public:
 	void update();
 
 	RideRequest* getTopRequest();
+
+	long getDistanceWithPassenger();
+	long getDistanceWithoutPassenger();
 };
 
 #endif

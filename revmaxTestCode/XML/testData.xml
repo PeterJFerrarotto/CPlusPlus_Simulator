@@ -1,4 +1,4 @@
-<Parameters>
+<Parameters OptimalScore="10" WeightOfDistanceToRequest="1" WeightOfDistanceOfTrip="2" WeightOfRequestsAtDestination="7">
   <RequestManager></RequestManager>
   <Requests>
     <Request>

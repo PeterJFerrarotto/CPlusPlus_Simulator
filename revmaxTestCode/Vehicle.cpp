@@ -38,6 +38,17 @@ void Vehicle::update(){
 		if (currentLocation.first == rLocation.first && currentLocation.second == rLocation.second && !rPickedUp){
 			requests.front()->setPickedUp(true);
 		}
+		else if (currentLocation.first == rLocation.first && currentLocation.second == rLocation.second && rPickedUp){
+			distanceWithPassenger += requests.front()->getDistanceOfRequest();
+			currentLocation.first = rDestination.first;
+			currentLocation.second = rDestination.second;
+		}
+		else if (currentLocation.first != rLocation.first && currentLocation.second != rLocation.second && !rPickedUp){
+			distanceWithoutPassenger += requests.front()->getDistanceToRequest();
+			currentLocation.first = rLocation.first;
+			currentLocation.second = rLocation.second;
+		}
+
 		if (currentLocation.first == rDestination.first && currentLocation.second == rDestination.second && rPickedUp){
 			requests.pop();
 		}
@@ -49,4 +60,12 @@ RideRequest* Vehicle::getTopRequest(){
 		return nullptr;
 	}
 	return requests.front();
+}
+
+long Vehicle::getDistanceWithPassenger(){
+	return distanceWithPassenger;
+}
+
+long Vehicle::getDistanceWithoutPassenger(){
+	return distanceWithoutPassenger;
 }

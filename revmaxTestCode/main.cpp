@@ -4,7 +4,7 @@
 #include "mathHelper.h"
 #include "xmlTester.h"
 
-int main(){
+int main(int argc, char *argv[]){
 	//RequestManager manager(5, 20, 20, 0, 0);
 	//RideRequest* x = new RideRequest;
 	//x->setLocation(10.6, 7.9);
@@ -39,6 +39,6 @@ int main(){
 	//	vehicle->addRequest(x);
 	//}
 
-	XMLTester tester(100, 10, 20, 70);
-	tester.runTest();
+	XMLTester tester;
+	tester.runTests();
 }

@@ -1,0 +1,88 @@
+Test testData
+Paraeters:
+	Max Score:10
+	Weight of Distance to Request: 1
+	Weight of Distance of Request: 2
+	Weight of Requests at Destination: 7
+	Times to run: 10
+
+Test loop 1 of 10
+
+Vehicle: 1
+Added passenger to vehicle 1's queue. Passenger info:
+	Pickup Location: 12, 18
+	Destination Location: 3, 1
+	Distance to pickup from next location: 2
+	Distance from pickup to dropoff: 19
+	Requests available at destination: 1
+	Request Score: 4.53536
+
+
+Test loop 2 of 10
+
+Vehicle: 1
+Added passenger to vehicle 1's queue. Passenger info:
+	Pickup Location: 3, 2
+	Destination Location: 5, 8
+	Distance to pickup from next location: 1
+	Distance from pickup to dropoff: 6
+	Requests available at destination: 0
+	Request Score: 1.3
+
+
+Test loop 3 of 10
+
+Vehicle: 1
+No new requests!
+
+
+Test loop 4 of 10
+
+Vehicle: 1
+No new requests!
+
+
+Test loop 5 of 10
+
+Vehicle: 1
+No new requests!
+
+
+Test loop 6 of 10
+
+Vehicle: 1
+No new requests!
+
+
+Test loop 7 of 10
+
+Vehicle: 1
+No new requests!
+
+
+Test loop 8 of 10
+
+Vehicle: 1
+No new requests!
+
+
+Test loop 9 of 10
+
+Vehicle: 1
+No new requests!
+
+
+Test loop 10 of 10
+
+Vehicle: 1
+No new requests!
+
+
+-------------------------------------------------------------------
+Complete Test Results:
+
+Vehicle: 1
+	Distance travelled with a passenger: 19
+	Distance travelled without a passenger: 2
+
+
