@@ -1,5 +1,6 @@
 #include "RequestManager.h"
 #include "RideRequest.h"
+#include "EventVenue.h"
 
 RequestManager::RequestManager()
 {
@@ -57,6 +58,25 @@ void RequestManager::addRequest(RideRequest* request){
 	requestMap[latitudeToUse][longitudeToUse].push_back(request);
 }
 
+void RequestManager::addVenue(EventVenue* venue){
+	int latitudeToUse = (int)venue->getLocation().first;
+	int longitudeToUse = (int)venue->getLocation().second;
+	if (latitudeToUse % sectionRadius > sectionRadius / 2){
+		latitudeToUse += sectionRadius - (latitudeToUse % sectionRadius);
+	}
+	else if (latitudeToUse % sectionRadius <= sectionRadius / 2){
+		latitudeToUse -= latitudeToUse % sectionRadius;
+	}
+
+	if (longitudeToUse % sectionRadius > sectionRadius / 2){
+		longitudeToUse += sectionRadius - (longitudeToUse % sectionRadius);
+	}
+	else if (longitudeToUse % sectionRadius <= sectionRadius / 2){
+		longitudeToUse -= longitudeToUse % sectionRadius;
+	}
+	venueMap[latitudeToUse][longitudeToUse].push_back(venue);
+}
+
 std::vector<RideRequest*>& RequestManager::getRequestsAtLocation(std::pair<long, long> location){
 	int latitudeToUse = (int)location.first;
 	int longitudeToUse = (int)location.second;
@@ -97,4 +117,36 @@ void RequestManager::setLatitudeMin(int latitudeMin){
 
 void RequestManager::setLongitudeMin(int longitudeMin){
 	this->longitudeMin = longitudeMin;
+}
+
+int RequestManager::getNumberOfRequestsAtLocation(std::pair<long, long> location, int time){
+	int latitudeToUse = (int)location.first;
+	int longitudeToUse = (int)location.second;
+	int requestCount = 0;
+
+	//This could later be re-worked into ranged SQL queries.
+	if (latitudeToUse % sectionRadius > sectionRadius / 2){
+		latitudeToUse += sectionRadius - (latitudeToUse % sectionRadius);
+	}
+	else if (latitudeToUse % sectionRadius <= sectionRadius / 2){
+		latitudeToUse -= latitudeToUse % sectionRadius;
+	}
+
+	if (longitudeToUse % sectionRadius > sectionRadius / 2){
+		longitudeToUse += sectionRadius - (longitudeToUse % sectionRadius);
+	}
+	else if (longitudeToUse % sectionRadius <= sectionRadius / 2){
+		longitudeToUse -= longitudeToUse % sectionRadius;
+	}
+	for (size_t i = 0; i < requestMap[latitudeToUse][longitudeToUse].size(); i++){
+		if (requestMap[latitudeToUse][longitudeToUse][i]->getRequestTime() == time){
+			requestCount++;
+		}
+	}
+
+	for (size_t i = 0; i < venueMap[latitudeToUse][longitudeToUse].size(); i++){
+		requestCount += venueMap[latitudeToUse][longitudeToUse][i]->getProjectedRequests(time);
+	}
+
+	return requestCount;
 }

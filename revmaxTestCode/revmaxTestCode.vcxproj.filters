@@ -27,6 +27,9 @@
     <ClCompile Include="Vehicle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="EventVenue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mathHelper.h">
@@ -57,6 +60,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="xmlTester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EventVenue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

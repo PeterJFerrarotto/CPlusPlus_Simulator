@@ -7,6 +7,8 @@ class RideRequest
 protected:
 	std::pair<long, long> location;
 	std::pair<long, long> destination;
+	//Request time is an integer representing the hour - right now using an hour timestep for testing purposes
+	int requestTime;
 	bool pickedUp;
 	//Members set upon routing for later use
 	long distanceToRequest, distanceOfRequest;
@@ -25,6 +27,7 @@ public:
 	void setDistanceToRequest(long distanceToRequest);
 	void setDistanceOfRequest(long distanceOfRequest);
 	void setRequestsAtDestination(unsigned requestsAtDestination);
+	void setRequestTime(int time);
 
 	std::pair<long, long> getLocation();
 	std::pair<long, long> getDestination();
@@ -33,6 +36,7 @@ public:
 	long getDistanceOfRequest();
 	bool getDistanceOfRequestCalculated();
 	unsigned getRequestsAtDestination();
+	int getRequestTime();
 };
 
 #endif

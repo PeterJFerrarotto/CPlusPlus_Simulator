@@ -64,6 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EventVenue.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RequestManager.cpp" />
     <ClCompile Include="RideRequest.cpp" />
@@ -71,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dirent.h" />
+    <ClInclude Include="EventVenue.h" />
     <ClInclude Include="mathHelper.h" />
     <ClInclude Include="rapidxml.hpp" />
     <ClInclude Include="rapidxml_iterators.hpp" />
@@ -82,7 +84,9 @@
     <ClInclude Include="xmlTester.h" />
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="XML\testData.xml" />
+    <Xml Include="XML\testData.xml">
+      <SubType>Designer</SubType>
+    </Xml>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

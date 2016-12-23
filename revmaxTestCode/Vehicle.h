@@ -22,7 +22,10 @@ public:
 
 	void setLocation(long latitude, long longitude);
 
+	//Update assuming that vehicles always take one hour to arrive at 
 	void update();
+
+	void update(int time);
 
 	RideRequest* getTopRequest();
 

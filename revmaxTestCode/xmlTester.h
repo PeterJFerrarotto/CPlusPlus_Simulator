@@ -6,6 +6,7 @@
 #include "dirent.h"
 #include "rapidxml.hpp"
 #include "rapidxml_utils.hpp"
+#include "EventVenue.h"
 #include <vector>
 #include <iostream>
 using namespace rapidxml;
@@ -41,6 +42,7 @@ protected:
 	inline void enrichRequestData(xml_node<>* requestNode){
 		float locLat, locLong;
 		float destLat, destLong;
+		int time;
 
 		if (requestNode->first_node("Location") == nullptr){
 			throw "No request location!";
@@ -62,9 +64,14 @@ protected:
 		destLat = std::stof(destinationNode->first_attribute("lat")->value());
 		destLong = std::stof(destinationNode->first_attribute("long")->value());
 
+		if (requestNode->first_node("RequestTime") == nullptr){
+			throw "No time specified for request!";
+		}
+		time = std::stoi(requestNode->first_node("RequestTime")->value());
 		RideRequest* request = new RideRequest;
 		request->setLocation(locLat, locLong);
 		request->setDestination(destLat, destLong);
+		request->setRequestTime(time);
 		managers[currentTest].addRequest(request);
 	}
 
@@ -118,6 +125,40 @@ protected:
 		managers[currentTest].setLongitudeMax(maxLong);
 		managers[currentTest].setSectionRadius(sectionSize);
 		managers[currentTest].initializeRequestMap();
+	}
+
+	inline void enrichVenueData(xml_node<>* venueNode){
+		float latitude = 0, longitude = 0;
+		EventVenue* venue = new EventVenue();
+		if (venueNode->first_node("Location") == nullptr){
+			throw "No location specified for venue!";
+		}
+
+		xml_node<>* locationNode = venueNode->first_node("Location");
+		if (locationNode->first_attribute("long") == nullptr || locationNode->first_attribute("lat") == nullptr){
+			throw "No latitude or longitude!";
+		}
+
+		latitude = std::stof(locationNode->first_attribute("lat")->value());
+		longitude = std::stof(locationNode->first_attribute("long")->value());
+
+		if (venueNode->first_node("Events") != nullptr){
+			xml_node<>* requestNode = venueNode->first_node("Events")->first_node("Event");
+			if (requestNode != nullptr){
+				do{
+					int time, requestCount;
+					if (requestNode->first_attribute("time") == nullptr || requestNode->first_attribute("requestCount") == nullptr){
+						throw "No time or request count specified for event!";
+					}
+					time = std::stoi(requestNode->first_attribute("time")->value());
+					requestCount = std::stoi(requestNode->first_attribute("requestCount")->value());
+					venue->addEvent(time, requestCount);
+					requestNode = requestNode->next_sibling("Event");
+				} while (requestNode != nullptr);
+			}
+		}
+		venue->setLocation(latitude, longitude);
+		managers[currentTest].addVenue(venue);
 	}
 
 	inline void initialize(){
@@ -183,6 +224,14 @@ protected:
 					enrichVehicleData(vehicleNode);
 					vehicleNode = vehicleNode->next_sibling("Vehicle");
 				} while (vehicleNode != nullptr);
+
+				if (parameters->first_node("Venues") != nullptr){
+					xml_node<>* venueNode = parameters->first_node("Venues")->first_node("Venue");
+					do{
+						enrichVenueData(venueNode);
+						venueNode = venueNode->next_sibling("Venue");
+					} while (venueNode != nullptr);
+				}
 			}
 		}
 	}
@@ -194,6 +243,7 @@ public:
 
 	inline void runTests(){
 		for (size_t j = 0; j < tests.size(); j++){
+			int currentTime = 1;
 			currentTest = tests[j];
 			char resultsFile[360] = RESOURCE_FOLDER"Results/";
 			strcat_s(resultsFile, currentTest.c_str());
@@ -203,7 +253,7 @@ public:
 			std::cout << "Test " << currentTest << ":" << '\n' << '\n' << '\n';
 			outputFile << "Test " << currentTest << '\n';
 			outputFile << "Paraeters:" << '\n';
-			outputFile << '\t' << "Max Score:" << optimalScores[currentTest] << '\n';
+			outputFile << '\t' << "Max Score: " << optimalScores[currentTest] << '\n';
 			outputFile << '\t' << "Weight of Distance to Request: " << weightOfDistanceToRequest[currentTest] << '\n';
 			outputFile << '\t' << "Weight of Distance of Request: " << weightOfDistanceOfTrip[currentTest] << '\n';
 			outputFile << '\t' << "Weight of Requests at Destination: " << weightOfRequestsAtDestination[currentTest] << '\n';
@@ -215,24 +265,14 @@ public:
 				for (Vehicle* vehicle : vehicles[currentTest]){
 					std::cout << "Vehicle: " << vehicleNum << '\n';
 					outputFile << "Vehicle: " << vehicleNum << '\n';
-					//if (vehicle->getTopRequest() != nullptr){
-					//	if (vehicle->getTopRequest()->getPickedUp()){
-					//		vehicle->setLocation(vehicle->getTopRequest()->getDestination().first, vehicle->getTopRequest()->getDestination().second);
-					//		outputFile << "Vehicle " << vehicleNum << " dropped off passenger at " << vehicle->getTopRequest()->getDestination().first << ", " << vehicle->getTopRequest()->getDestination().second << ".\n";
-					//	}
-					//	else{
-					//		vehicle->setLocation(vehicle->getTopRequest()->getLocation().first, vehicle->getTopRequest()->getLocation().second);
-					//		outputFile << "Vehicle " << vehicleNum << " picked up passenger at " << vehicle->getTopRequest()->getLocation().first << ", " << vehicle->getTopRequest()->getLocation().second << ".\n";
-					//	}
-					//}
-					vehicle->update();
+					vehicle->update(currentTime);
 					std::vector<RideRequest*> requests = managers[currentTest].getRequestsAtLocation(vehicle->getCurrentLocation());
 					if (requests.size() != 0){
 						float topScore = 0;
 						std::vector<RideRequest*>::iterator highestScorer;
 						for (std::vector<RideRequest*>::iterator request = requests.begin(); request != requests.end(); request++){
-							if (scoreRequest(vehicle, *request, managers[currentTest], optimalScores[currentTest], weightOfDistanceToRequest[currentTest], weightOfDistanceOfTrip[currentTest], weightOfRequestsAtDestination[currentTest], &pythagDistance) > topScore){
-								topScore = scoreRequest(vehicle, *request, managers[currentTest], optimalScores[currentTest], weightOfDistanceToRequest[currentTest], weightOfDistanceOfTrip[currentTest], weightOfRequestsAtDestination[currentTest], &pythagDistance);
+							if (scoreRequest(vehicle, *request, managers[currentTest], currentTime, optimalScores[currentTest], weightOfDistanceToRequest[currentTest], weightOfDistanceOfTrip[currentTest], weightOfRequestsAtDestination[currentTest], &pythagDistance) > topScore){
+								topScore = scoreRequest(vehicle, *request, managers[currentTest], currentTime, optimalScores[currentTest], weightOfDistanceToRequest[currentTest], weightOfDistanceOfTrip[currentTest], weightOfRequestsAtDestination[currentTest], &pythagDistance);
 								highestScorer = request;
 								if (topScore >= optimalScores[currentTest]){
 									break;
@@ -240,18 +280,42 @@ public:
 							}
 						}
 						if (topScore != 0 && *highestScorer != nullptr){
+							int timeToUse = currentTime;
+							if (vehicle->getTopRequest() != nullptr){
+								timeToUse = vehicle->getTopRequest()->getRequestTime() + vehicle->getTopRequest()->getDistanceOfRequest();
+							}
 							vehicle->addRequest(*highestScorer);
-							outputFile << "Added passenger to vehicle " << vehicleNum << "'s queue. Passenger info:" << '\n';
+							outputFile << "Added passenger to vehicle " << vehicleNum << "'s queue at T = " << currentTime << ". Passenger info:" << '\n';
 							outputFile << '\t' << "Pickup Location: " << (*highestScorer)->getLocation().first << ", " << (*highestScorer)->getLocation().second << '\n';
+							outputFile << '\t' << "Pickup Time: " << (*highestScorer)->getRequestTime() << '\n';
 							outputFile << '\t' << "Destination Location: " << (*highestScorer)->getDestination().first << ", " << (*highestScorer)->getDestination().second << '\n';
 							outputFile << '\t' << "Distance to pickup from next location: " << (*highestScorer)->getDistanceToRequest() << '\n';
 							outputFile << '\t' << "Distance from pickup to dropoff: " << (*highestScorer)->getDistanceOfRequest() << '\n';
+							outputFile << '\t' << "Dropoff at T = " << (*highestScorer)->getDistanceOfRequest() + timeToUse << '\n';
 							outputFile << '\t' << "Requests available at destination: " << (*highestScorer)->getRequestsAtDestination() << '\n';
 							outputFile << '\t' << "Request Score: " << topScore << '\n';
 							requests.erase(highestScorer);
 						}
 						else{
-							outputFile << "Vehicle idling." << '\n';
+							if (vehicle->getTopRequest() != nullptr){
+								if (vehicle->getTopRequest()->getPickedUp()){
+									if (currentTime == vehicle->getTopRequest()->getRequestTime()){
+										outputFile << "Vehicle picked up request." << '\n';
+									}
+									else if (currentTime == vehicle->getTopRequest()->getDistanceOfRequest() + vehicle->getTopRequest()->getRequestTime()){
+										outputFile << "Vehicle dropped off request." << '\n';
+									}
+									else{
+										outputFile << "Vehicle en route to destination." << '\n';
+									}
+								}
+								else{
+									outputFile << "Vehicle en route to pickup." << '\n';
+								}
+							}
+							else{
+								outputFile << "Vehicle idling." << '\n';
+							}
 						}
 					}
 					else {
@@ -260,6 +324,7 @@ public:
 					vehicleNum++;
 					outputFile << '\n';
 				}
+				currentTime++;
 				outputFile << '\n';
 			}
 			outputFile << "-------------------------------------------------------------------" << '\n';

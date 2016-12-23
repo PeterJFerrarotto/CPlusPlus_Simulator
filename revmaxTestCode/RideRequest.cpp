@@ -39,6 +39,10 @@ void RideRequest::setRequestsAtDestination(unsigned requestsAtDestination){
 	this->requestsAtDestination = requestsAtDestination;
 }
 
+void RideRequest::setRequestTime(int time){
+	requestTime = time;
+}
+
 std::pair<long, long> RideRequest::getLocation(){
 	return location;
 }
@@ -65,4 +69,8 @@ bool RideRequest::getDistanceOfRequestCalculated(){
 
 unsigned RideRequest::getRequestsAtDestination(){
 	return requestsAtDestination;
+}
+
+int RideRequest::getRequestTime(){
+	return requestTime;
 }

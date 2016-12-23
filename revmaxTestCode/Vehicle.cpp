@@ -55,6 +55,32 @@ void Vehicle::update(){
 	}
 }
 
+void Vehicle::update(int time){
+	if (requests.size() != 0){
+		std::pair<float, float> rLocation = requests.front()->getLocation();
+		std::pair<float, float> rDestination = requests.front()->getDestination();
+		int requestTime = requests.front()->getRequestTime();
+		int dropOffTime = requests.front()->getDistanceOfRequest() + requestTime;
+		bool rPickedUp = requests.front()->getPickedUp();
+
+		if (time == requestTime && !rPickedUp){
+			requests.front()->setPickedUp(true);
+			currentLocation.first = rLocation.first;
+			currentLocation.second = rLocation.second;
+			distanceWithoutPassenger += requests.front()->getDistanceToRequest();
+		}
+		else if (time == dropOffTime && rPickedUp){
+			distanceWithPassenger += requests.front()->getDistanceOfRequest();
+			currentLocation.first = rDestination.first;
+			currentLocation.second = rDestination.second;
+		}
+
+		if (currentLocation.first == rDestination.first && currentLocation.second == rDestination.second && rPickedUp){
+			requests.pop();
+		}
+	}
+}
+
 RideRequest* Vehicle::getTopRequest(){
 	if (requests.size() == 0){
 		return nullptr;
