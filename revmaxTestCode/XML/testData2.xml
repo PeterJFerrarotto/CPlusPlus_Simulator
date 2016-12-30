@@ -1,0 +1,77 @@
+<Parameters WeightOfDistanceOfTrip=".002" TimesToRun="200" MinimumScore="3">
+  <RequestManager maxLat="50" maxLong="50"></RequestManager>
+  <Requests>
+    <Request>
+      <Location lat="3" long="2"></Location>
+      <Destination lat="5" long="8"></Destination>
+      <RequestTime>23</RequestTime>
+    </Request>
+    <Request>
+      <Location lat="3" long="2"></Location>
+      <Destination lat="18" long="31"></Destination>
+      <RequestTime>148</RequestTime>
+    </Request>
+    <Request>
+      <Location lat="3" long="2"></Location>
+      <Destination lat="10" long="16"></Destination>
+      <RequestTime>23</RequestTime>
+    </Request>
+    <Request>
+      <Location lat="3" long="2"></Location>
+      <Destination lat="40" long="46"></Destination>
+      <RequestTime>23</RequestTime>
+    </Request>
+    <Request>
+      <Location lat="40" long="44"></Location>
+      <Destination lat="32" long="2"></Destination>
+      <RequestTime>87</RequestTime>
+    </Request>
+    <Request>
+      <Location lat="3" long="2"></Location>
+      <Destination lat="40" long="46"></Destination>
+      <RequestTime>24</RequestTime>
+    </Request>
+    <Request>
+      <Location lat="41" long="48"></Location>
+      <Destination lat="3" long="2"></Destination>
+      <RequestTime>87</RequestTime>
+    </Request>
+    <Request>
+      <Location lat="12" long="18"></Location>
+      <Destination lat="3" long="1"></Destination>
+      <RequestTime>4</RequestTime>
+    </Request>
+    <Request>
+      <Location lat="13" long="20"></Location>
+      <Destination lat="16" long="8"></Destination>
+      <RequestTime>5</RequestTime>
+    </Request>
+    <Request>
+      <Location lat="16" long="8"></Location>
+      <Destination lat="40" long="46"></Destination>
+      <RequestTime>18</RequestTime>
+    </Request>
+    <Request>
+      <Location lat="13" long="20"></Location>
+      <Destination lat="2" long="1"></Destination>
+      <RequestTime>5</RequestTime>
+    </Request>
+  </Requests>
+  <Vehicles>
+    <Vehicle>
+      <Location lat="10" long="20"></Location>
+    </Vehicle>
+    <Vehicle>
+      <Location lat="14" long="21"></Location>
+    </Vehicle>
+  </Vehicles>
+  <Venues>
+    <Venue>
+      <Location lat="3" long="2"></Location>
+      <Events>
+        <Event time="23" requestCount="15"></Event>
+        <Event time="146" requestCount="200"></Event>
+      </Events>
+    </Venue>
+  </Venues>
+</Parameters>

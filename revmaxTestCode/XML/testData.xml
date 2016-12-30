@@ -1,10 +1,10 @@
-<Parameters OptimalScore="10" WeightOfDistanceToRequest="1" WeightOfDistanceOfTrip="2" WeightOfRequestsAtDestination="7" TimesToRun="50">
+<Parameters WeightOfDistanceOfTrip=".002" TimesToRun="50" MinimumScore="3">
   <RequestManager></RequestManager>
   <Requests>
     <Request>
       <Location lat="3" long="2"></Location>
       <Destination lat="5" long="8"></Destination>
-      <RequestTime>24</RequestTime>
+      <RequestTime>23</RequestTime>
     </Request>
     <Request>
       <Location lat="12" long="18"></Location>

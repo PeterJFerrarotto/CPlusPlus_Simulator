@@ -21,7 +21,7 @@ public:
 
 	std::pair<long, long> getLocation();
 
-	int getProjectedRequests(int time);
+	int getProjectedRequests(int time, int timeRadius);
 };
 
 #endif

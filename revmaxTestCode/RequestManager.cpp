@@ -119,7 +119,7 @@ void RequestManager::setLongitudeMin(int longitudeMin){
 	this->longitudeMin = longitudeMin;
 }
 
-int RequestManager::getNumberOfRequestsAtLocation(std::pair<long, long> location, int time){
+int RequestManager::getNumberOfRequestsAtLocation(std::pair<long, long> location, int time, int timeRadius){
 	int latitudeToUse = (int)location.first;
 	int longitudeToUse = (int)location.second;
 	int requestCount = 0;
@@ -145,7 +145,7 @@ int RequestManager::getNumberOfRequestsAtLocation(std::pair<long, long> location
 	}
 
 	for (size_t i = 0; i < venueMap[latitudeToUse][longitudeToUse].size(); i++){
-		requestCount += venueMap[latitudeToUse][longitudeToUse][i]->getProjectedRequests(time);
+		requestCount += venueMap[latitudeToUse][longitudeToUse][i]->getProjectedRequests(time, timeRadius);
 	}
 
 	return requestCount;

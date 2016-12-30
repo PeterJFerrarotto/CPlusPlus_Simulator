@@ -29,7 +29,7 @@ public:
 
 	std::vector<RideRequest*>& getRequestsAtLocation(std::pair<long, long> location);
 
-	int getNumberOfRequestsAtLocation(std::pair<long, long> location, int time);
+	int getNumberOfRequestsAtLocation(std::pair<long, long> location, int time, int timeRadius);
 };
 
 #endif

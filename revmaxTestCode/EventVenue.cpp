@@ -27,9 +27,12 @@ std::pair<long, long> EventVenue::getLocation(){
 	return location;
 }
 
-int EventVenue::getProjectedRequests(int time){
-	if (events.find(time) == events.end()){
-		return 0;
+int EventVenue::getProjectedRequests(int time, int timeRadius){
+	int eventCount = 0;
+	for (int i = time - timeRadius; i <= time + timeRadius; i++){
+		if (events.find(i) != events.end()){
+			eventCount += events[i];
+		}
 	}
-	return events[time];
+	return eventCount;
 }
