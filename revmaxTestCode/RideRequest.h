@@ -1,6 +1,7 @@
 #ifndef _RIDE_REQUEST_H
 #define _RIDE_REQUEST_H
 #include <algorithm>
+#include "Matrix.h"
 
 class RideRequest
 {
@@ -9,7 +10,9 @@ protected:
 	std::pair<long, long> destination;
 	//Request time is an integer representing the hour - right now using an hour timestep for testing purposes
 	int requestTime;
+	int timeMatched;
 	bool pickedUp;
+	bool matchedToVehicle;
 	//Members set upon routing for later use
 	long distanceToRequest, distanceOfRequest;
 	unsigned requestsAtDestination;
@@ -28,6 +31,7 @@ public:
 	void setDistanceOfRequest(long distanceOfRequest);
 	void setRequestsAtDestination(unsigned requestsAtDestination);
 	void setRequestTime(int time);
+	void setTimeMatched(int time);
 
 	std::pair<long, long> getLocation();
 	std::pair<long, long> getDestination();
@@ -37,6 +41,10 @@ public:
 	bool getDistanceOfRequestCalculated();
 	unsigned getRequestsAtDestination();
 	int getRequestTime();
+	int getTimeMatched();
+
+	bool getMatchedToVehicle();
+	void setMatchedToVehicle(bool matchedToVehicle);
 };
 
 #endif

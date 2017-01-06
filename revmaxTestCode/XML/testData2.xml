@@ -1,4 +1,4 @@
-<Parameters WeightOfDistanceOfTrip=".002" TimesToRun="200" MinimumScore="3">
+<Parameters WeightOfDistanceOfTrip=".002" TimesToRun="150" MinimumScore="3">
   <RequestManager maxLat="50" maxLong="50"></RequestManager>
   <Requests>
     <Request>

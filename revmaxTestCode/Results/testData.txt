@@ -12,27 +12,66 @@ Test loop 1 of 50
 
 	Vehicle: 1
 		Added passenger to vehicle 1's queue at T = 1. Passenger info:
-			Pickup Location: 12, 18
-			Pickup Time: 4
-			Destination Location: 3, 1
-			Distance to pickup from next location: 3
-			Distance from pickup to dropoff: 19
-			Dropoff at T = 23
-			Requests available at destination: 16
-			Request Score: 6.08425
-		Vehicle en route to pickup.
+			Pickup Location: 10, 13
+			Pickup Time: 6
+			Destination Location: 2, 0
+			Distance to pickup from next location: 7
+			Distance from pickup to dropoff: 15
+			Dropoff at T = 21
+			Requests available at destination: 77
+			Request Score: 7.11818
+		Vehicle waiting at pickup for request.
 
 
 	Vehicle: 2
 		Added passenger to vehicle 2's queue at T = 1. Passenger info:
-			Pickup Location: 13, 20
-			Pickup Time: 5
-			Destination Location: 16, 8
+			Pickup Location: 14, 15
+			Pickup Time: 12
+			Destination Location: 4, 12
+			Distance to pickup from next location: 6
+			Distance from pickup to dropoff: 10
+			Dropoff at T = 22
+			Requests available at destination: 328
+			Request Score: 6.45
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 3
+		Added passenger to vehicle 3's queue at T = 1. Passenger info:
+			Pickup Location: 12, 18
+			Pickup Time: 4
+			Destination Location: 3, 1
+			Distance to pickup from next location: 5
+			Distance from pickup to dropoff: 19
+			Dropoff at T = 23
+			Requests available at destination: 16
+			Request Score: 5.29667
+		Vehicle en route to pickup.
+
+
+	Vehicle: 4
+		Added passenger to vehicle 4's queue at T = 1. Passenger info:
+			Pickup Location: 16, 6
+			Pickup Time: 2
+			Destination Location: 13, 15
+			Distance to pickup from next location: 5
+			Distance from pickup to dropoff: 9
+			Dropoff at T = 11
+			Requests available at destination: 112
+			Request Score: 6.86046
+		Vehicle en route to pickup.
+
+
+	Vehicle: 5
+		Added passenger to vehicle 5's queue at T = 1. Passenger info:
+			Pickup Location: 11, 6
+			Pickup Time: 0
+			Destination Location: 6, 12
 			Distance to pickup from next location: 2
-			Distance from pickup to dropoff: 12
-			Dropoff at T = 17
-			Requests available at destination: 0
-			Request Score: 6.18573
+			Distance from pickup to dropoff: 7
+			Dropoff at T = 7
+			Requests available at destination: 373
+			Request Score: 8.45926
 		Vehicle en route to pickup.
 
 
@@ -40,10 +79,22 @@ Test loop 1 of 50
 Test loop 2 of 50
 
 	Vehicle: 1
-		Vehicle en route to pickup.
+		Vehicle waiting at pickup for request.
 
 
 	Vehicle: 2
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 3
+		Vehicle en route to pickup.
+
+
+	Vehicle: 4
+		Vehicle en route to pickup.
+
+
+	Vehicle: 5
 		Vehicle en route to pickup.
 
 
@@ -51,43 +102,91 @@ Test loop 2 of 50
 Test loop 3 of 50
 
 	Vehicle: 1
-		Vehicle en route to pickup.
+		Vehicle waiting at pickup for request.
 
 
 	Vehicle: 2
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 3
 		Vehicle en route to pickup.
+
+
+	Vehicle: 4
+		Vehicle en route to pickup.
+
+
+	Vehicle: 5
+		Vehicle picked up request at Latitude: 11 and Longitude: 6 at T = 3
 
 
 
 Test loop 4 of 50
 
 	Vehicle: 1
-		Vehicle picked up request at Latitude: 12 and Longitude: 18 at T = 4
+		Vehicle waiting at pickup for request.
 
 
 	Vehicle: 2
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 3
 		Vehicle en route to pickup.
+
+
+	Vehicle: 4
+		Vehicle en route to pickup.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
 
 
 
 Test loop 5 of 50
 
 	Vehicle: 1
-		Vehicle en route to destination.
+		Vehicle waiting at pickup for request.
 
 
 	Vehicle: 2
-		Vehicle picked up request at Latitude: 13 and Longitude: 20 at T = 5
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 3
+		Vehicle en route to pickup.
+
+
+	Vehicle: 4
+		Vehicle en route to pickup.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
 
 
 
 Test loop 6 of 50
 
 	Vehicle: 1
-		Vehicle en route to destination.
+		Vehicle waiting at pickup for request.
 
 
 	Vehicle: 2
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 3
+		Vehicle picked up request at Latitude: 12 and Longitude: 18 at T = 6
+
+
+	Vehicle: 4
+		Vehicle picked up request at Latitude: 16 and Longitude: 6 at T = 6
+
+
+	Vehicle: 5
 		Vehicle en route to destination.
 
 
@@ -95,10 +194,22 @@ Test loop 6 of 50
 Test loop 7 of 50
 
 	Vehicle: 1
-		Vehicle en route to destination.
+		Vehicle waiting at pickup for request.
 
 
 	Vehicle: 2
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
 		Vehicle en route to destination.
 
 
@@ -106,10 +217,22 @@ Test loop 7 of 50
 Test loop 8 of 50
 
 	Vehicle: 1
-		Vehicle en route to destination.
+		Vehicle picked up request at Latitude: 10 and Longitude: 13 at T = 8
 
 
 	Vehicle: 2
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
 		Vehicle en route to destination.
 
 
@@ -121,6 +244,18 @@ Test loop 9 of 50
 
 
 	Vehicle: 2
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
 		Vehicle en route to destination.
 
 
@@ -132,7 +267,29 @@ Test loop 10 of 50
 
 
 	Vehicle: 2
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 3
 		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle dropped off request at Latitude: 6 and Longitude: 12 at T = 10
+		Added passenger to vehicle 5's queue at T = 10. Passenger info:
+			Pickup Location: 4, 11
+			Pickup Time: 9
+			Destination Location: 19, 18
+			Distance to pickup from next location: 3
+			Distance from pickup to dropoff: 16
+			Dropoff at T = 25
+			Requests available at destination: 0
+			Request Score: 6.09382
+		Vehicle en route to pickup.
 
 
 
@@ -143,7 +300,19 @@ Test loop 11 of 50
 
 
 	Vehicle: 2
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 3
 		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle en route to pickup.
 
 
 
@@ -154,7 +323,19 @@ Test loop 12 of 50
 
 
 	Vehicle: 2
+		Vehicle picked up request at Latitude: 14 and Longitude: 15 at T = 12
+
+
+	Vehicle: 3
 		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle en route to pickup.
 
 
 
@@ -168,6 +349,18 @@ Test loop 13 of 50
 		Vehicle en route to destination.
 
 
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle picked up request at Latitude: 4 and Longitude: 11 at T = 13
+
+
 
 Test loop 14 of 50
 
@@ -176,6 +369,18 @@ Test loop 14 of 50
 
 
 	Vehicle: 2
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
 		Vehicle en route to destination.
 
 
@@ -190,6 +395,28 @@ Test loop 15 of 50
 		Vehicle en route to destination.
 
 
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle dropped off request at Latitude: 13 and Longitude: 15 at T = 15
+		Added passenger to vehicle 4's queue at T = 15. Passenger info:
+			Pickup Location: 12, 14
+			Pickup Time: 21
+			Destination Location: 15, 7
+			Distance to pickup from next location: 2
+			Distance from pickup to dropoff: 7
+			Dropoff at T = 28
+			Requests available at destination: 86
+			Request Score: 8.45926
+		Vehicle en route to pickup.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
+
 
 Test loop 16 of 50
 
@@ -201,6 +428,18 @@ Test loop 16 of 50
 		Vehicle en route to destination.
 
 
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to pickup.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
+
 
 Test loop 17 of 50
 
@@ -209,8 +448,20 @@ Test loop 17 of 50
 
 
 	Vehicle: 2
-		Vehicle dropped off request at Latitude: 16 and Longitude: 8 at T = 17
-		Vehicle idling.
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to pickup.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 18 of 50
@@ -220,7 +471,20 @@ Test loop 18 of 50
 
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to pickup.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 19 of 50
@@ -230,7 +494,20 @@ Test loop 19 of 50
 
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to pickup.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 20 of 50
@@ -240,7 +517,20 @@ Test loop 20 of 50
 
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to pickup.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 21 of 50
@@ -250,7 +540,20 @@ Test loop 21 of 50
 
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle picked up request at Latitude: 12 and Longitude: 14 at T = 21
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 22 of 50
@@ -260,57 +563,142 @@ Test loop 22 of 50
 
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle dropped off request at Latitude: 4 and Longitude: 12 at T = 22
+		Added passenger to vehicle 2's queue at T = 22. Passenger info:
+			Pickup Location: 3, 10
+			Pickup Time: 29
+			Destination Location: 17, 12
+			Distance to pickup from next location: 3
+			Distance from pickup to dropoff: 14
+			Dropoff at T = 43
+			Requests available at destination: 0
+			Request Score: 5.90278
+		Vehicle en route to pickup.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 23 of 50
 
 	Vehicle: 1
-		Vehicle dropped off request at Latitude: 3 and Longitude: 1 at T = 23
+		Vehicle dropped off request at Latitude: 2 and Longitude: 0 at T = 23
 		Added passenger to vehicle 1's queue at T = 23. Passenger info:
 			Pickup Location: 3, 2
 			Pickup Time: 23
 			Destination Location: 5, 8
-			Distance to pickup from next location: 1
+			Distance to pickup from next location: 3
 			Distance from pickup to dropoff: 6
 			Dropoff at T = 29
-			Requests available at destination: 0
-			Request Score: 5.69143
-		Vehicle waiting at pickup for request.
+			Requests available at destination: 322
+			Request Score: 7.40503
+		Vehicle en route to pickup.
 
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to pickup.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 24 of 50
 
 	Vehicle: 1
-		Vehicle en route to destination.
+		Vehicle en route to pickup.
 
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to pickup.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 25 of 50
 
 	Vehicle: 1
-		Vehicle en route to destination.
+		Vehicle en route to pickup.
 
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to pickup.
+
+
+	Vehicle: 3
+		Vehicle dropped off request at Latitude: 3 and Longitude: 1 at T = 25
+		Added passenger to vehicle 3's queue at T = 25. Passenger info:
+			Pickup Location: 1, 1
+			Pickup Time: 23
+			Destination Location: 10, 6
+			Distance to pickup from next location: 2
+			Distance from pickup to dropoff: 10
+			Dropoff at T = 33
+			Requests available at destination: 0
+			Request Score: 5.53333
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 26 of 50
 
 	Vehicle: 1
-		Vehicle en route to destination.
+		Vehicle picked up request at Latitude: 3 and Longitude: 2 at T = 26
 
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to pickup.
+
+
+	Vehicle: 3
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 27 of 50
@@ -320,7 +708,20 @@ Test loop 27 of 50
 
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to pickup.
+
+
+	Vehicle: 3
+		Vehicle picked up request at Latitude: 1 and Longitude: 1 at T = 27
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 28 of 50
@@ -330,205 +731,604 @@ Test loop 28 of 50
 
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to pickup.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle dropped off request at Latitude: 15 and Longitude: 7 at T = 28
+		Added passenger to vehicle 4's queue at T = 28. Passenger info:
+			Pickup Location: 16, 6
+			Pickup Time: 29
+			Destination Location: 12, 18
+			Distance to pickup from next location: 2
+			Distance from pickup to dropoff: 12
+			Dropoff at T = 41
+			Requests available at destination: 298
+			Request Score: 9.18573
+		Vehicle en route to pickup.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 29 of 50
 
 	Vehicle: 1
-		Vehicle dropped off request at Latitude: 5 and Longitude: 8 at T = 29
-		Vehicle idling.
+		Vehicle en route to destination.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle picked up request at Latitude: 3 and Longitude: 10 at T = 29
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to pickup.
+
+
+	Vehicle: 5
+		Vehicle dropped off request at Latitude: 19 and Longitude: 18 at T = 29
+		Added passenger to vehicle 5's queue at T = 29. Passenger info:
+			Pickup Location: 19, 11
+			Pickup Time: 35
+			Destination Location: 7, 5
+			Distance to pickup from next location: 7
+			Distance from pickup to dropoff: 13
+			Dropoff at T = 48
+			Requests available at destination: 0
+			Request Score: 3.76
+		Vehicle waiting at pickup for request.
+
 
 
 Test loop 30 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle en route to destination.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle picked up request at Latitude: 16 and Longitude: 6 at T = 30
+
+
+	Vehicle: 5
+		Vehicle waiting at pickup for request.
+
 
 
 Test loop 31 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle en route to destination.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle waiting at pickup for request.
+
 
 
 Test loop 32 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle dropped off request at Latitude: 5 and Longitude: 8 at T = 32
+		Added passenger to vehicle 1's queue at T = 32. Passenger info:
+			Pickup Location: 1, 9
+			Pickup Time: 33
+			Destination Location: 13, 4
+			Distance to pickup from next location: 5
+			Distance from pickup to dropoff: 13
+			Dropoff at T = 46
+			Requests available at destination: 85
+			Request Score: 7.85208
+		Vehicle en route to pickup.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle waiting at pickup for request.
+
 
 
 Test loop 33 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle en route to pickup.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle waiting at pickup for request.
+
 
 
 Test loop 34 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle en route to pickup.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle waiting at pickup for request.
+
 
 
 Test loop 35 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle en route to pickup.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle waiting at pickup for request.
+
 
 
 Test loop 36 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle en route to pickup.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle picked up request at Latitude: 19 and Longitude: 11 at T = 36
+
 
 
 Test loop 37 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle picked up request at Latitude: 1 and Longitude: 9 at T = 37
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle dropped off request at Latitude: 10 and Longitude: 6 at T = 37
+		Added passenger to vehicle 3's queue at T = 37. Passenger info:
+			Pickup Location: 9, 8
+			Pickup Time: 40
+			Destination Location: 13, 17
+			Distance to pickup from next location: 3
+			Distance from pickup to dropoff: 9
+			Dropoff at T = 49
+			Requests available at destination: 143
+			Request Score: 8.18992
+		Vehicle en route to pickup.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 38 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle en route to destination.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle en route to pickup.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 39 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle en route to destination.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle en route to pickup.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 40 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle en route to destination.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle picked up request at Latitude: 9 and Longitude: 8 at T = 40
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 41 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle en route to destination.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 42 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle en route to destination.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle dropped off request at Latitude: 12 and Longitude: 18 at T = 42
+		Added passenger to vehicle 4's queue at T = 42. Passenger info:
+			Pickup Location: 10, 17
+			Pickup Time: 42
+			Destination Location: 13, 1
+			Distance to pickup from next location: 3
+			Distance from pickup to dropoff: 16
+			Dropoff at T = 58
+			Requests available at destination: 0
+			Request Score: 6.09382
+		Vehicle en route to pickup.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 43 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle en route to destination.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle dropped off request at Latitude: 17 and Longitude: 12 at T = 43
+		Added passenger to vehicle 2's queue at T = 43. Passenger info:
+			Pickup Location: 14, 12
+			Pickup Time: 49
+			Destination Location: 2, 4
+			Distance to pickup from next location: 3
+			Distance from pickup to dropoff: 14
+			Dropoff at T = 63
+			Requests available at destination: 0
+			Request Score: 5.51529
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to pickup.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 44 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle en route to destination.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to pickup.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 45 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle en route to destination.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle picked up request at Latitude: 10 and Longitude: 17 at T = 45
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 46 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle en route to destination.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 47 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle en route to destination.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 48 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle en route to destination.
+
 
 	Vehicle: 2
-		Vehicle idling.
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 3
+		Vehicle en route to destination.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle en route to destination.
+
 
 
 Test loop 49 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle en route to destination.
+
 
 	Vehicle: 2
+		Vehicle picked up request at Latitude: 14 and Longitude: 12 at T = 49
+
+
+	Vehicle: 3
+		Vehicle dropped off request at Latitude: 13 and Longitude: 17 at T = 49
+		Added passenger to vehicle 3's queue at T = 49. Passenger info:
+			Pickup Location: 13, 19
+			Pickup Time: 46
+			Destination Location: 7, 16
+			Distance to pickup from next location: 2
+			Distance from pickup to dropoff: 6
+			Dropoff at T = 52
+			Requests available at destination: 0
+			Request Score: 4.62
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
+		Vehicle dropped off request at Latitude: 7 and Longitude: 5 at T = 49
 		Vehicle idling.
 
 
 Test loop 50 of 50
 
 	Vehicle: 1
-		Vehicle idling.
+		Vehicle dropped off request at Latitude: 13 and Longitude: 4 at T = 50
+		Added passenger to vehicle 1's queue at T = 50. Passenger info:
+			Pickup Location: 14, 3
+			Pickup Time: 48
+			Destination Location: 2, 14
+			Distance to pickup from next location: 2
+			Distance from pickup to dropoff: 16
+			Dropoff at T = 64
+			Requests available at destination: 0
+			Request Score: 6.5079
+		Vehicle en route to pickup.
+
 
 	Vehicle: 2
+		Vehicle en route to destination.
+
+
+	Vehicle: 3
+		Vehicle waiting at pickup for request.
+
+
+	Vehicle: 4
+		Vehicle en route to destination.
+
+
+	Vehicle: 5
 		Vehicle idling.
 
 
@@ -536,13 +1336,28 @@ Test loop 50 of 50
 Complete Test Results:
 
 Vehicle: 1
-	Distance travelled with a passenger: 25
-	Distance travelled without a passenger: 4
+	Distance travelled with a passenger: 34
+	Distance travelled without a passenger: 15
 
 
-Vehicle: 1
-	Distance travelled with a passenger: 12
-	Distance travelled without a passenger: 2
+Vehicle: 2
+	Distance travelled with a passenger: 24
+	Distance travelled without a passenger: 12
 
 
-Fleet utilization is: 86.0465%.
+Vehicle: 3
+	Distance travelled with a passenger: 38
+	Distance travelled without a passenger: 10
+
+
+Vehicle: 4
+	Distance travelled with a passenger: 28
+	Distance travelled without a passenger: 12
+
+
+Vehicle: 5
+	Distance travelled with a passenger: 36
+	Distance travelled without a passenger: 12
+
+
+Fleet utilization is: 72.3982%.

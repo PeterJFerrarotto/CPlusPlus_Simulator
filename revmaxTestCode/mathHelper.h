@@ -2,6 +2,7 @@
 #define _MATH_HELPER_H
 #include <math.h>
 #include "Vehicle.h"
+#include <random>
 #include "RequestManager.h"
 #include "RideRequest.h"
 
@@ -9,7 +10,25 @@ inline float pythagDistance(float x1, float y1, float x2, float y2){
 	return sqrtf(powf(x2 - x1, 2) + powf(y2 - y1, 2));
 }
 
-inline float scoreRequest(Vehicle* vehicle, RideRequest* request, RequestManager manager, int time, int timeRadius, float weightOfDistanceOfRide, float(*routing)(float, float, float, float)){
+inline long randomRangedLong(long bottom, long top){
+	static std::random_device rd; // obtain a random number from hardware
+	static std::mt19937 eng(rd()); // seed the generator
+	static std::uniform_real_distribution<> distr(bottom, top); // define the range
+
+	return distr(eng);
+}
+
+inline int randomRangedInt(int bottom, int top){
+	static std::random_device rd; // obtain a random number from hardware
+	static std::mt19937 eng(rd()); // seed the generator
+	static std::uniform_int_distribution<> distr(bottom, top); // define the range
+
+	return distr(eng);
+}
+
+
+
+inline float scoreRequest(Vehicle* vehicle, RideRequest* request, RequestManager manager, int time, int timeRadius, float weightOfDistanceOfRide, int maxRideRequests, float(*routing)(float, float, float, float)){
 	float distanceToRide = routing(vehicle->getCurrentLocation().first, vehicle->getCurrentLocation().second, request->getLocation().first, request->getLocation().second);
 	//Assumption: each unit is travelled in one hour.
 	int timeToUse = time;
@@ -32,21 +51,9 @@ inline float scoreRequest(Vehicle* vehicle, RideRequest* request, RequestManager
 	request->setRequestsAtDestination(numOfRequestsAtDestination);
 	score += ((distanceOfRide) * (weightOfDistanceOfRide)) * 10;
 
-	if (0 <= numOfRequestsAtDestination < 5){
-		score -= 3;
+	if (numOfRequestsAtDestination < 30){
+		score += (-3 + (numOfRequestsAtDestination * (3/maxRideRequests)));
 	}
-	else if (5 <= numOfRequestsAtDestination < 10){
-		score -= 2;
-	}
-	else if (10 <= numOfRequestsAtDestination < 20){
-		score -= 1;
-	}
-	//else if (20 <= numOfRequestsAtDestination < 40){
-	//	score -= 2;
-	//}
-	//else if (40 <= numOfRequestsAtDestination < 80){
-	//	score -= 1;
-	//}
 	return score;
 }
 

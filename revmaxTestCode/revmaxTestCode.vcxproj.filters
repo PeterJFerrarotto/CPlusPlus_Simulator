@@ -30,6 +30,15 @@
     <ClCompile Include="EventVenue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderProgram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mathHelper.h">
@@ -59,16 +68,33 @@
     <ClInclude Include="rapidxml_utils.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="xmlTester.h">
+    <ClInclude Include="EventVenue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="EventVenue.h">
+    <ClInclude Include="Simulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderProgram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="renderingMathHelper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="XML\testData.xml">
-      <Filter>Header Files</Filter>
-    </Xml>
+    <Xml Include="XML\testData2.xml" />
+    <Xml Include="XML\testData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fragment.glsl" />
+    <None Include="fragment_textured.glsl" />
+    <None Include="vertex.glsl" />
+    <None Include="vertex_textured.glsl" />
   </ItemGroup>
 </Project>

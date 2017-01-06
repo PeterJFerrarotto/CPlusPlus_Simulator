@@ -3,6 +3,8 @@
 #include "RideRequest.h"
 #include <map>
 
+class ShaderProgram;
+class Texture;
 class EventVenue
 {
 private:

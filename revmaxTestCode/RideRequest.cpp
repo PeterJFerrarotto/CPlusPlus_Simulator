@@ -5,6 +5,7 @@ RideRequest::RideRequest()
 {
 	distanceOfRequestCalculated = false;
 	pickedUp = false;
+	matchedToVehicle = false;
 }
 
 
@@ -73,4 +74,20 @@ unsigned RideRequest::getRequestsAtDestination(){
 
 int RideRequest::getRequestTime(){
 	return requestTime;
+}
+
+bool RideRequest::getMatchedToVehicle(){
+	return matchedToVehicle;
+}
+
+void RideRequest::setMatchedToVehicle(bool matchedToVehicle){
+	this->matchedToVehicle = matchedToVehicle;
+}
+
+void RideRequest::setTimeMatched(int time){
+	this->timeMatched = time;
+}
+
+int RideRequest::getTimeMatched(){
+	return timeMatched;
 }

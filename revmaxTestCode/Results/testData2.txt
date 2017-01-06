@@ -6,9 +6,9 @@ Parameters:
 	Radius Increment Value: 5
 	Time Radius: 5
 	Minimum Score: 3
-	Times to run: 500
+	Times to run: 150
 
-Test loop 1 of 500
+Test loop 1 of 150
 
 	Vehicle: 1
 		Added passenger to vehicle 1's queue at T = 1. Passenger info:
@@ -37,7 +37,7 @@ Test loop 1 of 500
 
 
 
-Test loop 2 of 500
+Test loop 2 of 150
 
 	Vehicle: 1
 		Vehicle waiting at pickup for request.
@@ -48,7 +48,7 @@ Test loop 2 of 500
 
 
 
-Test loop 3 of 500
+Test loop 3 of 150
 
 	Vehicle: 1
 		Vehicle waiting at pickup for request.
@@ -59,7 +59,7 @@ Test loop 3 of 500
 
 
 
-Test loop 4 of 500
+Test loop 4 of 150
 
 	Vehicle: 1
 		Vehicle waiting at pickup for request.
@@ -70,7 +70,7 @@ Test loop 4 of 500
 
 
 
-Test loop 5 of 500
+Test loop 5 of 150
 
 	Vehicle: 1
 		Vehicle picked up request at Latitude: 13 and Longitude: 20 at T = 5
@@ -81,7 +81,7 @@ Test loop 5 of 500
 
 
 
-Test loop 6 of 500
+Test loop 6 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -92,7 +92,7 @@ Test loop 6 of 500
 
 
 
-Test loop 7 of 500
+Test loop 7 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -103,7 +103,7 @@ Test loop 7 of 500
 
 
 
-Test loop 8 of 500
+Test loop 8 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -114,7 +114,7 @@ Test loop 8 of 500
 
 
 
-Test loop 9 of 500
+Test loop 9 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -125,7 +125,7 @@ Test loop 9 of 500
 
 
 
-Test loop 10 of 500
+Test loop 10 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -136,7 +136,7 @@ Test loop 10 of 500
 
 
 
-Test loop 11 of 500
+Test loop 11 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -147,7 +147,7 @@ Test loop 11 of 500
 
 
 
-Test loop 12 of 500
+Test loop 12 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -158,7 +158,7 @@ Test loop 12 of 500
 
 
 
-Test loop 13 of 500
+Test loop 13 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -169,7 +169,7 @@ Test loop 13 of 500
 
 
 
-Test loop 14 of 500
+Test loop 14 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -180,7 +180,7 @@ Test loop 14 of 500
 
 
 
-Test loop 15 of 500
+Test loop 15 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -191,7 +191,7 @@ Test loop 15 of 500
 
 
 
-Test loop 16 of 500
+Test loop 16 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -202,7 +202,7 @@ Test loop 16 of 500
 
 
 
-Test loop 17 of 500
+Test loop 17 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -223,7 +223,7 @@ Test loop 17 of 500
 
 
 
-Test loop 18 of 500
+Test loop 18 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -234,7 +234,7 @@ Test loop 18 of 500
 
 
 
-Test loop 19 of 500
+Test loop 19 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -245,7 +245,7 @@ Test loop 19 of 500
 
 
 
-Test loop 20 of 500
+Test loop 20 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -256,7 +256,7 @@ Test loop 20 of 500
 
 
 
-Test loop 21 of 500
+Test loop 21 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -267,7 +267,7 @@ Test loop 21 of 500
 
 
 
-Test loop 22 of 500
+Test loop 22 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -278,7 +278,7 @@ Test loop 22 of 500
 
 
 
-Test loop 23 of 500
+Test loop 23 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -289,7 +289,7 @@ Test loop 23 of 500
 
 
 
-Test loop 24 of 500
+Test loop 24 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -300,7 +300,7 @@ Test loop 24 of 500
 
 
 
-Test loop 25 of 500
+Test loop 25 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -311,7 +311,7 @@ Test loop 25 of 500
 
 
 
-Test loop 26 of 500
+Test loop 26 of 150
 
 	Vehicle: 1
 		Vehicle dropped off request at Latitude: 2 and Longitude: 1 at T = 26
@@ -332,7 +332,29 @@ Test loop 26 of 500
 
 
 
-Test loop 27 of 500
+Test loop 27 of 150
+
+	Vehicle: 1
+		Vehicle en route to pickup.
+
+
+	Vehicle: 2
+		Vehicle en route to destination.
+
+
+
+Test loop 28 of 150
+
+	Vehicle: 1
+		Vehicle picked up request at Latitude: 3 and Longitude: 2 at T = 28
+
+
+	Vehicle: 2
+		Vehicle en route to destination.
+
+
+
+Test loop 29 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -343,7 +365,7 @@ Test loop 27 of 500
 
 
 
-Test loop 28 of 500
+Test loop 30 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -354,7 +376,7 @@ Test loop 28 of 500
 
 
 
-Test loop 29 of 500
+Test loop 31 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -365,7 +387,7 @@ Test loop 29 of 500
 
 
 
-Test loop 30 of 500
+Test loop 32 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -376,7 +398,7 @@ Test loop 30 of 500
 
 
 
-Test loop 31 of 500
+Test loop 33 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -387,7 +409,7 @@ Test loop 31 of 500
 
 
 
-Test loop 32 of 500
+Test loop 34 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -398,7 +420,7 @@ Test loop 32 of 500
 
 
 
-Test loop 33 of 500
+Test loop 35 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -409,7 +431,7 @@ Test loop 33 of 500
 
 
 
-Test loop 34 of 500
+Test loop 36 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -420,7 +442,7 @@ Test loop 34 of 500
 
 
 
-Test loop 35 of 500
+Test loop 37 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -431,7 +453,7 @@ Test loop 35 of 500
 
 
 
-Test loop 36 of 500
+Test loop 38 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -442,7 +464,7 @@ Test loop 36 of 500
 
 
 
-Test loop 37 of 500
+Test loop 39 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -453,7 +475,7 @@ Test loop 37 of 500
 
 
 
-Test loop 38 of 500
+Test loop 40 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -464,7 +486,7 @@ Test loop 38 of 500
 
 
 
-Test loop 39 of 500
+Test loop 41 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -475,7 +497,7 @@ Test loop 39 of 500
 
 
 
-Test loop 40 of 500
+Test loop 42 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -486,7 +508,7 @@ Test loop 40 of 500
 
 
 
-Test loop 41 of 500
+Test loop 43 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -497,7 +519,7 @@ Test loop 41 of 500
 
 
 
-Test loop 42 of 500
+Test loop 44 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -508,7 +530,7 @@ Test loop 42 of 500
 
 
 
-Test loop 43 of 500
+Test loop 45 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -519,7 +541,7 @@ Test loop 43 of 500
 
 
 
-Test loop 44 of 500
+Test loop 46 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -530,7 +552,7 @@ Test loop 44 of 500
 
 
 
-Test loop 45 of 500
+Test loop 47 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -541,7 +563,7 @@ Test loop 45 of 500
 
 
 
-Test loop 46 of 500
+Test loop 48 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -552,7 +574,7 @@ Test loop 46 of 500
 
 
 
-Test loop 47 of 500
+Test loop 49 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -563,7 +585,7 @@ Test loop 47 of 500
 
 
 
-Test loop 48 of 500
+Test loop 50 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -574,7 +596,7 @@ Test loop 48 of 500
 
 
 
-Test loop 49 of 500
+Test loop 51 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -585,7 +607,7 @@ Test loop 49 of 500
 
 
 
-Test loop 50 of 500
+Test loop 52 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -596,7 +618,7 @@ Test loop 50 of 500
 
 
 
-Test loop 51 of 500
+Test loop 53 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -607,7 +629,7 @@ Test loop 51 of 500
 
 
 
-Test loop 52 of 500
+Test loop 54 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -618,7 +640,7 @@ Test loop 52 of 500
 
 
 
-Test loop 53 of 500
+Test loop 55 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -629,7 +651,7 @@ Test loop 53 of 500
 
 
 
-Test loop 54 of 500
+Test loop 56 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -640,7 +662,7 @@ Test loop 54 of 500
 
 
 
-Test loop 55 of 500
+Test loop 57 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -651,7 +673,7 @@ Test loop 55 of 500
 
 
 
-Test loop 56 of 500
+Test loop 58 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -662,7 +684,7 @@ Test loop 56 of 500
 
 
 
-Test loop 57 of 500
+Test loop 59 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -673,7 +695,7 @@ Test loop 57 of 500
 
 
 
-Test loop 58 of 500
+Test loop 60 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -684,7 +706,7 @@ Test loop 58 of 500
 
 
 
-Test loop 59 of 500
+Test loop 61 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -695,29 +717,7 @@ Test loop 59 of 500
 
 
 
-Test loop 60 of 500
-
-	Vehicle: 1
-		Vehicle en route to destination.
-
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 61 of 500
-
-	Vehicle: 1
-		Vehicle en route to destination.
-
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 62 of 500
+Test loop 62 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -728,7 +728,7 @@ Test loop 62 of 500
 		Vehicle idling.
 
 
-Test loop 63 of 500
+Test loop 63 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -738,7 +738,7 @@ Test loop 63 of 500
 		Vehicle idling.
 
 
-Test loop 64 of 500
+Test loop 64 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -748,7 +748,7 @@ Test loop 64 of 500
 		Vehicle idling.
 
 
-Test loop 65 of 500
+Test loop 65 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -758,7 +758,7 @@ Test loop 65 of 500
 		Vehicle idling.
 
 
-Test loop 66 of 500
+Test loop 66 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -768,7 +768,7 @@ Test loop 66 of 500
 		Vehicle idling.
 
 
-Test loop 67 of 500
+Test loop 67 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -778,7 +778,7 @@ Test loop 67 of 500
 		Vehicle idling.
 
 
-Test loop 68 of 500
+Test loop 68 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -788,7 +788,7 @@ Test loop 68 of 500
 		Vehicle idling.
 
 
-Test loop 69 of 500
+Test loop 69 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -798,7 +798,7 @@ Test loop 69 of 500
 		Vehicle idling.
 
 
-Test loop 70 of 500
+Test loop 70 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -808,7 +808,7 @@ Test loop 70 of 500
 		Vehicle idling.
 
 
-Test loop 71 of 500
+Test loop 71 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -818,7 +818,7 @@ Test loop 71 of 500
 		Vehicle idling.
 
 
-Test loop 72 of 500
+Test loop 72 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -828,7 +828,7 @@ Test loop 72 of 500
 		Vehicle idling.
 
 
-Test loop 73 of 500
+Test loop 73 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -838,7 +838,7 @@ Test loop 73 of 500
 		Vehicle idling.
 
 
-Test loop 74 of 500
+Test loop 74 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -848,7 +848,7 @@ Test loop 74 of 500
 		Vehicle idling.
 
 
-Test loop 75 of 500
+Test loop 75 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -858,7 +858,7 @@ Test loop 75 of 500
 		Vehicle idling.
 
 
-Test loop 76 of 500
+Test loop 76 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -868,7 +868,7 @@ Test loop 76 of 500
 		Vehicle idling.
 
 
-Test loop 77 of 500
+Test loop 77 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -878,7 +878,7 @@ Test loop 77 of 500
 		Vehicle idling.
 
 
-Test loop 78 of 500
+Test loop 78 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -888,7 +888,7 @@ Test loop 78 of 500
 		Vehicle idling.
 
 
-Test loop 79 of 500
+Test loop 79 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -903,12 +903,12 @@ Test loop 79 of 500
 			Distance from pickup to dropoff: 59
 			Dropoff at T = 146
 			Requests available at destination: 200
-			Request Score: 7.81485
+			Request Score: 10.8148
 		Vehicle en route to pickup.
 
 
 
-Test loop 80 of 500
+Test loop 80 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -919,11 +919,55 @@ Test loop 80 of 500
 
 
 
-Test loop 81 of 500
+Test loop 81 of 150
 
 	Vehicle: 1
-		Vehicle dropped off request at Latitude: 40 and Longitude: 46 at T = 81
-		Added passenger to vehicle 1's queue at T = 81. Passenger info:
+		Vehicle en route to destination.
+
+
+	Vehicle: 2
+		Vehicle en route to pickup.
+
+
+
+Test loop 82 of 150
+
+	Vehicle: 1
+		Vehicle en route to destination.
+
+
+	Vehicle: 2
+		Vehicle en route to pickup.
+
+
+
+Test loop 83 of 150
+
+	Vehicle: 1
+		Vehicle en route to destination.
+
+
+	Vehicle: 2
+		Vehicle en route to pickup.
+
+
+
+Test loop 84 of 150
+
+	Vehicle: 1
+		Vehicle en route to destination.
+
+
+	Vehicle: 2
+		Vehicle en route to pickup.
+
+
+
+Test loop 85 of 150
+
+	Vehicle: 1
+		Vehicle dropped off request at Latitude: 40 and Longitude: 46 at T = 85
+		Added passenger to vehicle 1's queue at T = 85. Passenger info:
 			Pickup Location: 40, 44
 			Pickup Time: 87
 			Destination Location: 32, 2
@@ -940,7 +984,7 @@ Test loop 81 of 500
 
 
 
-Test loop 82 of 500
+Test loop 86 of 150
 
 	Vehicle: 1
 		Vehicle waiting at pickup for request.
@@ -951,51 +995,7 @@ Test loop 82 of 500
 
 
 
-Test loop 83 of 500
-
-	Vehicle: 1
-		Vehicle waiting at pickup for request.
-
-
-	Vehicle: 2
-		Vehicle en route to pickup.
-
-
-
-Test loop 84 of 500
-
-	Vehicle: 1
-		Vehicle waiting at pickup for request.
-
-
-	Vehicle: 2
-		Vehicle en route to pickup.
-
-
-
-Test loop 85 of 500
-
-	Vehicle: 1
-		Vehicle waiting at pickup for request.
-
-
-	Vehicle: 2
-		Vehicle en route to pickup.
-
-
-
-Test loop 86 of 500
-
-	Vehicle: 1
-		Vehicle waiting at pickup for request.
-
-
-	Vehicle: 2
-		Vehicle en route to pickup.
-
-
-
-Test loop 87 of 500
+Test loop 87 of 150
 
 	Vehicle: 1
 		Vehicle picked up request at Latitude: 40 and Longitude: 44 at T = 87
@@ -1006,7 +1006,7 @@ Test loop 87 of 500
 
 
 
-Test loop 88 of 500
+Test loop 88 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1017,7 +1017,7 @@ Test loop 88 of 500
 
 
 
-Test loop 89 of 500
+Test loop 89 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1028,7 +1028,7 @@ Test loop 89 of 500
 
 
 
-Test loop 90 of 500
+Test loop 90 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1039,7 +1039,7 @@ Test loop 90 of 500
 
 
 
-Test loop 91 of 500
+Test loop 91 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1050,7 +1050,7 @@ Test loop 91 of 500
 
 
 
-Test loop 92 of 500
+Test loop 92 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1061,7 +1061,7 @@ Test loop 92 of 500
 
 
 
-Test loop 93 of 500
+Test loop 93 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1072,7 +1072,7 @@ Test loop 93 of 500
 
 
 
-Test loop 94 of 500
+Test loop 94 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1083,7 +1083,7 @@ Test loop 94 of 500
 
 
 
-Test loop 95 of 500
+Test loop 95 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1094,7 +1094,7 @@ Test loop 95 of 500
 
 
 
-Test loop 96 of 500
+Test loop 96 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1105,7 +1105,7 @@ Test loop 96 of 500
 
 
 
-Test loop 97 of 500
+Test loop 97 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1116,7 +1116,7 @@ Test loop 97 of 500
 
 
 
-Test loop 98 of 500
+Test loop 98 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1127,7 +1127,7 @@ Test loop 98 of 500
 
 
 
-Test loop 99 of 500
+Test loop 99 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1138,7 +1138,7 @@ Test loop 99 of 500
 
 
 
-Test loop 100 of 500
+Test loop 100 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1149,7 +1149,7 @@ Test loop 100 of 500
 
 
 
-Test loop 101 of 500
+Test loop 101 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1160,7 +1160,7 @@ Test loop 101 of 500
 
 
 
-Test loop 102 of 500
+Test loop 102 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1171,7 +1171,7 @@ Test loop 102 of 500
 
 
 
-Test loop 103 of 500
+Test loop 103 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1182,7 +1182,7 @@ Test loop 103 of 500
 
 
 
-Test loop 104 of 500
+Test loop 104 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1193,7 +1193,7 @@ Test loop 104 of 500
 
 
 
-Test loop 105 of 500
+Test loop 105 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1204,7 +1204,7 @@ Test loop 105 of 500
 
 
 
-Test loop 106 of 500
+Test loop 106 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1215,7 +1215,7 @@ Test loop 106 of 500
 
 
 
-Test loop 107 of 500
+Test loop 107 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1226,7 +1226,7 @@ Test loop 107 of 500
 
 
 
-Test loop 108 of 500
+Test loop 108 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1237,7 +1237,7 @@ Test loop 108 of 500
 
 
 
-Test loop 109 of 500
+Test loop 109 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1248,7 +1248,7 @@ Test loop 109 of 500
 
 
 
-Test loop 110 of 500
+Test loop 110 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1259,7 +1259,7 @@ Test loop 110 of 500
 
 
 
-Test loop 111 of 500
+Test loop 111 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1270,7 +1270,7 @@ Test loop 111 of 500
 
 
 
-Test loop 112 of 500
+Test loop 112 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1281,7 +1281,7 @@ Test loop 112 of 500
 
 
 
-Test loop 113 of 500
+Test loop 113 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1292,7 +1292,7 @@ Test loop 113 of 500
 
 
 
-Test loop 114 of 500
+Test loop 114 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1303,7 +1303,7 @@ Test loop 114 of 500
 
 
 
-Test loop 115 of 500
+Test loop 115 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1314,7 +1314,7 @@ Test loop 115 of 500
 
 
 
-Test loop 116 of 500
+Test loop 116 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1325,7 +1325,7 @@ Test loop 116 of 500
 
 
 
-Test loop 117 of 500
+Test loop 117 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1336,7 +1336,7 @@ Test loop 117 of 500
 
 
 
-Test loop 118 of 500
+Test loop 118 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1347,7 +1347,7 @@ Test loop 118 of 500
 
 
 
-Test loop 119 of 500
+Test loop 119 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1358,7 +1358,7 @@ Test loop 119 of 500
 
 
 
-Test loop 120 of 500
+Test loop 120 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1369,7 +1369,7 @@ Test loop 120 of 500
 
 
 
-Test loop 121 of 500
+Test loop 121 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1380,7 +1380,7 @@ Test loop 121 of 500
 
 
 
-Test loop 122 of 500
+Test loop 122 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1391,7 +1391,7 @@ Test loop 122 of 500
 
 
 
-Test loop 123 of 500
+Test loop 123 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1402,7 +1402,7 @@ Test loop 123 of 500
 
 
 
-Test loop 124 of 500
+Test loop 124 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1413,7 +1413,7 @@ Test loop 124 of 500
 
 
 
-Test loop 125 of 500
+Test loop 125 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1424,7 +1424,7 @@ Test loop 125 of 500
 
 
 
-Test loop 126 of 500
+Test loop 126 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1435,7 +1435,7 @@ Test loop 126 of 500
 
 
 
-Test loop 127 of 500
+Test loop 127 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1446,7 +1446,7 @@ Test loop 127 of 500
 
 
 
-Test loop 128 of 500
+Test loop 128 of 150
 
 	Vehicle: 1
 		Vehicle en route to destination.
@@ -1457,7 +1457,7 @@ Test loop 128 of 500
 
 
 
-Test loop 129 of 500
+Test loop 129 of 150
 
 	Vehicle: 1
 		Vehicle dropped off request at Latitude: 32 and Longitude: 2 at T = 129
@@ -1468,7 +1468,7 @@ Test loop 129 of 500
 
 
 
-Test loop 130 of 500
+Test loop 130 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1478,7 +1478,7 @@ Test loop 130 of 500
 
 
 
-Test loop 131 of 500
+Test loop 131 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1488,7 +1488,7 @@ Test loop 131 of 500
 
 
 
-Test loop 132 of 500
+Test loop 132 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1498,7 +1498,7 @@ Test loop 132 of 500
 
 
 
-Test loop 133 of 500
+Test loop 133 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1508,7 +1508,7 @@ Test loop 133 of 500
 
 
 
-Test loop 134 of 500
+Test loop 134 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1518,7 +1518,7 @@ Test loop 134 of 500
 
 
 
-Test loop 135 of 500
+Test loop 135 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1528,7 +1528,7 @@ Test loop 135 of 500
 
 
 
-Test loop 136 of 500
+Test loop 136 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1538,7 +1538,7 @@ Test loop 136 of 500
 
 
 
-Test loop 137 of 500
+Test loop 137 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1548,7 +1548,7 @@ Test loop 137 of 500
 
 
 
-Test loop 138 of 500
+Test loop 138 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1558,7 +1558,7 @@ Test loop 138 of 500
 
 
 
-Test loop 139 of 500
+Test loop 139 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1568,7 +1568,7 @@ Test loop 139 of 500
 
 
 
-Test loop 140 of 500
+Test loop 140 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1578,7 +1578,7 @@ Test loop 140 of 500
 
 
 
-Test loop 141 of 500
+Test loop 141 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1588,7 +1588,7 @@ Test loop 141 of 500
 
 
 
-Test loop 142 of 500
+Test loop 142 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1598,7 +1598,7 @@ Test loop 142 of 500
 
 
 
-Test loop 143 of 500
+Test loop 143 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1608,7 +1608,7 @@ Test loop 143 of 500
 
 
 
-Test loop 144 of 500
+Test loop 144 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1618,7 +1618,7 @@ Test loop 144 of 500
 
 
 
-Test loop 145 of 500
+Test loop 145 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1628,7 +1628,7 @@ Test loop 145 of 500
 
 
 
-Test loop 146 of 500
+Test loop 146 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1648,7 +1648,7 @@ Test loop 146 of 500
 
 
 
-Test loop 147 of 500
+Test loop 147 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1658,7 +1658,7 @@ Test loop 147 of 500
 
 
 
-Test loop 148 of 500
+Test loop 148 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1668,7 +1668,7 @@ Test loop 148 of 500
 
 
 
-Test loop 149 of 500
+Test loop 149 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1678,7 +1678,7 @@ Test loop 149 of 500
 
 
 
-Test loop 150 of 500
+Test loop 150 of 150
 
 	Vehicle: 1
 		Vehicle idling.
@@ -1686,3186 +1686,6 @@ Test loop 150 of 500
 	Vehicle: 2
 		Vehicle en route to destination.
 
-
-
-Test loop 151 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 152 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 153 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 154 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 155 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 156 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 157 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 158 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 159 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 160 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 161 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 162 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 163 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 164 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 165 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 166 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 167 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 168 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 169 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 170 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 171 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 172 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 173 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 174 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 175 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 176 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 177 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 178 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 179 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle en route to destination.
-
-
-
-Test loop 180 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle dropped off request at Latitude: 18 and Longitude: 31 at T = 180
-		Vehicle idling.
-
-
-Test loop 181 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 182 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 183 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 184 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 185 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 186 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 187 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 188 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 189 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 190 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 191 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 192 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 193 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 194 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 195 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 196 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 197 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 198 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 199 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 200 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 201 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 202 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 203 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 204 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 205 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 206 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 207 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 208 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 209 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 210 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 211 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 212 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 213 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 214 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 215 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 216 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 217 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 218 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 219 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 220 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 221 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 222 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 223 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 224 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 225 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 226 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 227 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 228 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 229 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 230 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 231 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 232 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 233 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 234 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 235 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 236 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 237 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 238 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 239 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 240 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 241 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 242 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 243 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 244 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 245 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 246 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 247 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 248 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 249 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 250 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 251 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 252 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 253 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 254 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 255 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 256 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 257 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 258 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 259 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 260 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 261 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 262 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 263 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 264 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 265 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 266 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 267 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 268 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 269 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 270 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 271 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 272 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 273 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 274 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 275 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 276 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 277 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 278 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 279 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 280 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 281 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 282 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 283 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 284 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 285 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 286 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 287 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 288 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 289 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 290 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 291 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 292 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 293 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 294 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 295 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 296 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 297 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 298 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 299 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 300 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 301 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 302 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 303 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 304 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 305 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 306 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 307 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 308 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 309 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 310 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 311 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 312 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 313 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 314 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 315 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 316 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 317 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 318 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 319 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 320 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 321 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 322 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 323 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 324 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 325 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 326 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 327 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 328 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 329 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 330 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 331 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 332 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 333 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 334 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 335 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 336 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 337 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 338 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 339 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 340 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 341 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 342 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 343 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 344 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 345 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 346 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 347 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 348 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 349 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 350 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 351 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 352 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 353 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 354 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 355 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 356 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 357 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 358 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 359 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 360 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 361 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 362 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 363 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 364 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 365 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 366 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 367 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 368 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 369 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 370 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 371 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 372 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 373 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 374 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 375 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 376 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 377 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 378 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 379 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 380 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 381 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 382 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 383 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 384 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 385 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 386 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 387 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 388 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 389 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 390 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 391 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 392 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 393 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 394 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 395 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 396 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 397 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 398 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 399 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 400 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 401 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 402 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 403 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 404 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 405 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 406 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 407 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 408 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 409 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 410 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 411 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 412 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 413 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 414 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 415 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 416 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 417 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 418 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 419 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 420 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 421 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 422 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 423 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 424 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 425 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 426 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 427 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 428 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 429 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 430 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 431 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 432 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 433 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 434 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 435 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 436 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 437 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 438 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 439 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 440 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 441 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 442 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 443 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 444 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 445 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 446 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 447 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 448 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 449 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 450 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 451 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 452 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 453 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 454 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 455 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 456 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 457 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 458 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 459 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 460 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 461 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 462 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 463 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 464 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 465 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 466 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 467 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 468 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 469 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 470 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 471 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 472 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 473 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 474 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 475 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 476 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 477 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 478 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 479 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 480 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 481 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 482 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 483 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 484 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 485 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 486 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 487 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 488 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 489 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 490 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 491 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 492 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 493 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 494 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 495 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 496 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 497 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 498 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 499 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
-
-
-Test loop 500 of 500
-
-	Vehicle: 1
-		Vehicle idling.
-
-	Vehicle: 2
-		Vehicle idling.
 
 
 -------------------------------------------------------------------
@@ -4876,9 +1696,9 @@ Vehicle: 1
 	Distance travelled without a passenger: 7
 
 
-Vehicle: 1
-	Distance travelled with a passenger: 147
+Vehicle: 2
+	Distance travelled with a passenger: 115
 	Distance travelled without a passenger: 5
 
 
-Fleet utilization is: 95.6989%.
+Fleet utilization is: 95.1417%.
