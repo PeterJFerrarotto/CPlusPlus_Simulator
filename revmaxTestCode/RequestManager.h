@@ -21,8 +21,10 @@ protected:
 	void normalizeCoordinates();
 	Matrix modelMatrix;
 	Texture* lineTexture;
+	Texture* gridTexture;
 	Texture* requestTexture;
 	Texture* venueTexture;
+	Texture* destinationTexture;
 public:
 	RequestManager();
 	RequestManager(int sectionRadius, int latitudeMax, int longitudeMax, int latitudeMin, int longitudeMin);
@@ -44,11 +46,14 @@ public:
 
 	int getNumberOfRequestsAtLocation(std::pair<long, long> location, int time, int timeRadius);
 
-	void render(ShaderProgram* program, float time, float timeRadius);
+	void render(ShaderProgram* program, float time, float timeRadius, float scaleX, float scaleY);
 
 	void setLineTexture(Texture* texture);
 	void setRequestTexture(Texture* texture);
 	void setVenueTexture(Texture* texture);
+	void setDestinationTexture(Texture* texture);
+	void setGridTexture(Texture* gridTexture){ this->gridTexture = gridTexture; }
+	void freeMemory();
 };
 
 #endif

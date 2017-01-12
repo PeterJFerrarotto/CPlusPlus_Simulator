@@ -192,8 +192,18 @@ float Vehicle::getRenderingAngle(){
 	if (routingLog.size() != 0){
 		float distY = routingLog.front().second.first - currentRenderingLocation.first;
 		float distX = routingLog.front().second.second - currentRenderingLocation.second;
-		float angle = atan(distY / distX);
+		float angle;
+		angle = distX != 0 ? angle = atan(distY / distX) : 3.14/2;
 		return angle;
 	}
 	return 0;
+}
+
+void Vehicle::freeMemory(){
+	while (!routingLog.empty()){
+		routingLog.pop();
+	}
+	while (!requests.empty()){
+		requests.pop();
+	}
 }

@@ -17,6 +17,7 @@
 #include <iostream>
 #include "renderingMathHelper.h"
 #include "Texture.h"
+#include "Button.h"
 
 using namespace rapidxml;
 
@@ -50,12 +51,48 @@ protected:
 	Texture* requestTexture;
 	Texture* venueTexture;
 	Texture* vehicleTexture;
+	Texture* destinationTexture;
+	Texture* textSheet;
+	Texture* gridTexture;
+
+	float offsetX, offsetY;
+	float scaleOffsetX, scaleOffsetY;
+	float windowSizeOffsetX, windowSizeOffsetY;
 	float simTime;
 	inline xml_document<> * loadXMLFile(const char* filePath){
 		file<>* xmlFile = new file<>(filePath);
 		xml_document<>* doc = new xml_document<>;
 		doc->parse<0>(xmlFile->data());
 		return doc;
+	}
+
+	inline float scoreRequest(Vehicle* vehicle, RideRequest* request, RequestManager manager, int time, int timeRadius, float weightOfDistanceOfRide, int maxRideRequests, float(*routing)(float, float, float, float)){
+		float distanceToRide = routing(vehicle->getCurrentLocation().first, vehicle->getCurrentLocation().second, request->getLocation().first, request->getLocation().second);
+		//Assumption: each unit is travelled in one hour.
+		int timeToUse = time;
+		if (vehicle->getTopRequest() != nullptr){
+			timeToUse = vehicle->getTopRequest()->getRequestTime() + vehicle->getTopRequest()->getDistanceOfRequest();
+		}
+		if (request->getRequestTime() > timeToUse + ceil(distanceToRide) + timeRadius || request->getRequestTime() < timeToUse + ceil(distanceToRide) - timeRadius){
+			return -1;
+		}
+		float distanceOfRide = request->getDistanceOfRequestCalculated() ? request->getDistanceOfRequest() : routing(request->getLocation().first, request->getLocation().second, request->getDestination().first, request->getDestination().second);
+		//Currently using the calculated distance as the time.
+		int timeOfRide = (int)distanceOfRide;
+		int numOfRequestsAtDestination = manager.getNumberOfRequestsAtLocation(request->getDestination(), request->getRequestTime() + timeOfRide, timeRadius);
+		float score = 0;
+
+		//The smaller the distance to the ride, the greater the score.
+		score = (distanceOfRide / (distanceToRide + distanceOfRide)) * 10;
+		request->setDistanceToRequest(ceil(distanceToRide));
+		request->setDistanceOfRequest(distanceOfRide);
+		request->setRequestsAtDestination(numOfRequestsAtDestination);
+		score += ((distanceOfRide)* (weightOfDistanceOfRide)) * 10;
+
+		if (numOfRequestsAtDestination < 30){
+			score += (-3 + (numOfRequestsAtDestination * (3 / maxRideRequests)));
+		}
+		return score;
 	}
 
 	inline void enrichRequestData(xml_node<>* requestNode){
@@ -172,8 +209,25 @@ protected:
 		managers[currentTest].initializeRequestMap();
 
 		managers[currentTest].setLineTexture(lineTexture);
+		managers[currentTest].setGridTexture(gridTexture);
 		managers[currentTest].setRequestTexture(requestTexture);
 		managers[currentTest].setVenueTexture(venueTexture);
+		managers[currentTest].setDestinationTexture(destinationTexture);
+	}
+
+	inline void createManagerFromParams(float maxLong, float maxLat, float sectionSize){
+		managers[currentTest].setLatitudeMin(0);
+		managers[currentTest].setLongitudeMin(0);
+		managers[currentTest].setLatitudeMax(maxLat);
+		managers[currentTest].setLongitudeMax(maxLong);
+		managers[currentTest].setSectionRadius(sectionSize);
+		managers[currentTest].initializeRequestMap();
+
+		managers[currentTest].setLineTexture(lineTexture);
+		managers[currentTest].setGridTexture(gridTexture);
+		managers[currentTest].setRequestTexture(requestTexture);
+		managers[currentTest].setVenueTexture(venueTexture);
+		managers[currentTest].setDestinationTexture(destinationTexture);
 	}
 
 	inline void enrichVenueData(xml_node<>* venueNode){
@@ -226,11 +280,53 @@ protected:
 		managers[currentTest].addVenue(venue);
 	}
 
-	inline void initialize(bool getParameters){
-		lineTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/line_texture.png"), 0);
+	inline void initialize(const std::string& customTestName, unsigned customTimesToRun, float customTripWeight, float customRadiusMin, float customRadiusStep, 
+		float customRadiusMax, float customTimeRadius, float customMinimumScore, unsigned customMaximumRideRequests, unsigned customFleetSize, unsigned customVenueCount,
+		unsigned customRideCount, float customMaxLat, float customMaxLong, float customSectionSize){
+		gridTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/grid_texture.png"), 0);
 		requestTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/request_texture.png"), 1);
 		venueTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/venue_texture.png"), 1);
+		destinationTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/destination_texture.png"), 1);
+		lineTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/line_texture.png"), 1);
 		vehicleTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/vehicle_texture.png"), 2);
+		textSheet = new Texture(loadTexture(RESOURCE_FOLDER"Assets/text_format.png"), 2);
+
+		currentTest = customTestName;
+		tests.push_back(currentTest);
+		createManagerFromParams(customMaxLong, customMaxLat, customSectionSize);
+		weightOfDistanceOfTrip[currentTest] = customTripWeight;
+		timesToRun[currentTest] = customTimesToRun;
+		radiusMin[currentTest] = customRadiusMin;
+		radiusStep[currentTest] = customRadiusStep;
+		radiusMax[currentTest] = customRadiusMax;
+		timeRadius[currentTest] = customTimeRadius;
+		minimumScore[currentTest] = customMinimumScore;
+		maxRideRequests[currentTest] = customMaximumRideRequests;
+		for (int i = 0; i < customFleetSize; i++){
+			createRandomVehicle(0, 0, customMaxLat, customMaxLong);
+		}
+		for (int i = 0; i < customVenueCount; i++){
+			createRandomVenue(0, 0, customMaxLat, customMaxLong);
+		}
+		for (int i = 0; i < customRideCount; i++){
+			createRandomRequest(0, 0, customMaxLat, customMaxLong);
+		}
+	}
+
+	inline void initialize(bool getParameters){
+		gridTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/grid_texture.png"), 0);
+		requestTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/request_texture.png"), 1);
+		venueTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/venue_texture.png"), 1);
+		destinationTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/destination_texture.png"), 1);
+		lineTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/line_texture.png"), 1);
+		vehicleTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/vehicle_texture.png"), 2);
+		textSheet = new Texture(loadTexture(RESOURCE_FOLDER"Assets/text_format.png"), 2);
+		offsetX = 0;
+		offsetY = 0;
+		scaleOffsetX = 0;
+		scaleOffsetY = 0;
+		windowSizeOffsetX = 0;
+		windowSizeOffsetY = 0;
 		if (!getParameters){
 			DIR *dirp;
 			struct dirent *dp;
@@ -358,17 +454,24 @@ protected:
 		}
 	}
 
+	inline void handleInput(const Uint8* input, SDL_Event input2){
+	}
 
-	inline void render(ShaderProgram* program, float elapsed, float framesPerSecond, const std::string& testName){
-		managers[testName].render(program, elapsed, timeRadius[testName]);
+
+	inline void render(ShaderProgram* program, float elapsed, float framesPerSecond, int scaleX, int scaleY, const std::string& testName){
+		managers[testName].render(program, elapsed, timeRadius[testName], scaleX, scaleY);
 		Matrix modelMatrix;
 		std::vector<GLfloat> objectVertices;
 		std::vector<GLfloat> textureCoordinates;
+		std::vector<GLfloat> colorVector;
+		for (int i = 0; i < 6; i++){
+			colorVector.insert(colorVector.end(), {1.0, 1.0, 1.0, 1.0});
+		}
 		for (Vehicle* vehicle : vehicles[testName]){
 			modelMatrix.identity();
 			modelMatrix.Translate(vehicle->getCurrentRenderingLocation().second, vehicle->getCurrentRenderingLocation().first, 0);
-			modelMatrix.Scale(1, 1, 0);
-			//modelMatrix.Rotate(vehicle->getRenderingAngle());
+			modelMatrix.Scale(scaleX + 0.5, scaleY + 0.5, 0);
+			modelMatrix.Rotate(vehicle->getRenderingAngle());
 			objectVertices = { -0.5f, -0.5f, 0.5f, -0.5f, 0.5f, 0.5f, -0.5f, -0.5f, 0.5f, 0.5f, -0.5f, 0.5f };
 			//-1, -1, 1, -1, 1, 1, -1, -1, 1, 1, -1, 1
 			//n, n, p, n, p, p, n, n, p, p, n, p
@@ -387,11 +490,69 @@ protected:
 			glDisableVertexAttribArray(program->positionAttribute);
 			glDisableVertexAttribArray(program->texCoordAttribute);
 		}
+		float texture_size = 1.0 / 16.0f;
+		std::vector<float> vertexData;
+		std::vector<float> texCoordData;
+		std::vector<float> color;
+		float timeToUse = roundf(elapsed * 1000.0) / 1000.0;
+		std::stringstream textStream;
+		//text = "Time: %f" % timeToUse;
+		//text += std::to_string(timeToUse);
+		textStream.precision(3);
+		textStream << "Time: " << timeToUse;
+		std::string text = textStream.str();
+		modelMatrix.identity();
+		modelMatrix.Translate(0, -3, 0);
+		float textScaleX = (getMaxCoords(testName).second / getSectionRadius(testName)) * 0.375;
+		float textScaleY = (getMaxCoords(testName).first / getSectionRadius(testName)) * 0.375;
+		modelMatrix.Scale(textScaleX, textScaleY, 0);
+		float size = 0.5;
+		float spacing = 0.2;
+		for (int i = 0; i < text.size(); i++) {
+			float texture_x = (float)(((int)text[i]) % 16) / 16.0f;
+			float texture_y = (float)(((int)text[i]) / 16) / 16.0f;
+			vertexData.insert(vertexData.end(), { ((size + spacing) * i) + (-0.5f * size), 0.5f * size, ((size + spacing) * i) + (-0.5f * size), -0.5f * size, ((size + spacing) * i) + (0.5f * size), 0.5f * size, ((size + spacing) * i) + (0.5f * size), -0.5f * size, ((size + spacing) * i) + (0.5f * size), 0.5f * size, ((size + spacing) * i) + (-0.5f * size), -0.5f * size,
+			});
+			texCoordData.insert(texCoordData.end(), { texture_x, texture_y,
+				texture_x, texture_y + texture_size, texture_x + texture_size, texture_y, texture_x + texture_size, texture_y + texture_size, texture_x + texture_size, texture_y, texture_x, texture_y + texture_size,
+			});
+		}
+		glUseProgram(program->programID);
+		glVertexAttribPointer(program->positionAttribute, 2, GL_FLOAT, false, 0, vertexData.data());
+		glEnableVertexAttribArray(program->positionAttribute);
+		glVertexAttribPointer(program->texCoordAttribute, 2, GL_FLOAT, false, 0, texCoordData.data());
+		glEnableVertexAttribArray(program->texCoordAttribute);
+		program->setModelMatrix(modelMatrix);
+
+
+		glBindTexture(GL_TEXTURE_2D, textSheet->getTextureID());
+		glDrawArrays(GL_TRIANGLES, 0, vertexData.size() / 2);
+
+		glDisableVertexAttribArray(program->positionAttribute);
+		glDisableVertexAttribArray(program->texCoordAttribute);
 	}
 
 public:
 	Simulator(bool getParameters = false){
-		initialize(getParameters);
+		if (!getParameters){
+			initialize(getParameters);
+		}
+	}
+
+	//std::unordered_map<std::string, float> weightOfDistanceOfTrip;
+	//std::unordered_map<std::string, unsigned> timesToRun;
+	//std::unordered_map<std::string, float> radiusMin;
+	//std::unordered_map<std::string, float> radiusStep;
+	//std::unordered_map<std::string, float> radiusMax;
+	//std::unordered_map<std::string, float> timeRadius;
+	//std::unordered_map<std::string, float> minimumScore;
+	//std::unordered_map<std::string, int> maxRideRequests;
+
+	void initializeSimulatorWithParams(const std::string& customTestName, unsigned customTimesToRun, float customTripWeight, float customRadiusMin, float customRadiusStep, float customRadiusMax,
+		float customTimeRadius, float customMinimumScore, unsigned customMaximumRideRequests, unsigned customFleetSize, unsigned customVenueCount,
+		unsigned customRideCount, float customMaxLat, float customMaxLong, float customSectionSize){
+		initialize(customTestName, customTimesToRun, customTripWeight, customRadiusMin, customRadiusStep, customRadiusMax, customTimeRadius, customMinimumScore,
+			customMaximumRideRequests, customFleetSize, customVenueCount, customRideCount, customMaxLat, customMaxLong, customSectionSize);
 	}
 
 	inline void runTests(){
@@ -578,22 +739,84 @@ public:
 		return timesToRun[testName];
 	}
 
-	inline void prepareToRender(const std::string& testName){
-		for (Vehicle* vehicle : vehicles[testName]){
-			vehicle->prepareForRendering();
-		}
-		simTime = 0;
-	}
-
-	inline void visualize(float elapsed, const Uint8* input, SDL_Event input2, ShaderProgram* program, const std::string& testName){
+	inline void visualize(float elapsed, const Uint8* input, SDL_Event input2, ShaderProgram* program, const std::string& testName, SDL_Window* displayWindow){
 		glClear(GL_COLOR_BUFFER_BIT);
 		Matrix viewMatrix;
-		viewMatrix.Scale((float)managers[testName].getSectionRadius() / (float)managers[testName].getMaxCoords().second, ((float)managers[testName].getSectionRadius() / (float)managers[testName].getMaxCoords().first)/2, 0);
-		viewMatrix.Translate(-(managers[testName].getSectionRadius() * 2)-((managers[testName].getMaxCoords().first) / managers[testName].getMaxCoords().second), -(managers[testName].getSectionRadius() * 2) -(managers[testName].getMaxCoords().second / managers[testName].getMaxCoords().first), 0);
+		handleInput(input, input2);
+		//viewMatrix.Scale((float)managers[testName].getSectionRadius() / (float)managers[testName].getMaxCoords().second, ((float)managers[testName].getSectionRadius() / (float)managers[testName].getMaxCoords().first)/2, 0);
+		//viewMatrix.Translate(-(managers[testName].getSectionRadius() * 2)-((managers[testName].getMaxCoords().first) / managers[testName].getMaxCoords().second), -(managers[testName].getSectionRadius() * 2) -(managers[testName].getMaxCoords().second / managers[testName].getMaxCoords().first), 0);
+		float scaleX = (float)managers[testName].getSectionRadius() / (float)managers[testName].getMaxCoords().second;
+		float scaleY = (float)managers[testName].getSectionRadius() / (float)managers[testName].getMaxCoords().first;
+		float translateX = -(managers[testName].getSectionRadius() * 2) - ((managers[testName].getMaxCoords().second / managers[testName].getMaxCoords().first));
+		float translateY = -(managers[testName].getSectionRadius() * 2) - ((managers[testName].getMaxCoords().first / managers[testName].getMaxCoords().first));
+		windowSizeOffsetX = getMaxCoords(testName).second;
+		windowSizeOffsetY = getMaxCoords(testName).first;
+		viewMatrix.Scale(scaleX + scaleOffsetX, scaleY + scaleOffsetY, 0);
+		//offsetX = -15;
+		//offsetY = -15;
+		viewMatrix.Translate(translateX + offsetX, translateY + offsetY, 0);
+		SDL_SetWindowSize(displayWindow, 720, 800);
+		glViewport(0, 0, 720, 800);
+		Matrix projectionMatrix;
+		int coeffX = (int)(getMaxCoords(testName).second / getSectionRadius(testName));
+		int coeffY = (int)(getMaxCoords(testName).first / getSectionRadius(testName));
+		if (coeffX < 10){
+			coeffX *= 10;
+			offsetX = 0;
+		}
+		else{
+			offsetX = -(getMaxCoords(testName).second/getSectionRadius(testName) + getSectionRadius(testName));
+		}
 
+		if (coeffY < 10){
+			coeffY *= 10;
+			offsetY = 0;
+		}
+		else{
+			offsetY = -(getMaxCoords(testName).first / getSectionRadius(testName) + getSectionRadius(testName));
+		}
+		projectionMatrix.setOrthoProjection(-(640 + windowSizeOffsetX * coeffX) / 360, (640 + windowSizeOffsetX * coeffX) / 360, -(640 + windowSizeOffsetY * coeffY) / 360, (640 + windowSizeOffsetY * coeffY) / 360, -1.0, 1.0);
+		program->setProjectionMatrix(projectionMatrix);
 		program->setViewMatrix(viewMatrix);
 		update(elapsed, testName);
-		render(program, elapsed, FRAMES_PER_SECOND, testName);
+		float elementScaleX = ((float)(getMaxCoords(testName).second) / (float)(getSectionRadius(testName))) / 4;
+		float elementScaleY = ((float)(getMaxCoords(testName).first) / (float)(getSectionRadius(testName))) / 4;
+		render(program, elapsed, FRAMES_PER_SECOND, elementScaleX, elementScaleY, testName);
+	}
+
+	inline void freeMemory(){
+		delete lineTexture;
+		delete venueTexture;
+		delete vehicleTexture;
+		delete requestTexture;
+		delete destinationTexture;
+		lineTexture = nullptr;
+		venueTexture = nullptr;
+		vehicleTexture = nullptr;
+		requestTexture = nullptr;
+		destinationTexture = nullptr;
+		for (std::unordered_map<std::string, RequestManager>::iterator itr = managers.begin(); itr != managers.end(); itr++){
+			itr->second.freeMemory();
+		}
+		managers.clear();
+
+		for (std::unordered_map<std::string, std::vector<Vehicle*>>::iterator itr = vehicles.begin(); itr != vehicles.end(); itr++){
+			for (Vehicle* vehicle : itr->second){
+				vehicle->freeMemory();
+				delete vehicle;
+				vehicle = nullptr;
+			}
+			itr->second.clear();
+		}
+		vehicles.clear();
+	}
+
+	inline std::pair<int, int> getMaxCoords(const std::string& testName){
+		return managers[testName].getMaxCoords();
+	}
+
+	inline int getSectionRadius(const std::string& testName){
+		return managers[testName].getSectionRadius();
 	}
 };
 

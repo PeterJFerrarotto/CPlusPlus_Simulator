@@ -30,6 +30,7 @@ protected:
 public:
 	Vehicle();
 	~Vehicle();
+	void freeMemory();
 	std::pair<long, long> getCurrentLocation();
 
 	void addRequest(RideRequest* request);

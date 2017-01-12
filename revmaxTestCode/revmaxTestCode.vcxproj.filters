@@ -39,6 +39,9 @@
     <ClCompile Include="Texture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mathHelper.h">
@@ -86,15 +89,72 @@
     <ClInclude Include="renderingMathHelper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="enumHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="XML\testData2.xml" />
-    <Xml Include="XML\testData.xml" />
+    <Xml Include="XML\testData.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
+    <Xml Include="XML\testData2.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
   </ItemGroup>
   <ItemGroup>
     <None Include="fragment.glsl" />
     <None Include="fragment_textured.glsl" />
     <None Include="vertex.glsl" />
     <None Include="vertex_textured.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\decrease_texture.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\destination_texture.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\done_texture.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\grid_texture.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\increase_texture.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\line_texture.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\request_texture.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\triangle.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\use_custom.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\use_files.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\vehicle_texture.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\venue_texture.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
