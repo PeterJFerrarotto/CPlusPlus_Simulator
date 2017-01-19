@@ -75,7 +75,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Button.cpp" />
-    <ClCompile Include="EventVenue.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="RequestManager.cpp" />
@@ -87,7 +86,6 @@
   <ItemGroup>
     <ClInclude Include="Button.h" />
     <ClInclude Include="dirent.h" />
-    <ClInclude Include="EventVenue.h" />
     <ClInclude Include="enumHelper.h" />
     <ClInclude Include="mathHelper.h" />
     <ClInclude Include="Matrix.h" />
@@ -97,8 +95,6 @@
     <ClInclude Include="rapidxml_utils.hpp" />
     <ClInclude Include="renderingMathHelper.h" />
     <ClInclude Include="RequestManager.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="resource1.h" />
     <ClInclude Include="RideRequest.h" />
     <ClInclude Include="ShaderProgram.h" />
     <ClInclude Include="Texture.h" />

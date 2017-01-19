@@ -1,6 +1,6 @@
 #include "RequestManager.h"
 #include "RideRequest.h"
-#include "EventVenue.h"
+//#include "EventVenue.h"
 #include "Texture.h"
 #include "ShaderProgram.h"
 #include "mathHelper.h"
@@ -63,29 +63,44 @@ void RequestManager::addRequest(RideRequest* request){
 	else if (longitudeToUse % sectionRadius <= sectionRadius / 2){
 		longitudeToUse -= longitudeToUse % sectionRadius;
 	}
+
+	if (latitudeToUse < latitudeMin){
+		latitudeToUse = latitudeMin;
+	}
+	else if (latitudeToUse > latitudeMax){
+		latitudeToUse = latitudeMax;
+	}
+
+	if (longitudeToUse < longitudeMin){
+		longitudeToUse = longitudeMin;
+	}
+	else if (longitudeToUse > longitudeMax){
+		longitudeToUse = longitudeMax;
+	}
+
 	requestMap[latitudeToUse][longitudeToUse].push_back(request);
 	allRideRequests.push_back(request);
 }
 
-void RequestManager::addVenue(EventVenue* venue){
-	int latitudeToUse = (int)venue->getLocation().first;
-	int longitudeToUse = (int)venue->getLocation().second;
-	if (latitudeToUse % sectionRadius > sectionRadius / 2){
-		latitudeToUse += sectionRadius - (latitudeToUse % sectionRadius);
-	}
-	else if (latitudeToUse % sectionRadius <= sectionRadius / 2){
-		latitudeToUse -= latitudeToUse % sectionRadius;
-	}
-
-	if (longitudeToUse % sectionRadius > sectionRadius / 2){
-		longitudeToUse += sectionRadius - (longitudeToUse % sectionRadius);
-	}
-	else if (longitudeToUse % sectionRadius <= sectionRadius / 2){
-		longitudeToUse -= longitudeToUse % sectionRadius;
-	}
-	venueMap[latitudeToUse][longitudeToUse].push_back(venue);
-	allVenues.push_back(venue);
-}
+//void RequestManager::addVenue(EventVenue* venue){
+//	int latitudeToUse = (int)venue->getLocation().first;
+//	int longitudeToUse = (int)venue->getLocation().second;
+//	if (latitudeToUse % sectionRadius > sectionRadius / 2){
+//		latitudeToUse += sectionRadius - (latitudeToUse % sectionRadius);
+//	}
+//	else if (latitudeToUse % sectionRadius <= sectionRadius / 2){
+//		latitudeToUse -= latitudeToUse % sectionRadius;
+//	}
+//
+//	if (longitudeToUse % sectionRadius > sectionRadius / 2){
+//		longitudeToUse += sectionRadius - (longitudeToUse % sectionRadius);
+//	}
+//	else if (longitudeToUse % sectionRadius <= sectionRadius / 2){
+//		longitudeToUse -= longitudeToUse % sectionRadius;
+//	}
+//	venueMap[latitudeToUse][longitudeToUse].push_back(venue);
+//	allVenues.push_back(venue);
+//}
 
 std::vector<RideRequest*>& RequestManager::getRequestsAtLocation(std::pair<long, long> location){
 	int latitudeToUse = (int)location.first;
@@ -104,6 +119,20 @@ std::vector<RideRequest*>& RequestManager::getRequestsAtLocation(std::pair<long,
 	}
 	else if (longitudeToUse % sectionRadius <= sectionRadius / 2){
 		longitudeToUse -= longitudeToUse % sectionRadius;
+	}
+
+	if (latitudeToUse < latitudeMin){
+		latitudeToUse = latitudeMin;
+	}
+	else if (latitudeToUse > latitudeMax){
+		latitudeToUse = latitudeMax;
+	}
+
+	if (longitudeToUse < longitudeMin){
+		longitudeToUse = longitudeMin;
+	}
+	else if (longitudeToUse > longitudeMax){
+		longitudeToUse = longitudeMax;
 	}
 
 	return requestMap[latitudeToUse][longitudeToUse];
@@ -162,9 +191,9 @@ int RequestManager::getNumberOfRequestsAtLocation(std::pair<long, long> location
 		}
 	}
 
-	for (size_t i = 0; i < venueMap[latitudeToUse][longitudeToUse].size(); i++){
-		requestCount += venueMap[latitudeToUse][longitudeToUse][i]->getProjectedRequests(time, timeRadius);
-	}
+	//for (size_t i = 0; i < venueMap[latitudeToUse][longitudeToUse].size(); i++){
+	//	requestCount += venueMap[latitudeToUse][longitudeToUse][i]->getProjectedRequests(time, timeRadius);
+	//}
 
 	return requestCount;
 }
@@ -177,9 +206,9 @@ void RequestManager::setRequestTexture(Texture* texture){
 	requestTexture = texture;
 }
 
-void RequestManager::setVenueTexture(Texture* texture){
-	venueTexture = texture;
-}
+//void RequestManager::setVenueTexture(Texture* texture){
+//	venueTexture = texture;
+//}
 
 void RequestManager::render(ShaderProgram* program, float time, float timeRadius, float scaleX, float scaleY){
 	std::vector<GLfloat> objectVertices;
@@ -248,96 +277,96 @@ void RequestManager::render(ShaderProgram* program, float time, float timeRadius
 			glDisableVertexAttribArray(program->positionAttribute);
 			glDisableVertexAttribArray(program->texCoordAttribute);
 		}
-		if (request->getMatchedToVehicle() && time >= request->getRequestTime() && time <= request->getRequestTime() + request->getDistanceOfRequest() + timeRadius){
-			modelMatrix.identity();
-			modelMatrix.Translate(request->getDestination().second, request->getDestination().first + 0.5, 0);
-			modelMatrix.Scale(scaleX, scaleY * 2, 0);
-			objectVertices = { -0.5f, -0.5f, 0.5f, -0.5f, 0.5f, 0.5f, -0.5f, -0.5f, 0.5f, 0.5f, -0.5f, 0.5f };
-			// {-x, -y}, {x, -y}, {x, y}
-			// {-x, -y}, {x, y}, {-x, y}
+		//if (request->getMatchedToVehicle() && time >= request->getRequestTime() && time <= request->getRequestTime() + request->getDistanceOfRequest() + timeRadius){
+		//	modelMatrix.identity();
+		//	modelMatrix.Translate(request->getDestination().second, request->getDestination().first + 0.5, 0);
+		//	modelMatrix.Scale(scaleX, scaleY * 2, 0);
+		//	objectVertices = { -0.5f, -0.5f, 0.5f, -0.5f, 0.5f, 0.5f, -0.5f, -0.5f, 0.5f, 0.5f, -0.5f, 0.5f };
+		//	// {-x, -y}, {x, -y}, {x, y}
+		//	// {-x, -y}, {x, y}, {-x, y}
 
-			textureCoordinates = destinationTexture->getTextureCoordinates();
-			glBindTexture(GL_TEXTURE_2D, destinationTexture->getTextureID());
-			program->setModelMatrix(modelMatrix);
+		//	textureCoordinates = destinationTexture->getTextureCoordinates();
+		//	glBindTexture(GL_TEXTURE_2D, destinationTexture->getTextureID());
+		//	program->setModelMatrix(modelMatrix);
 
-			glEnableVertexAttribArray(program->positionAttribute);
-			glVertexAttribPointer(program->positionAttribute, 2, GL_FLOAT, false, 0, objectVertices.data());
+		//	glEnableVertexAttribArray(program->positionAttribute);
+		//	glVertexAttribPointer(program->positionAttribute, 2, GL_FLOAT, false, 0, objectVertices.data());
 
-			glEnableVertexAttribArray(program->texCoordAttribute);
-			glVertexAttribPointer(program->texCoordAttribute, 2, GL_FLOAT, false, 0, textureCoordinates.data());
+		//	glEnableVertexAttribArray(program->texCoordAttribute);
+		//	glVertexAttribPointer(program->texCoordAttribute, 2, GL_FLOAT, false, 0, textureCoordinates.data());
 
-			glDrawArrays(GL_TRIANGLES, 0, 6);
-			glDisableVertexAttribArray(program->positionAttribute);
-			glDisableVertexAttribArray(program->texCoordAttribute);
-			
-			float lineWidth = 0.5;
+		//	glDrawArrays(GL_TRIANGLES, 0, 6);
+		//	glDisableVertexAttribArray(program->positionAttribute);
+		//	glDisableVertexAttribArray(program->texCoordAttribute);
+		//	
+		//	float lineWidth = 0.5;
 
-			float destX = request->getDestination().second;
-			float destY = request->getDestination().first;
+		//	float destX = request->getDestination().second;
+		//	float destY = request->getDestination().first;
 
-			float locX = request->getLocation().second;
-			float locY = request->getLocation().first;
+		//	float locX = request->getLocation().second;
+		//	float locY = request->getLocation().first;
 
-			float dist = pythagDistance(locX, locY, destX, destY);
+		//	float dist = pythagDistance(locX, locY, destX, destY);
 
-			// Triangle Right: {-x, -y}, {x, -y}, {x, y}
-			// Triangle Left: {-x, -y}, {x, y}, {-x, y}
-			float centerX = (locX + destX) / 2;
-			float centerY = (locY + destY) / 2;
+		//	// Triangle Right: {-x, -y}, {x, -y}, {x, y}
+		//	// Triangle Left: {-x, -y}, {x, y}, {-x, y}
+		//	float centerX = (locX + destX) / 2;
+		//	float centerY = (locY + destY) / 2;
 
-			//float angle = atan2f(destY - locY, destX - locX);
-			float angle = abs(acosf((destY - locY) / dist));
-			while (angle >= M_PI){
-				angle -= M_PI;
-			}
-			//if (angle > 3.14159 / 4 && angle < 3.14159 / 3){
-			//	angle *= -1;
-			//}
-			if (destX > locX){
-				angle *= -1;
-			}
-			textureCoordinates = lineTexture->getTextureCoordinates();
-			glBindTexture(GL_TEXTURE_2D, lineTexture->getTextureID());
-			modelMatrix.identity();
-			modelMatrix.Translate(centerX, centerY, 0);
-			modelMatrix.Rotate(angle);
-			modelMatrix.Scale(lineWidth, dist, 0);
-			program->setModelMatrix(modelMatrix);
+		//	//float angle = atan2f(destY - locY, destX - locX);
+		//	float angle = abs(acosf((destY - locY) / dist));
+		//	while (angle >= M_PI){
+		//		angle -= M_PI;
+		//	}
+		//	//if (angle > 3.14159 / 4 && angle < 3.14159 / 3){
+		//	//	angle *= -1;
+		//	//}
+		//	if (destX > locX){
+		//		angle *= -1;
+		//	}
+		//	textureCoordinates = lineTexture->getTextureCoordinates();
+		//	glBindTexture(GL_TEXTURE_2D, lineTexture->getTextureID());
+		//	modelMatrix.identity();
+		//	modelMatrix.Translate(centerX, centerY, 0);
+		//	modelMatrix.Rotate(angle);
+		//	modelMatrix.Scale(lineWidth, dist, 0);
+		//	program->setModelMatrix(modelMatrix);
 
-			glEnableVertexAttribArray(program->positionAttribute);
-			glVertexAttribPointer(program->positionAttribute, 2, GL_FLOAT, false, 0, objectVertices.data());
+		//	glEnableVertexAttribArray(program->positionAttribute);
+		//	glVertexAttribPointer(program->positionAttribute, 2, GL_FLOAT, false, 0, objectVertices.data());
 
-			glEnableVertexAttribArray(program->texCoordAttribute);
-			glVertexAttribPointer(program->texCoordAttribute, 2, GL_FLOAT, false, 0, textureCoordinates.data());
+		//	glEnableVertexAttribArray(program->texCoordAttribute);
+		//	glVertexAttribPointer(program->texCoordAttribute, 2, GL_FLOAT, false, 0, textureCoordinates.data());
 
-			glDrawArrays(GL_TRIANGLES, 0, 6);
-			glDisableVertexAttribArray(program->positionAttribute);
-			glDisableVertexAttribArray(program->texCoordAttribute);
-		}
+		//	glDrawArrays(GL_TRIANGLES, 0, 6);
+		//	glDisableVertexAttribArray(program->positionAttribute);
+		//	glDisableVertexAttribArray(program->texCoordAttribute);
+		//}
 	}
 
-	for (EventVenue* venue : allVenues){
-		modelMatrix.identity();
-		modelMatrix.Translate(venue->getLocation().second, venue->getLocation().first, 0);
-		//modelMatrix.setPosition(1.0, -2.0, 0.0);
-		modelMatrix.Scale(scaleX, scaleY, 0);
-		//modelMatrix.Rotate(3.14 / 4);
-		objectVertices = { -0.5f, -0.5f, 0.5f, -0.5f, 0.5f, 0.5f, -0.5f, -0.5f, 0.5f, 0.5f, -0.5f, 0.5f };
+	//for (EventVenue* venue : allVenues){
+	//	modelMatrix.identity();
+	//	modelMatrix.Translate(venue->getLocation().second, venue->getLocation().first, 0);
+	//	//modelMatrix.setPosition(1.0, -2.0, 0.0);
+	//	modelMatrix.Scale(scaleX, scaleY, 0);
+	//	//modelMatrix.Rotate(3.14 / 4);
+	//	objectVertices = { -0.5f, -0.5f, 0.5f, -0.5f, 0.5f, 0.5f, -0.5f, -0.5f, 0.5f, 0.5f, -0.5f, 0.5f };
 
-		textureCoordinates = venueTexture->getTextureCoordinates();
-		glBindTexture(GL_TEXTURE_2D, venueTexture->getTextureID());
-		program->setModelMatrix(modelMatrix);
+	//	textureCoordinates = venueTexture->getTextureCoordinates();
+	//	glBindTexture(GL_TEXTURE_2D, venueTexture->getTextureID());
+	//	program->setModelMatrix(modelMatrix);
 
-		glEnableVertexAttribArray(program->positionAttribute);
-		glVertexAttribPointer(program->positionAttribute, 2, GL_FLOAT, false, 0, objectVertices.data());
+	//	glEnableVertexAttribArray(program->positionAttribute);
+	//	glVertexAttribPointer(program->positionAttribute, 2, GL_FLOAT, false, 0, objectVertices.data());
 
-		glEnableVertexAttribArray(program->texCoordAttribute);
-		glVertexAttribPointer(program->texCoordAttribute, 2, GL_FLOAT, false, 0, textureCoordinates.data());
+	//	glEnableVertexAttribArray(program->texCoordAttribute);
+	//	glVertexAttribPointer(program->texCoordAttribute, 2, GL_FLOAT, false, 0, textureCoordinates.data());
 
-		glDrawArrays(GL_TRIANGLES, 0, 6);
-		glDisableVertexAttribArray(program->positionAttribute);
-		glDisableVertexAttribArray(program->texCoordAttribute);
-	}
+	//	glDrawArrays(GL_TRIANGLES, 0, 6);
+	//	glDisableVertexAttribArray(program->positionAttribute);
+	//	glDisableVertexAttribArray(program->texCoordAttribute);
+	//}
 }
 
 int RequestManager::getSectionRadius(){
@@ -346,9 +375,9 @@ int RequestManager::getSectionRadius(){
 
 void RequestManager::freeMemory(){
 	requestMap.clear();
-	venueMap.clear();
+	//venueMap.clear();
 	lineTexture = nullptr;
-	venueTexture = nullptr;
+	//venueTexture = nullptr;
 	requestTexture = nullptr;
 	destinationTexture = nullptr;
 	for (int i = 0; i < allRideRequests.size(); i++){
@@ -356,11 +385,11 @@ void RequestManager::freeMemory(){
 		allRideRequests[i] = nullptr;
 	}
 	allRideRequests.clear();
-	for (int i = 0; i < allVenues.size(); i++){
-		delete allVenues[i];
-		allVenues[i] = nullptr;
-	}
-	allRideRequests.clear();
+	//for (int i = 0; i < allVenues.size(); i++){
+	//	delete allVenues[i];
+	//	allVenues[i] = nullptr;
+	//}
+	//allRideRequests.clear();
 }
 
 void RequestManager::setDestinationTexture(Texture* texture){

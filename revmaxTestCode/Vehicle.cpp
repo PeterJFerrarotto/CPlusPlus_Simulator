@@ -207,3 +207,8 @@ void Vehicle::freeMemory(){
 		requests.pop();
 	}
 }
+
+void Vehicle::setStartingLocation(long latitude, long longitude){
+	setLocation(latitude, longitude);
+	routingLog.push(std::make_pair(0, std::make_pair(latitude, longitude)));
+}

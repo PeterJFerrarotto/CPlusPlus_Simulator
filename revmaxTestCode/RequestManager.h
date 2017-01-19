@@ -4,16 +4,16 @@
 #include "Matrix.h"
 
 class RideRequest;
-class EventVenue;
+//class EventVenue;
 class Texture;
 class ShaderProgram;
 class RequestManager
 {
 protected:
 	std::unordered_map<int, std::unordered_map<int, std::vector<RideRequest*>>> requestMap;
-	std::unordered_map<int, std::unordered_map<int, std::vector<EventVenue*>>> venueMap;
+	//std::unordered_map<int, std::unordered_map<int, std::vector<EventVenue*>>> venueMap;
 	std::vector<RideRequest*> allRideRequests;
-	std::vector<EventVenue*> allVenues;
+	//std::vector<EventVenue*> allVenues;
 	int latitudeMax, longitudeMax;
 	int latitudeMin, longitudeMin;
 	int sectionRadius;
@@ -23,7 +23,7 @@ protected:
 	Texture* lineTexture;
 	Texture* gridTexture;
 	Texture* requestTexture;
-	Texture* venueTexture;
+	//Texture* venueTexture;
 	Texture* destinationTexture;
 public:
 	RequestManager();
@@ -35,7 +35,7 @@ public:
 	void setLatitudeMin(int latitudeMin);
 	void setLongitudeMin(int longitudeMin);
 	void addRequest(RideRequest* toAdd);
-	void addVenue(EventVenue* toAdd);
+	//void addVenue(EventVenue* toAdd);
 	void initializeRequestMap();
 
 	std::pair<int, int> getMinCoords();
@@ -50,10 +50,13 @@ public:
 
 	void setLineTexture(Texture* texture);
 	void setRequestTexture(Texture* texture);
-	void setVenueTexture(Texture* texture);
+	//void setVenueTexture(Texture* texture);
 	void setDestinationTexture(Texture* texture);
 	void setGridTexture(Texture* gridTexture){ this->gridTexture = gridTexture; }
 	void freeMemory();
+
+	std::vector<RideRequest*>& getAllRideRequests(){ return allRideRequests; }
+	//std::vector<EventVenue*>& getAllEventVenues(){ return allVenues; }
 };
 
 #endif

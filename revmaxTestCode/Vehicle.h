@@ -37,6 +37,8 @@ public:
 
 	void setLocation(long latitude, long longitude);
 
+	void setStartingLocation(long latitude, long longitude);
+
 	//Update assuming that vehicles always take one hour to arrive at 
 	void update();
 
@@ -60,6 +62,7 @@ public:
 
 	std::pair<long, long> getPreviousRenderingLocation();
 	std::pair<float, float> getCurrentRenderingLocation();
+	std::pair<float, float> getNextLocation();
 	std::pair<int, std::pair<long, long>> getNextRoutingNode();
 	void prepareForRendering();
 	bool checkRoutingLog();
