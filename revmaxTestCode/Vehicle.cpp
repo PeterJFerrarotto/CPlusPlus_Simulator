@@ -90,12 +90,13 @@ void Vehicle::update(int time, int timeRadius){
 		std::pair<float, float> rDestination = requests.front()->getDestination();
 		int requestTime = requests.front()->getRequestTime();
 		int matchTime = requests.front()->getTimeMatched();
-		int dropOffTime = requests.front()->getDistanceOfRequest() + requestTime;
+		//int dropOffTime = requests.front()->getDistanceOfRequest() + requestTime;
 		bool rPickedUp = requests.front()->getPickedUp();
 		int actualPickupTime = matchTime + requests.front()->getDistanceToRequest();
 		if (actualPickupTime < requestTime){
 			actualPickupTime = requestTime;
 		}
+		int dropOffTime = requests.front()->getDistanceOfRequest() + actualPickupTime;
 		if ((time >= requestTime && time <= requestTime + timeRadius) && (time == actualPickupTime) && !rPickedUp){
 			requests.front()->setPickedUp(true);
 			currentLocation.first = rLocation.first;

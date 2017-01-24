@@ -1,0 +1,39 @@
+<Parameters WeightOfDistanceOfTrip=".002" TimesToRun="50" MinimumScore="3">
+  <RequestManager></RequestManager>
+  <Requests requestCount="200">
+    <Request>
+      <Location lat="3" long="2"></Location>
+      <Destination lat="5" long="8"></Destination>
+      <RequestTime>23</RequestTime>
+    </Request>
+    <Request>
+      <Location lat="12" long="18"></Location>
+      <Destination lat="3" long="1"></Destination>
+      <RequestTime>4</RequestTime>
+    </Request>
+    <Request>
+      <Location lat="13" long="20"></Location>
+      <Destination lat="16" long="8"></Destination>
+      <RequestTime>5</RequestTime>
+    </Request>
+  </Requests>
+  <Vehicles fleetSize ="5">
+    <Vehicle>
+      <Location lat="10" long="20"></Location>
+    </Vehicle>
+    <Vehicle>
+      <Location lat="14" long="21"></Location>
+    </Vehicle>
+    <Vehicle>
+      <Location lat="16" long="21"></Location>
+    </Vehicle>
+  </Vehicles>
+  <Venues venueCount="10">
+    <Venue>
+      <Location lat="3" long="2"></Location>
+      <Events>
+        <Event time="23" requestCount="15"></Event>
+      </Events>
+    </Venue>
+  </Venues>
+</Parameters>

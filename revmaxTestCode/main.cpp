@@ -162,16 +162,16 @@ int main(int argc, char *argv[]){
 		decreaseRadiusStep.setPosition(-15, -1, 0);
 		nonRangedButtonsPrivate.push_back(decreaseRadiusStep);
 
-	Button increaseRadiusMax, decreaseRadiusMax;
-		increaseRadiusMax.setTexture(increaseTexture);
-		increaseRadiusMax.setSize(2, 2, 0);
-		increaseRadiusMax.setPosition(-15, -4, 0);
-		nonRangedButtonsPrivate.push_back(increaseRadiusMax);
+	//Button increaseRadiusMax, decreaseRadiusMax;
+	//	increaseRadiusMax.setTexture(increaseTexture);
+	//	increaseRadiusMax.setSize(2, 2, 0);
+	//	increaseRadiusMax.setPosition(-15, -4, 0);
+	//	nonRangedButtonsPrivate.push_back(increaseRadiusMax);
 
-		decreaseRadiusMax.setTexture(decreaseTexture);
-		decreaseRadiusMax.setSize(2, 2, 0);
-		decreaseRadiusMax.setPosition(-15, -6, 0);
-		nonRangedButtonsPrivate.push_back(decreaseRadiusMax);
+	//	decreaseRadiusMax.setTexture(decreaseTexture);
+	//	decreaseRadiusMax.setSize(2, 2, 0);
+	//	decreaseRadiusMax.setPosition(-15, -6, 0);
+	//	nonRangedButtonsPrivate.push_back(decreaseRadiusMax);
 
 	Button increaseTimeRadius, decreaseTimeRadius;
 		increaseTimeRadius.setTexture(increaseTexture);
@@ -467,12 +467,12 @@ int main(int argc, char *argv[]){
 							customRadiusStep--;
 						}
 
-						if (increaseRadiusMax.getIsClicked(unitX, unitY)){
-							customRadiusMax++;
-						}
-						if (decreaseRadiusMax.getIsClicked(unitX, unitY) && customRadiusStep > 1){
-							customRadiusMax--;
-						}
+						//if (increaseRadiusMax.getIsClicked(unitX, unitY)){
+						//	customRadiusMax++;
+						//}
+						//if (decreaseRadiusMax.getIsClicked(unitX, unitY) && customRadiusStep > 1){
+						//	customRadiusMax--;
+						//}
 
 						if (increaseTimeRadius.getIsClicked(unitX, unitY)){
 							customTimeRadius++;
@@ -597,12 +597,12 @@ int main(int argc, char *argv[]){
 						customRadiusStep -= coeff;
 					}
 
-					if (increaseRadiusMax.getIsClicked(unitX, unitY)){
-						customRadiusMax += coeff;
-					}
-					if (decreaseRadiusMax.getIsClicked(unitX, unitY) && customRadiusStep > 1){
-						customRadiusMax -= coeff;
-					}
+					//if (increaseRadiusMax.getIsClicked(unitX, unitY)){
+					//	customRadiusMax += coeff;
+					//}
+					//if (decreaseRadiusMax.getIsClicked(unitX, unitY) && customRadiusStep > 1){
+					//	customRadiusMax -= coeff;
+					//}
 
 					if (increaseTimeRadius.getIsClicked(unitX, unitY)){
 						customTimeRadius += coeff;
@@ -789,8 +789,8 @@ int main(int argc, char *argv[]){
 		int customRadiusStepTop = 6;
 		int customRadiusStepBottom = 5;
 
-		int customRadiusMaxTop = 3;
-		int customRadiusMaxBottom = 2;
+		int customRadiusMax = 2;
+		//int customRadiusMax = 2;
 
 		int customTimeRadiusTop = 6;
 		int customTimeRadiusBottom = 5;
@@ -877,7 +877,7 @@ int main(int argc, char *argv[]){
 								drawText(&program, 7, 15, 1, 1, std::to_string(customRadiusStepBottom) + " : " + std::to_string(customRadiusStepTop), textSheet);
 
 								drawText(&program, -17, 13, 1, 1, "Maximum Search Radius Range: ", textSheet);
-								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMaxBottom * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMaxTop * customRadiusStepTop + customRadiusMinTop), textSheet);
+								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMax * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMax * customRadiusStepTop + customRadiusMinTop), textSheet);
 
 								drawText(&program, -17, 11, 1, 1, "Trip Weight Range: ", textSheet);
 								drawText(&program, 7, 11, 1, 1, customTripWeightBottomStr.str() + " : " + customTripWeightTopStr.str(), textSheet);
@@ -934,7 +934,7 @@ int main(int argc, char *argv[]){
 							}
 						}
 
-						if (unitX >= 7 && unitX <= 7 + (std::to_string(customRadiusMinBottom).size() + std::to_string(customRadiusMaxTop).size() + 3) && unitY >= 16.5 && unitY <= 17.5){
+						if (unitX >= 7 && unitX <= 7 + (std::to_string(customRadiusMinBottom).size() + std::to_string(customRadiusMax).size() + 3) && unitY >= 16.5 && unitY <= 17.5){
 							SDL_bool doneWithFirst = SDL_FALSE;
 							SDL_bool doneWithSecond = SDL_FALSE;
 							std::string numLeft = std::to_string(customRadiusMinBottom);
@@ -982,7 +982,7 @@ int main(int argc, char *argv[]){
 								drawText(&program, 7, 15, 1, 1, std::to_string(customRadiusStepBottom) + " : " + std::to_string(customRadiusStepTop), textSheet);
 
 								drawText(&program, -17, 13, 1, 1, "Maximum Search Radius Range: ", textSheet);
-								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMaxBottom * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMaxTop * customRadiusStepTop + customRadiusMinTop), textSheet);
+								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMax * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMax * customRadiusStepTop + customRadiusMinTop), textSheet);
 
 								drawText(&program, -17, 11, 1, 1, "Trip Weight Range: ", textSheet);
 								drawText(&program, 7, 11, 1, 1, customTripWeightBottomStr.str() + " : " + customTripWeightTopStr.str(), textSheet);
@@ -1079,7 +1079,7 @@ int main(int argc, char *argv[]){
 								drawText(&program, 7, 15, 1, 1, std::to_string(customRadiusStepBottom) + " : " + std::to_string(customRadiusStepTop), textSheet);
 
 								drawText(&program, -17, 13, 1, 1, "Maximum Search Radius Range: ", textSheet);
-								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMaxBottom * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMaxTop * customRadiusStepTop + customRadiusMinTop), textSheet);
+								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMax * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMax * customRadiusStepTop + customRadiusMinTop), textSheet);
 
 								drawText(&program, -17, 11, 1, 1, "Trip Weight Range: ", textSheet);
 								drawText(&program, 7, 11, 1, 1, customTripWeightBottomStr.str() + " : " + customTripWeightTopStr.str(), textSheet);
@@ -1187,7 +1187,7 @@ int main(int argc, char *argv[]){
 								drawText(&program, 7, 15, 1, 1, numLeft + "| : " + numRight, textSheet);
 
 								drawText(&program, -17, 13, 1, 1, "Maximum Search Radius Range: ", textSheet);
-								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMaxBottom * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMaxTop * customRadiusStepTop + customRadiusMinTop), textSheet);
+								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMax * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMax * customRadiusStepTop + customRadiusMinTop), textSheet);
 
 								drawText(&program, -17, 11, 1, 1, "Trip Weight Range: ", textSheet);
 								drawText(&program, 7, 11, 1, 1, customTripWeightBottomStr.str() + " : " + customTripWeightTopStr.str(), textSheet);
@@ -1284,7 +1284,7 @@ int main(int argc, char *argv[]){
 								drawText(&program, 7, 15, 1, 1, numLeft + " : " + numRight + "|", textSheet);
 
 								drawText(&program, -17, 13, 1, 1, "Maximum Search Radius Range: ", textSheet);
-								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMaxBottom * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMaxTop * customRadiusStepTop + customRadiusMinTop), textSheet);
+								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMax * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMax * customRadiusStepTop + customRadiusMinTop), textSheet);
 
 								drawText(&program, -17, 11, 1, 1, "Trip Weight Range: ", textSheet);
 								drawText(&program, 7, 11, 1, 1, customTripWeightBottomStr.str() + " : " + customTripWeightTopStr.str(), textSheet);
@@ -1344,11 +1344,11 @@ int main(int argc, char *argv[]){
 							}
 						}
 
-						/*if (unitX >= 7 && unitX <= 7 + (std::to_string(customRadiusMaxBottom).size() + std::to_string(customRadiusMaxTop).size() + 3) && unitY >= 12.5 && unitY <= 13.5){
+						/*if (unitX >= 7 && unitX <= 7 + (std::to_string(customRadiusMax).size() + std::to_string(customRadiusMax).size() + 3) && unitY >= 12.5 && unitY <= 13.5){
 							SDL_bool doneWithFirst = SDL_FALSE;
 							SDL_bool doneWithSecond = SDL_FALSE;
-							std::string numLeft = std::to_string(customRadiusMaxBottom);
-							std::string numRight = std::to_string(customRadiusMaxTop);
+							std::string numLeft = std::to_string(customRadiusMax);
+							std::string numRight = std::to_string(customRadiusMax);
 							SDL_StartTextInput();
 							while (!doneWithFirst){
 								glClear(GL_COLOR_BUFFER_BIT);
@@ -1369,7 +1369,7 @@ int main(int argc, char *argv[]){
 										if (event.key.keysym.scancode == SDL_SCANCODE_RETURN || event.key.keysym.scancode == SDL_SCANCODE_TAB){
 											doneWithFirst = SDL_TRUE;
 											try{
-												customRadiusMaxBottom = std::stoi(numLeft);
+												customRadiusMax = std::stoi(numLeft);
 											}
 											catch (const std::exception& e){
 												std::cerr << "Not a valid number!" << std::endl;
@@ -1430,7 +1430,7 @@ int main(int argc, char *argv[]){
 										if (event.key.keysym.scancode == SDL_SCANCODE_RETURN){
 											doneWithSecond = SDL_TRUE;
 											try{
-												customRadiusMaxTop = std::stoi(numRight);
+												customRadiusMax = std::stoi(numRight);
 											}
 											catch (const std::exception& e){
 												std::cerr << "Not a valid number!" << std::endl;
@@ -1472,10 +1472,10 @@ int main(int argc, char *argv[]){
 								program.setProjectionMatrix(projectionMatrix);
 								SDL_GL_SwapWindow(displayWindow);
 							}
-							if (customRadiusMaxBottom > customRadiusMaxTop){
-								int x = customRadiusMaxBottom;
-								customRadiusMaxBottom = customRadiusMaxTop;
-								customRadiusMaxTop = x;
+							if (customRadiusMax > customRadiusMax){
+								int x = customRadiusMax;
+								customRadiusMax = customRadiusMax;
+								customRadiusMax = x;
 							}
 						}*/
 
@@ -1531,7 +1531,7 @@ int main(int argc, char *argv[]){
 								drawText(&program, 7, 15, 1, 1, std::to_string(customRadiusStepBottom) + " : " + std::to_string(customRadiusStepTop), textSheet);
 
 								drawText(&program, -17, 13, 1, 1, "Maximum Search Radius Range: ", textSheet);
-								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMaxBottom * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMaxTop * customRadiusStepTop + customRadiusMinTop), textSheet);
+								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMax * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMax * customRadiusStepTop + customRadiusMinTop), textSheet);
 
 								drawText(&program, -17, 11, 1, 1, "Trip Weight Range: ", textSheet);
 								drawText(&program, 7, 11, 1, 1, numLeft + "| : " + numRight, textSheet);
@@ -1632,7 +1632,7 @@ int main(int argc, char *argv[]){
 								drawText(&program, 7, 15, 1, 1, std::to_string(customRadiusStepBottom) + " : " + std::to_string(customRadiusStepTop), textSheet);
 
 								drawText(&program, -17, 13, 1, 1, "Maximum Search Radius Range: ", textSheet);
-								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMaxBottom * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMaxTop * customRadiusStepTop + customRadiusMinTop), textSheet);
+								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMax * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMax * customRadiusStepTop + customRadiusMinTop), textSheet);
 
 								drawText(&program, -17, 11, 1, 1, "Trip Weight Range: ", textSheet);
 								drawText(&program, 7, 11, 1, 1, numLeft + " : " + numRight + "|", textSheet);
@@ -1744,7 +1744,7 @@ int main(int argc, char *argv[]){
 								drawText(&program, 7, 15, 1, 1, std::to_string(customRadiusStepBottom) + " : " + std::to_string(customRadiusStepTop), textSheet);
 
 								drawText(&program, -17, 13, 1, 1, "Maximum Search Radius Range: ", textSheet);
-								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMaxBottom * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMaxTop * customRadiusStepTop + customRadiusMinTop), textSheet);
+								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMax * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMax * customRadiusStepTop + customRadiusMinTop), textSheet);
 
 								drawText(&program, -17, 11, 1, 1, "Trip Weight Range: ", textSheet);
 								drawText(&program, 7, 11, 1, 1, customTripWeightBottomStr.str() + " : " + customTripWeightTopStr.str(), textSheet);
@@ -1845,7 +1845,7 @@ int main(int argc, char *argv[]){
 								drawText(&program, 7, 15, 1, 1, std::to_string(customRadiusStepBottom) + " : " + std::to_string(customRadiusStepTop), textSheet);
 
 								drawText(&program, -17, 13, 1, 1, "Maximum Search Radius Range: ", textSheet);
-								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMaxBottom * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMaxTop * customRadiusStepTop + customRadiusMinTop), textSheet);
+								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMax * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMax * customRadiusStepTop + customRadiusMinTop), textSheet);
 
 								drawText(&program, -17, 11, 1, 1, "Trip Weight Range: ", textSheet);
 								drawText(&program, 7, 11, 1, 1, customTripWeightBottomStr.str() + " : " + customTripWeightTopStr.str(), textSheet);
@@ -1953,7 +1953,7 @@ int main(int argc, char *argv[]){
 								drawText(&program, 7, 15, 1, 1, std::to_string(customRadiusStepBottom) + " : " + std::to_string(customRadiusStepTop), textSheet);
 
 								drawText(&program, -17, 13, 1, 1, "Maximum Search Radius Range: ", textSheet);
-								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMaxBottom * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMaxTop * customRadiusStepTop + customRadiusMinTop), textSheet);
+								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMax * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMax * customRadiusStepTop + customRadiusMinTop), textSheet);
 
 								drawText(&program, -17, 11, 1, 1, "Trip Weight Range: ", textSheet);
 								drawText(&program, 7, 11, 1, 1, customTripWeightBottomStr.str() + " : " + customTripWeightTopStr.str(), textSheet);
@@ -2050,7 +2050,7 @@ int main(int argc, char *argv[]){
 								drawText(&program, 7, 15, 1, 1, std::to_string(customRadiusStepBottom) + " : " + std::to_string(customRadiusStepTop), textSheet);
 
 								drawText(&program, -17, 13, 1, 1, "Maximum Search Radius Range: ", textSheet);
-								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMaxBottom * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMaxTop * customRadiusStepTop + customRadiusMinTop), textSheet);
+								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMax * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMax * customRadiusStepTop + customRadiusMinTop), textSheet);
 
 								drawText(&program, -17, 11, 1, 1, "Trip Weight Range: ", textSheet);
 								drawText(&program, 7, 11, 1, 1, customTripWeightBottomStr.str() + " : " + customTripWeightTopStr.str(), textSheet);
@@ -2158,7 +2158,7 @@ int main(int argc, char *argv[]){
 								drawText(&program, 7, 15, 1, 1, std::to_string(customRadiusStepBottom) + " : " + std::to_string(customRadiusStepTop), textSheet);
 
 								drawText(&program, -17, 13, 1, 1, "Maximum Search Radius Range: ", textSheet);
-								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMaxBottom * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMaxTop * customRadiusStepTop + customRadiusMinTop), textSheet);
+								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMax * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMax * customRadiusStepTop + customRadiusMinTop), textSheet);
 
 								drawText(&program, -17, 11, 1, 1, "Trip Weight Range: ", textSheet);
 								drawText(&program, 7, 11, 1, 1, customTripWeightBottomStr.str() + " : " + customTripWeightTopStr.str(), textSheet);
@@ -2255,7 +2255,7 @@ int main(int argc, char *argv[]){
 								drawText(&program, 7, 15, 1, 1, std::to_string(customRadiusStepBottom) + " : " + std::to_string(customRadiusStepTop), textSheet);
 
 								drawText(&program, -17, 13, 1, 1, "Maximum Search Radius Range: ", textSheet);
-								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMaxBottom * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMaxTop * customRadiusStepTop + customRadiusMinTop), textSheet);
+								drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMax * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMax * customRadiusStepTop + customRadiusMinTop), textSheet);
 
 								drawText(&program, -17, 11, 1, 1, "Trip Weight Range: ", textSheet);
 								drawText(&program, 7, 11, 1, 1, customTripWeightBottomStr.str() + " : " + customTripWeightTopStr.str(), textSheet);
@@ -2359,10 +2359,10 @@ int main(int argc, char *argv[]){
 
 						if (doneButton.getIsClicked(unitX, unitY)){
 							int testNum = 0;
-							testNum += /*customTripWeightTop == customTripWeightBottom ? 1 : */std::round((customTripWeightTop - customTripWeightBottom + customTripWeightChange) / customTripWeightChange);
+							testNum += /*customTripWeightTop == customTripWeightBottom ? 1 : */std::round((customTripWeightTop - customTripWeightBottom + customTripWeightChange * 2) / customTripWeightChange);
 							testNum *= /*customRadiusMinTop == customRadiusMinBottom ? 1 : */(customRadiusMinTop - customRadiusMinBottom + customRadiusChange) / customRadiusChange;
 							testNum *= /*customRadiusStepTop == customRadiusStepBottom ? 1 : */(customRadiusStepTop - customRadiusStepBottom + customRadiusChange) / customRadiusChange;
-							testNum *= /*customRadiusMaxTop == customRadiusMaxBottom ? 1 : */(customRadiusMaxTop - customRadiusMaxBottom + customRadiusChange) / customRadiusChange;
+							testNum *= /*customRadiusMax == customRadiusMax ? 1 : */(customRadiusMax - customRadiusMax + customRadiusChange) / customRadiusChange;
 							testNum *= /*customTimeRadiusTop == customTimeRadiusBottom ? 1 : */(customTimeRadiusTop - customTimeRadiusBottom + customRadiusChange) / customRadiusChange;
 							testNum *= /*customMinimumScoreBottom == customMinimumScoreTop ? 1 : */std::round((customMinimumScoreTop - customMinimumScoreBottom + customScoreChange) / customScoreChange);
 							testNum *=/* customMaximumRideRequestsTop == customMaximumRideRequestsBottom ? 1 : */(customMaximumRideRequestsTop - customMaximumRideRequestsBottom + customRideRequestsChange) / customRideRequestsChange;
@@ -2385,7 +2385,7 @@ int main(int argc, char *argv[]){
 			drawText(&program, 7, 15, 1, 1, std::to_string(customRadiusStepBottom) + " : " + std::to_string(customRadiusStepTop), textSheet);
 
 			drawText(&program, -17, 13, 1, 1, "Maximum Search Radius Range: ", textSheet);
-			drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMaxBottom * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMaxTop * customRadiusStepTop + customRadiusMinTop), textSheet);
+			drawText(&program, 7, 13, 1, 1, std::to_string(customRadiusMax * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(customRadiusMax * customRadiusStepTop + customRadiusMinTop), textSheet);
 
 			drawText(&program, -17, 11, 1, 1, "Trip Weight Range: ", textSheet);
 			drawText(&program, 7, 11, 1, 1, customTripWeightBottomStr.str() + " : " + customTripWeightTopStr.str(), textSheet);
@@ -2441,18 +2441,18 @@ int main(int argc, char *argv[]){
 		}
 
 		int i = 1;
-		for (float customTripWeight = customTripWeightBottom; customTripWeight <= customTripWeightTop; customTripWeight += customTripWeightChange){
+		std::string excelFileName = customTestName + ".xls";
+		tester.setExcelFileName(excelFileName);
+		for (float customTripWeight = customTripWeightBottom; customTripWeight <= customTripWeightTop + 0.001; customTripWeight += customTripWeightChange){
 			for (int customRadiusMin = customRadiusMinBottom; customRadiusMin <= customRadiusMinTop; customRadiusMin += customRadiusChange){
 				for (int customRadiusStep = customRadiusStepBottom; customRadiusStep <= customRadiusStepTop; customRadiusStep += customRadiusChange){
-					for (int customRadiusMax = customRadiusMaxBottom; customRadiusMax <= customRadiusMaxTop; customRadiusMax += customRadiusChange){
-						for (int customTimeRadius = customTimeRadiusBottom; customTimeRadius <= customTimeRadiusTop; customTimeRadius += customRadiusChange){
-							for (float customMinimumScore = customMinimumScoreBottom; customMinimumScore <= customMinimumScoreTop; customMinimumScore += customScoreChange){
-								for (unsigned customMaxRideRequests = customMaximumRideRequestsBottom; customMaxRideRequests <= customMaximumRideRequestsTop; customMaxRideRequests += customRideRequestsChange){
-									std::string customNameToUse = customTestName + '_' + std::to_string(i++);
-									tester.initializeSimulatorWithParams(customNameToUse, customTimesToRun, customTripWeight, customRadiusMin, customRadiusStep, 
-										customRadiusMax * customRadiusStep + customRadiusMin, customTimeRadius, customMinimumScore, customMaxRideRequests, customFleetSize, customRideCount, customMaxLat * customSectionSize, 
-										customMaxLong * customSectionSize, customSectionSize, true);
-								}
+					for (int customTimeRadius = customTimeRadiusBottom; customTimeRadius <= customTimeRadiusTop; customTimeRadius += customRadiusChange){
+						for (float customMinimumScore = customMinimumScoreBottom; customMinimumScore <= customMinimumScoreTop; customMinimumScore += customScoreChange){
+							for (unsigned customMaxRideRequests = customMaximumRideRequestsBottom; customMaxRideRequests <= customMaximumRideRequestsTop; customMaxRideRequests += customRideRequestsChange){
+								std::string customNameToUse = customTestName + '_' + std::to_string(i++);
+								tester.initializeSimulatorWithParams(customNameToUse, customTimesToRun, customTripWeight, customRadiusMin, customRadiusStep,
+									customRadiusMax * customRadiusStep + customRadiusMin, customTimeRadius, customMinimumScore, customMaxRideRequests, customFleetSize, customRideCount, customMaxLat * customSectionSize,
+									customMaxLong * customSectionSize, customSectionSize, true);
 							}
 						}
 					}
@@ -2477,7 +2477,7 @@ int main(int argc, char *argv[]){
 		bool kPressed = false;
 		bool jPressed = false;
 		bool lPressed = false;
-		float speed = 0.008;
+		float speed = 0.005;
 		while (!done) {
 			while (SDL_PollEvent(&event)) {
 				if (event.type == SDL_QUIT || event.type == SDL_WINDOWEVENT_CLOSE) {
@@ -2522,7 +2522,8 @@ int main(int argc, char *argv[]){
 			}
 			program.setProjectionMatrix(projectionMatrix);
 			tester.visualize(timesRun, state, event, &program, testName, displayWindow);
-			SDL_SetWindowTitle(displayWindow, testName.c_str());
+			std::string windowName = testName + " of " + std::to_string(testNames.size());
+			SDL_SetWindowTitle(displayWindow, windowName.c_str());
 			SDL_GL_SwapWindow(displayWindow);
 			//}
 			if (/*timesRun >= timesToRun*/state[SDL_SCANCODE_ESCAPE] && (!escapePressed || escapePressedTime % escapedPressedGoal == 0)){

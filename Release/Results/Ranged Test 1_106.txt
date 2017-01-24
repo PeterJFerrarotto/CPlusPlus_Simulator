@@ -1,0 +1,87 @@
+Ranged Test 1_106 Data:
+
+Testing Parameters:
+
+	Times to run: 100
+
+	Minimum Search Radius: 4.000000
+	Search Radius Step: 5.000000
+	Maximum Search Radius: 14.000000
+
+	Time Radius: 5.000000
+
+	Ride Request Score Calculations: 
+
+		Distance Calculated by: Pythagorean Theorem
+		Time To Distance Ratio: 1:1
+
+		Pickup_Distance = Distance from car to pickup point (could also use time to arrive at pickup)
+		Ride_Distance = Distance from pickup to the car's destination (could also use time to arrive at destination)
+		Requests_At_Destination = Requests projected to exist at the destination point + Requests scheduled near destination at arrival time
+
+		Requests_At_Destination_Ceiling = Minimum number of requests available at destination to result in no penalty to score = 1
+		Ride_Distance_Weight = Coeficient used to determine relative value of the distance of the trip = 0.003000
+
+		PercentageValueOfTrip = ((Ride_Distance)/(Ride_Distance + Pickup_Distance)) * 10
+		ValueOfTripDistance = (Ride_Distance * Ride_Distance_Weight) * 10
+		DestinationPenalty:
+			If Requests_At_Destination > Requests_At_Destination_Saturation, DestinationPenalty = 0
+			Otherwise, DestinationPenalty = -3 + (Requests_At_Destination * (3/Requests_At_Destination_Ceiling))
+
+		Request_Score = PercentageValueOfTrip + ValueOfTripLength + DestinationPenalty
+
+
+-------------------------------------------------------------------
+Complete Test Results:
+
+Vehicle: 1
+	Distance travelled with a passenger: 52
+	Distance travelled without a passenger: 27
+
+
+Vehicle: 2
+	Distance travelled with a passenger: 38
+	Distance travelled without a passenger: 23
+
+
+Vehicle: 3
+	Distance travelled with a passenger: 61
+	Distance travelled without a passenger: 20
+
+
+Vehicle: 4
+	Distance travelled with a passenger: 47
+	Distance travelled without a passenger: 12
+
+
+Vehicle: 5
+	Distance travelled with a passenger: 25
+	Distance travelled without a passenger: 21
+
+
+Vehicle: 6
+	Distance travelled with a passenger: 47
+	Distance travelled without a passenger: 15
+
+
+Vehicle: 7
+	Distance travelled with a passenger: 45
+	Distance travelled without a passenger: 16
+
+
+Vehicle: 8
+	Distance travelled with a passenger: 30
+	Distance travelled without a passenger: 11
+
+
+Vehicle: 9
+	Distance travelled with a passenger: 45
+	Distance travelled without a passenger: 22
+
+
+Vehicle: 10
+	Distance travelled with a passenger: 42
+	Distance travelled without a passenger: 24
+
+
+Fleet utilization is: 69.3419%.
