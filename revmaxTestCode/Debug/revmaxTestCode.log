@@ -1,221 +1,180 @@
-﻿Build started 1/24/2017 11:05:58 AM.
+﻿Build started 1/26/2017 9:52:13 AM.
      1>Project "C:\Users\peter\Documents\revmaxTestCode\revmaxTestCode\revmaxTestCode.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\SDL2_image\include /IC:\SDL2\include /IC:\glew\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _MBCS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Vehicle.cpp main.cpp
-         Vehicle.cpp
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(46): warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(47): warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(51): warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(52): warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(71): warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(72): warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(77): warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(78): warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(102): warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(103): warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(109): warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(110): warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(169): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(176): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(176): warning C4244: 'argument' : conversion from 'long' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(177): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(177): warning C4244: 'argument' : conversion from 'long' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(181): warning C4244: '=' : conversion from 'long' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(182): warning C4244: '=' : conversion from 'long' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(183): warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(184): warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(185): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(197): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\utility(157): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-                 c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(33) : see reference to function template instantiation 'std::pair<int,std::pair<long,long>>::pair<float,std::pair<float,float>,void>(std::pair<float,std::pair<float,float>> &&)' being compiled
-                 c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(33) : see reference to function template instantiation 'std::pair<int,std::pair<long,long>>::pair<float,std::pair<float,float>,void>(std::pair<float,std::pair<float,float>> &&)' being compiled
-     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\utility(157): warning C4244: 'initializing' : conversion from 'long' to 'float', possible loss of data
-                 c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(38) : see reference to function template instantiation 'std::pair<float,float>::pair<long,long,void>(std::pair<long,long> &&)' being compiled
-                 c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(38) : see reference to function template instantiation 'std::pair<float,float>::pair<long,long,void>(std::pair<long,long> &&)' being compiled
-     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\utility(110): warning C4244: '=' : conversion from 'const long' to 'float', possible loss of data
-                 c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(167) : see reference to function template instantiation 'std::pair<float,float> &std::pair<float,float>::operator =<long,long>(const std::pair<long,long> &)' being compiled
-                 c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(167) : see reference to function template instantiation 'std::pair<float,float> &std::pair<float,float>::operator =<long,long>(const std::pair<long,long> &)' being compiled
-     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\utility(111): warning C4244: '=' : conversion from 'const long' to 'float', possible loss of data
-     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\utility(157): warning C4244: 'initializing' : conversion from 'float' to 'long', possible loss of data
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\utility(157) : see reference to function template instantiation 'std::pair<long,long>::pair<float,float,void>(std::pair<float,float> &&)' being compiled
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\utility(157) : see reference to function template instantiation 'std::pair<long,long>::pair<float,float,void>(std::pair<float,float> &&)' being compiled
-                 c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(33) : see reference to function template instantiation 'std::pair<int,std::pair<long,long>>::pair<float,std::pair<float,float>,void>(std::pair<float,std::pair<float,float>> &&)' being compiled
-                 c:\users\peter\documents\revmaxtestcode\revmaxtestcode\vehicle.cpp(33) : see reference to function template instantiation 'std::pair<int,std::pair<long,long>>::pair<float,std::pair<float,float>,void>(std::pair<float,std::pair<float,float>> &&)' being compiled
-         Generating Code...
-         Compiling...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\SDL2_image\include /IC:\SDL2\include /IC:\glew\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _MBCS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
      1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\mathhelper.h(15): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(77): warning C4244: 'argument' : conversion from 'long' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(87): warning C4244: 'argument' : conversion from 'long' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(99): warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(78): warning C4244: 'argument' : conversion from 'long' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(88): warning C4244: 'argument' : conversion from 'long' to 'float', possible loss of data
      1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(100): warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(105): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(142): warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(101): warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(106): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
      1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(143): warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(159): warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(144): warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
      1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(160): warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(180): warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(191): warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(240): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(161): warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(181): warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(192): warning C4244: 'argument' : conversion from 'float' to 'long', possible loss of data
      1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(241): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
      1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(242): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(275): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(281): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(286): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(292): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(337): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(358): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(361): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(364): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(367): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(396): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(416): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(514): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(525): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(525): warning C4244: 'argument' : conversion from 'long' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(526): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(547): warning C4244: 'initializing' : conversion from 'long' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(548): warning C4244: 'initializing' : conversion from 'long' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(550): warning C4244: 'initializing' : conversion from 'long' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(551): warning C4244: 'initializing' : conversion from 'long' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(563): warning C4305: '-=' : truncation from 'double' to 'float'
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(591): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(615): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(615): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(624): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(625): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(628): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(629): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(702): warning C4018: '<=' : signed/unsigned mismatch
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(711): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(721): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(723): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(723): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(739): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(740): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(747): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(748): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(756): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(757): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(765): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(766): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(774): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(775): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(809): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(831): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(901): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(904): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(907): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(916): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(984): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(999): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(1000): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(1001): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(1002): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(1017): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(1025): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(1033): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(243): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(269): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(272): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(277): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(283): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(326): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(347): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(350): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(353): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(356): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(385): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(405): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(439): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(450): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(450): warning C4244: 'argument' : conversion from 'long' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(451): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(472): warning C4244: 'initializing' : conversion from 'long' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(473): warning C4244: 'initializing' : conversion from 'long' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(475): warning C4244: 'initializing' : conversion from 'long' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(476): warning C4244: 'initializing' : conversion from 'long' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(488): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(518): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(542): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(542): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(551): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(552): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(555): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(556): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(623): warning C4018: '<=' : signed/unsigned mismatch
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(627): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(635): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(638): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(638): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(653): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(654): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(661): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(662): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(670): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(671): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(679): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(680): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(688): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(689): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(714): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(783): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(784): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(736): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(821): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(824): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(827): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(888): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(912): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(913): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(926): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(934): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(942): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
      1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(24): warning C4305: 'initializing' : truncation from 'double' to 'float'
      1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(25): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(75): warning C4305: 'argument' : truncation from 'double' to 'float'
      1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(94): warning C4305: 'argument' : truncation from 'double' to 'float'
      1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(107): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(281): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(310): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(330): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(352): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(389): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(450): warning C4305: '+=' : truncation from 'double' to 'float'
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(453): warning C4305: '-=' : truncation from 'double' to 'float'
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(549): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(580): warning C4305: '+=' : truncation from 'double' to 'float'
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(583): warning C4305: '-=' : truncation from 'double' to 'float'
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(678): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(686): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(772): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(783): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(784): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(811): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(833): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(870): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(898): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(900): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(976): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1002): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1004): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1073): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1099): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1101): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1181): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1207): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1209): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1278): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1304): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1306): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1525): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1551): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1553): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1626): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1652): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1654): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1689): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1691): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1738): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1764): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1766): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1839): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1865): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1867): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1902): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1904): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1947): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1973): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1975): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2044): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2070): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2072): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2138): warning C4244: '=' : conversion from 'float' to 'unsigned int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2152): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2178): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2180): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2249): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2275): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2277): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2362): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2367): warning C4244: '*=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2379): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2405): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2407): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2455): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2480): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2495): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2502): warning C4800: 'const Uint8' : forcing value to bool 'true' or 'false' (performance warning)
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2505): warning C4305: '-=' : truncation from 'double' to 'float'
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2508): warning C4800: 'const Uint8' : forcing value to bool 'true' or 'false' (performance warning)
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2511): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2515): warning C4305: '+=' : truncation from 'double' to 'float'
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2518): warning C4800: 'const Uint8' : forcing value to bool 'true' or 'false' (performance warning)
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2532): warning C4800: 'const Uint8' : forcing value to bool 'true' or 'false' (performance warning)
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(964): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1060): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1169): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1265): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1513): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1613): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1726): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1826): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1935): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2031): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2140): warning C4101: 'e' : unreferenced local variable
-     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2236): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(270): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(299): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(318): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(340): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(375): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(436): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(439): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(528): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(560): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(563): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(651): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(659): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(745): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(756): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(757): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(783): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(811): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(848): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(876): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(878): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(954): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(980): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(982): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1051): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1077): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1079): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1165): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1191): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1193): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1262): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1288): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1290): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1380): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1406): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1408): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1481): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1507): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1509): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1544): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1546): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1575): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1593): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1619): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1621): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1675): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1694): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1720): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1722): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1808): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1834): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1836): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1905): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1931): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1933): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1999): warning C4244: '=' : conversion from 'float' to 'unsigned int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2013): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2039): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2041): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2110): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2136): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2138): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2223): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2228): warning C4244: '*=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2303): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2329): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2331): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2374): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2379): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2395): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2418): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2425): warning C4800: 'const Uint8' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2428): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2431): warning C4800: 'const Uint8' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2434): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2438): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2441): warning C4800: 'const Uint8' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2454): warning C4800: 'const Uint8' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2455): warning C4800: 'const Uint8' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(942): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1038): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1153): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1249): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1368): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1468): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1581): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1681): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1796): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(1892): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2001): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\main.cpp(2097): warning C4101: 'e' : unreferenced local variable
      1>c:\users\peter\documents\revmaxtestcode\revmaxtestcode\rapidxml_utils.hpp(40): warning C4244: 'initializing' : conversion from 'std::streamoff' to 'size_t', possible loss of data
                  c:\users\peter\documents\revmaxtestcode\revmaxtestcode\rapidxml_utils.hpp(28) : while compiling class template member function 'rapidxml::file<char>::file(const char *)'
-                 c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(70) : see reference to function template instantiation 'rapidxml::file<char>::file(const char *)' being compiled
-                 c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(70) : see reference to class template instantiation 'rapidxml::file<char>' being compiled
+                 c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(71) : see reference to function template instantiation 'rapidxml::file<char>::file(const char *)' being compiled
+                 c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(71) : see reference to class template instantiation 'rapidxml::file<char>' being compiled
      1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\utility(103): warning C4244: 'initializing' : conversion from 'const long' to 'float', possible loss of data
-                 c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(721) : see reference to function template instantiation 'std::pair<float,float>::pair<long,long,void>(const std::pair<long,long> &)' being compiled
-                 c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(721) : see reference to function template instantiation 'std::pair<float,float>::pair<long,long,void>(const std::pair<long,long> &)' being compiled
-         Generating Code...
+                 c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(635) : see reference to function template instantiation 'std::pair<float,float>::pair<long,long,void>(const std::pair<long,long> &)' being compiled
+                 c:\users\peter\documents\revmaxtestcode\revmaxtestcode\simulator.h(635) : see reference to function template instantiation 'std::pair<float,float>::pair<long,long,void>(const std::pair<long,long> &)' being compiled
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\peter\Documents\revmaxTestCode\Debug\revmaxTestCode.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\SDL2_mixer\lib\x86 /LIBPATH:C:\SDL2\lib\x86 /LIBPATH:C:\SDL2_image\lib\x86 /LIBPATH:C:\glew\lib\Release\Win32 SDL2.lib SDL2_mixer.lib glew32.lib SDL2main.lib SDL2_image.lib OpenGL32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib glu32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\peter\Documents\revmaxTestCode\Debug\revmaxTestCode.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\peter\Documents\revmaxTestCode\Debug\revmaxTestCode.lib" /MACHINE:X86 Debug\BasicExcel.obj
          Debug\Button.obj
@@ -231,4 +190,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:06.16
+Time Elapsed 00:00:03.70

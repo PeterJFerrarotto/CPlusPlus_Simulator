@@ -162,17 +162,6 @@ int main(int argc, char *argv[]){
 		decreaseRadiusStep.setPosition(-15, -1, 0);
 		nonRangedButtonsPrivate.push_back(decreaseRadiusStep);
 
-	//Button increaseRadiusMax, decreaseRadiusMax;
-	//	increaseRadiusMax.setTexture(increaseTexture);
-	//	increaseRadiusMax.setSize(2, 2, 0);
-	//	increaseRadiusMax.setPosition(-15, -4, 0);
-	//	nonRangedButtonsPrivate.push_back(increaseRadiusMax);
-
-	//	decreaseRadiusMax.setTexture(decreaseTexture);
-	//	decreaseRadiusMax.setSize(2, 2, 0);
-	//	decreaseRadiusMax.setPosition(-15, -6, 0);
-	//	nonRangedButtonsPrivate.push_back(decreaseRadiusMax);
-
 	Button increaseTimeRadius, decreaseTimeRadius;
 		increaseTimeRadius.setTexture(increaseTexture);
 		increaseTimeRadius.setSize(2, 2, 0);
@@ -322,9 +311,8 @@ int main(int argc, char *argv[]){
 		bool paramsDialedIn = false;
 		bool clicked = false;
 		int clickCount = 0;
-		int clickTarget = 200;
-		int clickTargetInit = 200;
-		int coeff = 1;
+		int clickTarget = 100;
+		int clickTargetInit = 100;
 		int timesTitleUsed = 0;
 		int numberOfTests = 0;
 		viewMatrix.Scale(.1, .1, 1);
@@ -370,8 +358,6 @@ int main(int argc, char *argv[]){
 										done = SDL_TRUE;
 										break;
 									case SDL_TEXTINPUT:
-										/* Add new text onto the end of our text */
-										//strcat(customTestName, event.text.text);
 										customTestName += event.text.text;
 										break;
 									case SDL_KEYDOWN:
@@ -467,13 +453,6 @@ int main(int argc, char *argv[]){
 							customRadiusStep--;
 						}
 
-						//if (increaseRadiusMax.getIsClicked(unitX, unitY)){
-						//	customRadiusMax++;
-						//}
-						//if (decreaseRadiusMax.getIsClicked(unitX, unitY) && customRadiusStep > 1){
-						//	customRadiusMax--;
-						//}
-
 						if (increaseTimeRadius.getIsClicked(unitX, unitY)){
 							customTimeRadius++;
 						}
@@ -548,6 +527,7 @@ int main(int argc, char *argv[]){
 								customTimeRadius, customMinimumScore, customMaximumRideRequests, customFleetSize, customRideCount, (customMaxLat * customSectionSize),
 								(customMaxLong * customSectionSize), customSectionSize);
 							numberOfTests++;
+							cout << testNameToUse << " added to test list." << endl;
 						}
 					}
 					clicked = true;
@@ -570,10 +550,10 @@ int main(int argc, char *argv[]){
 					}
 
 					if (increaseTimesToRun.getIsClicked(unitX, unitY)){
-						customTimesToRun += 5 * coeff;
+						customTimesToRun += 5;
 					}
 					if (decreaseTimesToRun.getIsClicked(unitX, unitY) && customTimesToRun > 5){
-						customTimesToRun -= 5 * coeff;
+						customTimesToRun -= 5;
 					}
 
 					if (increaseTripWeight.getIsClicked(unitX, unitY)){
@@ -584,80 +564,73 @@ int main(int argc, char *argv[]){
 					}
 
 					if (increaseRadiusMin.getIsClicked(unitX, unitY)){
-						customRadiusMin += coeff;
+						customRadiusMin += 1;
 					}
 					if (decreaseRadiusMin.getIsClicked(unitX, unitY) && customRadiusMin > 1){
-						customRadiusMin -= coeff;
+						customRadiusMin -= 1;
 					}
 
 					if (increaseRadiusStep.getIsClicked(unitX, unitY)){
-						customRadiusStep += coeff;
+						customRadiusStep += 1;
 					}
 					if (decreaseRadiusStep.getIsClicked(unitX, unitY) && customRadiusStep > 1){
-						customRadiusStep -= coeff;
+						customRadiusStep -= 1;
 					}
-
-					//if (increaseRadiusMax.getIsClicked(unitX, unitY)){
-					//	customRadiusMax += coeff;
-					//}
-					//if (decreaseRadiusMax.getIsClicked(unitX, unitY) && customRadiusStep > 1){
-					//	customRadiusMax -= coeff;
-					//}
 
 					if (increaseTimeRadius.getIsClicked(unitX, unitY)){
-						customTimeRadius += coeff;
+						customTimeRadius += 1;
 					}
 					if (decreaseTimeRadius.getIsClicked(unitX, unitY) && customTimeRadius > 1){
-						customTimeRadius -= coeff;
+						customTimeRadius -= 1;
 					}
 
 					if (increaseMinScore.getIsClicked(unitX, unitY)){
-						customMinimumScore += 5 * coeff;
+						customMinimumScore += 5;
 					}
 					if (decreaseMinScore.getIsClicked(unitX, unitY) && customMinimumScore > 0){
-						customMinimumScore -= 5 * coeff;
+						customMinimumScore -= 5;
 					}
 
 					if (increaseMaxRequests.getIsClicked(unitX, unitY)){
-						customMaximumRideRequests += coeff;
+						customMaximumRideRequests += 1;
 					}
 					if (decreaseMaxRequests.getIsClicked(unitX, unitY) && customMaximumRideRequests > 1){
-						customMaximumRideRequests -= coeff;
+						customMaximumRideRequests -= 1;
 					}
 
 					if (increaseFleetSize.getIsClicked(unitX, unitY)){
-						customFleetSize += coeff;
+						customFleetSize += 1;
 					}
 					if (decreaseFleetSize.getIsClicked(unitX, unitY) && customFleetSize > 1){
-						customFleetSize -= coeff;
+						customFleetSize -= 1;
 					}
 
 					if (increaseRequestCount.getIsClicked(unitX, unitY)){
-						customRideCount += coeff;
+						customRideCount += 1;
 					}
 					if (decreaseRequestCount.getIsClicked(unitX, unitY) && customRideCount > 1){
-						customRideCount -= coeff;
+						customRideCount -= 1;
 					}
 
 					if (increaseSectionSize.getIsClicked(unitX, unitY)){
-						customSectionSize += coeff;
+						customSectionSize += 1;
 					}
 					if (decreaseSectionSize.getIsClicked(unitX, unitY) && customSectionSize > 1){
-						customSectionSize -= coeff;
+						customSectionSize -= 1;
 					}
 
 					if (increaseMaxLat.getIsClicked(unitX, unitY)){
-						customMaxLat += coeff;
+						customMaxLat += 1;
 					}
 					if (decreaseMaxLat.getIsClicked(unitX, unitY) && customMaxLat > 1){
-						customMaxLat -= coeff;
+						customMaxLat -= 1;
 					}
 
 					if (increaseMaxLong.getIsClicked(unitX, unitY)){
-						customMaxLong += coeff;
+						customMaxLong += 1;
 					}
 					if (decreaseMaxLong.getIsClicked(unitX, unitY) && customMaxLong > 1){
-						customMaxLong -= coeff;
+						customMaxLong -= 1;
 					}
 
 					if (doneButton.getIsClicked(unitX, unitY)){
@@ -774,7 +747,7 @@ int main(int argc, char *argv[]){
 		//CustomRadiusChange applies to min, max, and step radius, as well as time radius
 		int customRadiusChange = 1;
 
-		float customScoreChange = 5;
+		int customScoreChange = 5;
 
 		unsigned customRideRequestsChange = 1;
 		//
@@ -795,8 +768,8 @@ int main(int argc, char *argv[]){
 		int customTimeRadiusTop = 6;
 		int customTimeRadiusBottom = 5;
 
-		float customMinimumScoreTop = 55;
-		float customMinimumScoreBottom = 50;
+		int customMinimumScoreTop = 55;
+		int customMinimumScoreBottom = 50;
 
 		unsigned customMaximumRideRequestsTop = 31;
 		unsigned customMaximumRideRequestsBottom = 30;
@@ -805,9 +778,8 @@ int main(int argc, char *argv[]){
 		bool paramsDialedIn = false;
 		bool clicked = false;
 		int clickCount = 0;
-		int clickTarget = 200;
-		int clickTargetInit = 200;
-		int coeff = 1;
+		int clickTarget = 100;
+		int clickTargetInit = 100;
 		viewMatrix.Scale(.1, .1, 1);
 		while (!paramsDialedIn){
 			glClear(GL_COLOR_BUFFER_BIT);
@@ -828,14 +800,20 @@ int main(int argc, char *argv[]){
 					SDL_Quit();
 					return 0;
 				}
+				else if (event.type == SDL_MOUSEBUTTONUP){
+					if (event.button.button = SDL_BUTTON_LEFT){
+						clicked = false;
+					}
+				}
 				else if (event.type == SDL_MOUSEBUTTONDOWN){
 					if (event.button.button == SDL_BUTTON_LEFT){
+						clicked = true;
 						unitX = (((float)event.button.x / winX) * (1.78 * 2)) - 1.78;
 						unitY = (((winY - (float)event.button.y) / winY) * 4) - 2;
 						unitX *= 10;
 						unitY *= 10;
 
-						if (abs(unitX) <= customTestName.size() / 2 && unitY >= 17 && unitY <= 19){
+						if (abs(unitX) <= customTestName.size() / 2 && unitY >= 17.5 && unitY <= 19){
 							SDL_bool done = SDL_FALSE;
 
 							SDL_StartTextInput();
@@ -1137,6 +1115,12 @@ int main(int argc, char *argv[]){
 								customRadiusMinBottom = customRadiusMinTop;
 								customRadiusMinTop = x;
 							}
+							if (customRadiusMinBottom % customRadiusChange != 0){
+								customRadiusMinBottom -= customRadiusChange - customRadiusMinBottom % customRadiusChange;
+							}
+							if (customRadiusMinTop % customRadiusChange != 0){
+								customRadiusMinTop += customRadiusMinTop % customRadiusChange;
+							}
 						}
 
 						if (unitX >= 7 && unitX <= 7 + (std::to_string(customRadiusStepBottom).size() + std::to_string(customRadiusStepTop).size() + 3) && unitY >= 14.5 && unitY <= 15.5){
@@ -1342,142 +1326,13 @@ int main(int argc, char *argv[]){
 								customRadiusStepBottom = customRadiusStepTop;
 								customRadiusStepTop = x;
 							}
+							if (customRadiusStepBottom % customRadiusChange != 0){
+								customRadiusStepBottom -= customRadiusChange - customRadiusStepBottom % customRadiusChange;
+							}
+							if (customRadiusStepTop % customRadiusChange != 0){
+								customRadiusStepTop += customRadiusStepTop % customRadiusChange;
+							}
 						}
-
-						/*if (unitX >= 7 && unitX <= 7 + (std::to_string(customRadiusMax).size() + std::to_string(customRadiusMax).size() + 3) && unitY >= 12.5 && unitY <= 13.5){
-							SDL_bool doneWithFirst = SDL_FALSE;
-							SDL_bool doneWithSecond = SDL_FALSE;
-							std::string numLeft = std::to_string(customRadiusMax);
-							std::string numRight = std::to_string(customRadiusMax);
-							SDL_StartTextInput();
-							while (!doneWithFirst){
-								glClear(GL_COLOR_BUFFER_BIT);
-								SDL_Event event;
-								char let = ' ';
-								if (SDL_PollEvent(&event)){
-									switch (event.type){
-									case SDL_QUIT:
-										doneWithFirst = SDL_TRUE;
-										break;
-									case SDL_TEXTINPUT:
-										let = event.text.text[0];
-										if (let >= '0' && let <= '9' || let == '.'){
-											numLeft += let;
-										}
-										break;
-									case SDL_KEYDOWN:
-										if (event.key.keysym.scancode == SDL_SCANCODE_RETURN || event.key.keysym.scancode == SDL_SCANCODE_TAB){
-											doneWithFirst = SDL_TRUE;
-											try{
-												customRadiusMax = std::stoi(numLeft);
-											}
-											catch (const std::exception& e){
-												std::cerr << "Not a valid number!" << std::endl;
-												doneWithFirst = SDL_FALSE;
-											}
-										}
-										else if (event.key.keysym.scancode == SDL_SCANCODE_BACKSPACE){
-											if (numLeft.size() > 0){
-												numLeft.erase(numLeft.end() - 1);
-											}
-										}
-									}
-								}
-								drawText(&program, -(((float)customTestName.size() + 1) / 2.0), 18, 1, 1, customTestName, textSheet);
-
-								drawText(&program, -17, 17, 1, 1, "Minimum Search Radius Range: ", textSheet);
-								drawText(&program, 7, 17, 1, 1, std::to_string(customRadiusMinBottom) + " : " + std::to_string(customRadiusMinTop), textSheet);
-
-								drawText(&program, -17, 15, 1, 1, "Search Radius Step Range: ", textSheet);
-								drawText(&program, 7, 15, 1, 1, std::to_string(customRadiusStepBottom) + " : " + std::to_string(customRadiusStepTop), textSheet);
-
-								drawText(&program, -17, 13, 1, 1, "Maximum Search Radius Range: ", textSheet);
-								drawText(&program, 7, 13, 1, 1, std::to_string(std::stoi(numLeft) * customRadiusStepBottom + customRadiusMinBottom) + "| : " + std::to_string(std::stoi(numRight) * customRadiusStepTop + customRadiusMinTop), textSheet);
-
-								drawText(&program, -17, 11, 1, 1, "Trip Weight Range: ", textSheet);
-								drawText(&program, 7, 11, 1, 1, customTripWeightBottomStr.str() + " : " + customTripWeightTopStr.str(), textSheet);
-
-								drawText(&program, -17, 9, 1, 1, "Minimum Score Range: ", textSheet);
-								drawText(&program, 7, 9, 1, 1, customMinScoreBottomStr.str() + " : " + customMinScoreTopStr.str(), textSheet);
-
-								drawText(&program, -17, 7, 1, 1, "Time Radius Range: ", textSheet);
-								drawText(&program, 7, 7, 1, 1, std::to_string(customTimeRadiusBottom) + " : " + std::to_string(customTimeRadiusTop), textSheet);
-
-								drawText(&program, -17, 5, 1, 1, "Destination Ride Request Maximum: ", textSheet);
-								drawText(&program, 7, 5, 1, 1, std::to_string(customMaximumRideRequestsBottom) + " : " + std::to_string(customMaximumRideRequestsTop), textSheet);
-
-								program.setViewMatrix(viewMatrix);
-								program.setProjectionMatrix(projectionMatrix);
-								SDL_GL_SwapWindow(displayWindow);
-							}
-
-							while (!doneWithSecond){
-								glClear(GL_COLOR_BUFFER_BIT);
-								SDL_Event event;
-								char let = ' ';
-								if (SDL_PollEvent(&event)){
-									switch (event.type){
-									case SDL_QUIT:
-										doneWithFirst = SDL_TRUE;
-										break;
-									case SDL_TEXTINPUT:
-										let = event.text.text[0];
-										if (let >= '0' && let <= '9' || let == '.'){
-											numRight += let;
-										}
-										break;
-									case SDL_KEYDOWN:
-										if (event.key.keysym.scancode == SDL_SCANCODE_RETURN){
-											doneWithSecond = SDL_TRUE;
-											try{
-												customRadiusMax = std::stoi(numRight);
-											}
-											catch (const std::exception& e){
-												std::cerr << "Not a valid number!" << std::endl;
-												doneWithSecond = SDL_FALSE;
-												continue;
-											}
-										}
-										else if (event.key.keysym.scancode == SDL_SCANCODE_BACKSPACE){
-											if (numRight.size() > 0){
-												numRight.erase(numRight.end() - 1);
-											}
-										}
-									}
-								}
-								drawText(&program, -(((float)customTestName.size() + 1) / 2.0), 18, 1, 1, customTestName, textSheet);
-
-								drawText(&program, -17, 17, 1, 1, "Minimum Search Radius Range: ", textSheet);
-								drawText(&program, 7, 17, 1, 1, std::to_string(customRadiusMinBottom) + " : " + std::to_string(customRadiusMinTop), textSheet);
-
-								drawText(&program, -17, 15, 1, 1, "Search Radius Step Range: ", textSheet);
-								drawText(&program, 7, 15, 1, 1, std::to_string(customRadiusStepBottom) + " : " + std::to_string(customRadiusStepTop), textSheet);
-
-								drawText(&program, -17, 13, 1, 1, "Maximum Search Radius Range: ", textSheet);
-								drawText(&program, 7, 13, 1, 1, std::to_string(std::stoi(numLeft) * customRadiusStepBottom + customRadiusMinBottom) + " : " + std::to_string(std::stoi(numRight) * customRadiusStepTop + customRadiusMinTop) + "|", textSheet);
-
-								drawText(&program, -17, 11, 1, 1, "Trip Weight Range: ", textSheet);
-								drawText(&program, 7, 11, 1, 1, customTripWeightBottomStr.str() + " : " + customTripWeightTopStr.str(), textSheet);
-
-								drawText(&program, -17, 9, 1, 1, "Minimum Score Range: ", textSheet);
-								drawText(&program, 7, 9, 1, 1, customMinScoreBottomStr.str() + " : " + customMinScoreTopStr.str(), textSheet);
-
-								drawText(&program, -17, 7, 1, 1, "Time Radius Range: ", textSheet);
-								drawText(&program, 7, 7, 1, 1, std::to_string(customTimeRadiusBottom) + " : " + std::to_string(customTimeRadiusTop), textSheet);
-
-								drawText(&program, -17, 5, 1, 1, "Destination Ride Request Maximum: ", textSheet);
-								drawText(&program, 7, 5, 1, 1, std::to_string(customMaximumRideRequestsBottom) + " : " + std::to_string(customMaximumRideRequestsTop), textSheet);
-
-								program.setViewMatrix(viewMatrix);
-								program.setProjectionMatrix(projectionMatrix);
-								SDL_GL_SwapWindow(displayWindow);
-							}
-							if (customRadiusMax > customRadiusMax){
-								int x = customRadiusMax;
-								customRadiusMax = customRadiusMax;
-								customRadiusMax = x;
-							}
-						}*/
 
 						if (unitX >= 7 && unitX <= 7 + (customTripWeightBottomStr.str().size() + customTripWeightTopStr.str().size() + 3) && unitY >= 10 && unitY <= 12){
 							SDL_bool doneWithFirst = SDL_FALSE;
@@ -1898,10 +1753,16 @@ int main(int argc, char *argv[]){
 								program.setProjectionMatrix(projectionMatrix);
 								SDL_GL_SwapWindow(displayWindow);
 							}
-							if (customTripWeightBottom > customTripWeightTop){
-								int x = customTripWeightBottom;
-								customTripWeightBottom = customTripWeightTop;
-								customTripWeightTop = x;
+							if (customMinimumScoreBottom > customMinimumScoreTop){
+								int x = customMinimumScoreBottom;
+								customMinimumScoreBottom = customMinimumScoreTop;
+								customMinimumScoreTop = x;
+							}
+							if (customMinimumScoreBottom % customScoreChange != 0){
+								customMinimumScoreBottom -= customScoreChange - customMinimumScoreBottom % customScoreChange;
+							}
+							if (customMinimumScoreTop % customScoreChange != 0){
+								customMinimumScoreTop += customMinimumScoreTop % customScoreChange;
 							}
 						}
 
@@ -2316,56 +2177,56 @@ int main(int argc, char *argv[]){
 						}
 						
 						if (increaseTimesToRun.getIsClicked(unitX, unitY)){
-							customTimesToRun += 5 * coeff;
+							customTimesToRun += 5;
 						}
 						if (decreaseTimesToRun.getIsClicked(unitX, unitY) && customTimesToRun > 5){
-							customTimesToRun -= 5 * coeff;
+							customTimesToRun -= 5;
 						}
 
 						if (increaseFleetSize.getIsClicked(unitX, unitY)){
-							customFleetSize += coeff;
+							customFleetSize += 1;
 						}
 						if (decreaseFleetSize.getIsClicked(unitX, unitY) && customFleetSize > 1){
-							customFleetSize -= coeff;
+							customFleetSize -= 1;
 						}
 
 						if (increaseRequestCount.getIsClicked(unitX, unitY)){
-							customRideCount += coeff;
+							customRideCount += 1;
 						}
 						if (decreaseRequestCount.getIsClicked(unitX, unitY) && customRideCount > 1){
-							customRideCount -= coeff;
+							customRideCount -= 1;
 						}
 
 						if (increaseSectionSize.getIsClicked(unitX, unitY)){
-							customSectionSize += coeff;
+							customSectionSize += 1;
 						}
 						if (decreaseSectionSize.getIsClicked(unitX, unitY) && customSectionSize > 1){
-							customSectionSize -= coeff;
+							customSectionSize -= 1;
 						}
 
 						if (increaseMaxLat.getIsClicked(unitX, unitY)){
-							customMaxLat += coeff;
+							customMaxLat += 1;
 						}
 						if (decreaseMaxLat.getIsClicked(unitX, unitY) && customMaxLat > 1){
-							customMaxLat -= coeff;
+							customMaxLat -= 1;
 						}
 
 						if (increaseMaxLong.getIsClicked(unitX, unitY)){
-							customMaxLong += coeff;
+							customMaxLong += 1;
 						}
 						if (decreaseMaxLong.getIsClicked(unitX, unitY) && customMaxLong > 1){
-							customMaxLong -= coeff;
+							customMaxLong -= 1;
 						}
 
 						if (doneButton.getIsClicked(unitX, unitY)){
 							int testNum = 0;
-							testNum += /*customTripWeightTop == customTripWeightBottom ? 1 : */std::round((customTripWeightTop - customTripWeightBottom + customTripWeightChange * 2) / customTripWeightChange);
-							testNum *= /*customRadiusMinTop == customRadiusMinBottom ? 1 : */(customRadiusMinTop - customRadiusMinBottom + customRadiusChange) / customRadiusChange;
-							testNum *= /*customRadiusStepTop == customRadiusStepBottom ? 1 : */(customRadiusStepTop - customRadiusStepBottom + customRadiusChange) / customRadiusChange;
-							testNum *= /*customRadiusMax == customRadiusMax ? 1 : */(customRadiusMax - customRadiusMax + customRadiusChange) / customRadiusChange;
-							testNum *= /*customTimeRadiusTop == customTimeRadiusBottom ? 1 : */(customTimeRadiusTop - customTimeRadiusBottom + customRadiusChange) / customRadiusChange;
-							testNum *= /*customMinimumScoreBottom == customMinimumScoreTop ? 1 : */std::round((customMinimumScoreTop - customMinimumScoreBottom + customScoreChange) / customScoreChange);
-							testNum *=/* customMaximumRideRequestsTop == customMaximumRideRequestsBottom ? 1 : */(customMaximumRideRequestsTop - customMaximumRideRequestsBottom + customRideRequestsChange) / customRideRequestsChange;
+							testNum += std::round((customTripWeightTop - customTripWeightBottom + customTripWeightChange) / customTripWeightChange);
+							testNum *= (customRadiusMinTop - customRadiusMinBottom + customRadiusChange) / customRadiusChange;
+							testNum *= (customRadiusStepTop - customRadiusStepBottom + customRadiusChange) / customRadiusChange;
+							testNum *= (customRadiusMax - customRadiusMax + customRadiusChange) / customRadiusChange;
+							testNum *= (customTimeRadiusTop - customTimeRadiusBottom + customRadiusChange) / customRadiusChange;
+							testNum *= std::round((customMinimumScoreTop - customMinimumScoreBottom + customScoreChange) / customScoreChange);
+							testNum *= (customMaximumRideRequestsTop - customMaximumRideRequestsBottom + customRideRequestsChange) / customRideRequestsChange;
 							std::string answer;
 							std::cout << std::endl << "These parameters will result in the creation and execution of " << std::to_string(testNum) << " tests. Are you sure you want to continue? (y/n)" << std::endl << ">: ";
 							do{
@@ -2376,6 +2237,69 @@ int main(int argc, char *argv[]){
 					}
 				}
 			}
+			if (clicked){
+				clickCount++;
+				if (clickCount % clickTarget == 0){
+					if (clickCount < clickTargetInit * 5){
+						clickTarget = clickTargetInit;
+					}
+					else if (clickCount >= clickTargetInit * 5 && clickCount < clickTargetInit * 10){
+						clickTarget = 100;
+					}
+					else if (clickCount >= clickTargetInit * 10 && clickCount < clickTargetInit * 15){
+						clickTarget = 50;
+					}
+					else if (clickCount >= clickTargetInit * 15){
+						clickTarget = 25;
+					}
+
+					if (increaseTimesToRun.getIsClicked(unitX, unitY)){
+						customTimesToRun += 5;
+					}
+					if (decreaseTimesToRun.getIsClicked(unitX, unitY) && customTimesToRun > 5){
+						customTimesToRun -= 5;
+					}
+
+					if (increaseFleetSize.getIsClicked(unitX, unitY)){
+						customFleetSize += 1;
+					}
+					if (decreaseFleetSize.getIsClicked(unitX, unitY) && customFleetSize > 1){
+						customFleetSize -= 1;
+					}
+
+					if (increaseRequestCount.getIsClicked(unitX, unitY)){
+						customRideCount += 1;
+					}
+					if (decreaseRequestCount.getIsClicked(unitX, unitY) && customRideCount > 1){
+						customRideCount -= 1;
+					}
+
+					if (increaseSectionSize.getIsClicked(unitX, unitY)){
+						customSectionSize += 1;
+					}
+					if (decreaseSectionSize.getIsClicked(unitX, unitY) && customSectionSize > 1){
+						customSectionSize -= 1;
+					}
+
+					if (increaseMaxLat.getIsClicked(unitX, unitY)){
+						customMaxLat += 1;
+					}
+					if (decreaseMaxLat.getIsClicked(unitX, unitY) && customMaxLat > 1){
+						customMaxLat -= 1;
+					}
+
+					if (increaseMaxLong.getIsClicked(unitX, unitY)){
+						customMaxLong += 1;
+					}
+					if (decreaseMaxLong.getIsClicked(unitX, unitY) && customMaxLong > 1){
+						customMaxLong -= 1;
+					}
+				}
+			}
+			else{
+				clickCount = 0;
+			}
+
 			drawText(&program, -(((float)customTestName.size() + 1) / 2.0), 18, 1, 1, customTestName, textSheet);
 
 			drawText(&program, -17, 17, 1, 1, "Minimum Search Radius Range: ", textSheet);
@@ -2443,7 +2367,7 @@ int main(int argc, char *argv[]){
 		int i = 1;
 		std::string excelFileName = customTestName + ".xls";
 		tester.setExcelFileName(excelFileName);
-		for (float customTripWeight = customTripWeightBottom; customTripWeight <= customTripWeightTop + 0.001; customTripWeight += customTripWeightChange){
+		for (float customTripWeight = customTripWeightBottom; customTripWeight <= customTripWeightTop; customTripWeight += customTripWeightChange){
 			for (int customRadiusMin = customRadiusMinBottom; customRadiusMin <= customRadiusMinTop; customRadiusMin += customRadiusChange){
 				for (int customRadiusStep = customRadiusStepBottom; customRadiusStep <= customRadiusStepTop; customRadiusStep += customRadiusChange){
 					for (int customTimeRadius = customTimeRadiusBottom; customTimeRadius <= customTimeRadiusTop; customTimeRadius += customRadiusChange){
@@ -2465,11 +2389,11 @@ int main(int argc, char *argv[]){
 	tester.prepareToRender();
 	std::vector<std::string> testNames = tester.getTestNames();
 	bool escapePressed = false;
-	int escapedPressedGoal = 100;
-	int escapePressedTime = 0;
+	bool enterPressed = false;
+	int enterPressedGoal = 100;
+	int enterPressedTime = 0;
+	float speed = 0.005;
 	for (std::string testName : testNames){
-		//displayWindow = SDL_CreateWindow("My Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 720, SDL_WINDOW_OPENGL);
-		//projectionMatrix.setOrthoProjection(-1.78, 1.78, -2.0f, 2.0f, -1.0f, 1.0f);
 		int timesToRun = tester.getTimesToRun(testName);
 		float timesRun = 0;
 		bool done = false;
@@ -2477,7 +2401,6 @@ int main(int argc, char *argv[]){
 		bool kPressed = false;
 		bool jPressed = false;
 		bool lPressed = false;
-		float speed = 0.005;
 		while (!done) {
 			while (SDL_PollEvent(&event)) {
 				if (event.type == SDL_QUIT || event.type == SDL_WINDOWEVENT_CLOSE) {
@@ -2525,20 +2448,28 @@ int main(int argc, char *argv[]){
 			std::string windowName = testName + " of " + std::to_string(testNames.size());
 			SDL_SetWindowTitle(displayWindow, windowName.c_str());
 			SDL_GL_SwapWindow(displayWindow);
-			//}
-			if (/*timesRun >= timesToRun*/state[SDL_SCANCODE_ESCAPE] && (!escapePressed || escapePressedTime % escapedPressedGoal == 0)){
+			if (state[SDL_SCANCODE_RETURN] && (!enterPressed || enterPressedTime % enterPressedGoal == 0)){
 				done = true;
 			}
 			escapePressed = state[SDL_SCANCODE_ESCAPE];
-			if (escapePressed){
-				escapePressedTime++;
+			enterPressed = state[SDL_SCANCODE_RETURN];
+			if (enterPressed){
+				enterPressedTime++;
 			}
 			else{
-				escapePressedTime = 0;
+				enterPressedTime = 0;
 			}
+
+			if (escapePressed){
+				break;
+			}
+		}
+		if (escapePressed){
+			break;
 		}
 	}
 	tester.freeMemory();
+	textSheet = nullptr;
 	SDL_Quit();
 	return 0;
 }

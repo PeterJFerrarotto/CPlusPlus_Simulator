@@ -12,7 +12,6 @@
 #include "rapidxml_utils.hpp"
 #include "ShaderProgram.h"
 #include <SDL.h>
-//#include "EventVenue.h"
 #include <vector>
 #include <iostream>
 #include "renderingMathHelper.h"
@@ -52,11 +51,13 @@ protected:
 	std::unordered_map<std::string, float> timeRadius;
 	std::unordered_map<std::string, float> minimumScore;
 	std::unordered_map<std::string, int> maxRideRequests;
-	std::unordered_map<std::string, float> results;
+	std::map<int, float> results;
+	std::map<int, int> totalDistanceWithPassenger;
+	std::map<int, int> totalDistanceWithoutPassenger;
+	std::map<int, int> numberOfCompletedRequests;
 
 	Texture* lineTexture;
 	Texture* requestTexture;
-	//Texture* venueTexture;
 	Texture* vehicleTexture;
 	Texture* destinationTexture;
 	Texture* textSheet;
@@ -252,13 +253,6 @@ protected:
 	inline void initialize(const std::string& customTestName, unsigned customTimesToRun, float customTripWeight, float customRadiusMin, float customRadiusStep,
 		float customRadiusMax, float customTimeRadius, float customMinimumScore, unsigned customMaximumRideRequests, unsigned customFleetSize, unsigned customRideCount,
 		float customMaxLat, float customMaxLong, float customSectionSize, bool ranged){
-		//gridTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/grid_texture.png"), 0);
-		//requestTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/request_texture.png"), 1);
-		//venueTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/venue_texture.png"), 1);
-		//destinationTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/destination_texture.png"), 1);
-		//lineTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/line_texture.png"), 1);
-		//vehicleTexture = new Texture(loadTexture(RESOURCE_FOLDER"Assets/vehicle_texture.png"), 2);
-		//textSheet = new Texture(loadTexture(RESOURCE_FOLDER"Assets/text_format.png"), 2);
 		runningRanged = ranged;
 		currentTest = customTestName;
 		tests.push_back(currentTest);
@@ -275,9 +269,6 @@ protected:
 			for (int i = 0; i < customFleetSize; i++){
 				createRandomVehicle(0, 0, customMaxLat, customMaxLong);
 			}
-			//for (int i = 0; i < customVenueCount; i++){
-			//	createRandomVenue(0, 0, customMaxLat, customMaxLong);
-			//}
 			for (int i = 0; i < customRideCount; i++){
 				createRandomRequest(0, 0, customMaxLat, customMaxLong);
 			}
@@ -300,8 +291,6 @@ protected:
 				managers[currentTest]->addRequest(request);
 			}
 		}
-
-		//outputTestData();
 	}
 
 	inline void initialize(bool getParameters){
@@ -440,74 +429,10 @@ protected:
 		}
 	}
 
-	/*inline void outputTestData(){
-		std::cout << "Stored parameters for " + currentTest + ".\n";
-		char testFileName[360] = RESOURCE_FOLDER"Test Data/";
-		strcat_s(testFileName, currentTest.c_str());
-		strcat_s(testFileName, ".txt");
-		std::ofstream outputFile;
-		outputFile.open(testFileName);
-		outputFile.precision(4);
-		outputFile << currentTest << " Data:" << std::endl << std::endl;
-
-		outputFile << "Testing Parameters:" << std::endl << std::endl;
-		outputFile << "\tTimes to run: " << std::to_string(timesToRun[currentTest]) << std::endl << std::endl;
-
-		outputFile << "\tMinimum Search Radius: " << std::to_string(radiusMin[currentTest]) << std::endl;
-		outputFile << "\tSearch Radius Step: " << std::to_string(radiusStep[currentTest]) << std::endl;
-		outputFile << "\tMaximum Search Radius: " << std::to_string(radiusMax[currentTest]) << std::endl << std::endl;
-
-		outputFile << "\tTime Radius: " << std::to_string(timeRadius[currentTest]) << std::endl << std::endl;
-
-		outputFile << "\tRide Request Score Calculations: " << std::endl << std::endl;
-		outputFile << "\t\tDistance Calculated by: Pythagorean Theorem" << std::endl;
-		outputFile << "\t\tTime To Distance Ratio: 1:1" << std::endl << std::endl;
-
-		outputFile << "\t\tPickup_Distance = Distance from car to pickup point (could also use time to arrive at pickup)" << std::endl;
-		outputFile << "\t\tRide_Distance = Distance from pickup to the car's destination (could also use time to arrive at destination)" << std::endl;
-		outputFile << "\t\tRequests_At_Destination = Requests projected to exist at the destination point + Requests scheduled near destination at arrival time" << std::endl << std::endl;
-
-		outputFile << "\t\tRequests_At_Destination_Ceiling = Minimum number of requests available at destination to result in no penalty to score = " << std::to_string(maxRideRequests[currentTest]) << std::endl;
-		outputFile << "\t\tRide_Distance_Weight = Coeficient used to determine relative value of the distance of the trip = " << std::to_string(weightOfDistanceOfTrip[currentTest]) << std::endl << std::endl;
-
-		outputFile << "\t\tPercentageValueOfTrip = ((Ride_Distance)/(Ride_Distance + Pickup_Distance)) * 10" << std::endl;
-		outputFile << "\t\tValueOfTripDistance = (Ride_Distance * Ride_Distance_Weight) * 10" << std::endl;
-		outputFile << "\t\tDestinationPenalty:" << std::endl;
-		outputFile << "\t\t\tIf Requests_At_Destination > Requests_At_Destination_Saturation, DestinationPenalty = 0" << std::endl;
-		outputFile << "\t\t\tOtherwise, DestinationPenalty = -3 + (Requests_At_Destination * (3/Requests_At_Destination_Ceiling))" << std::endl << std::endl;
-
-		outputFile << "\t\tRequest_Score = PercentageValueOfTrip + ValueOfTripLength + DestinationPenalty" << std::endl << std::endl;
-
-		outputFile << "Map Information:" << std::endl << std::endl;
-		outputFile << "\tDimensions:" << std::endl << std::endl;
-		outputFile << "\t\tMaximum Latitude: " << getMaxCoords(currentTest).first << std::endl;
-		outputFile << "\t\tMaximum Longitude: " << getMaxCoords(currentTest).second << std::endl;
-		outputFile << "\t\tSection Radius: " << getSectionRadius(currentTest) << std::endl << std::endl;
-
-		std::vector<RideRequest*> requests = managers[currentTest]->getAllRideRequests();
-
-		outputFile << "\tRequests Generated:" << std::endl << std::endl;
-		int requestNum = 1;
-		for (RideRequest* request : requests){
-		outputFile << "\t\t" << "Request " << requestNum << " Details:" << std::endl;
-		outputFile << "\t\t\t" << "Pickup Location (Latitude, Longitude): (" << request->getLocation().first << ", " << request->getLocation().second << ")" << std::endl;
-		outputFile << "\t\t\t" << "Dropoff Location (Latitude, Longitude): (" << request->getDestination().first << ", " << request->getDestination().second << ")" << std::endl;
-		outputFile << "\t\t\t" << "Time of Request: " << request->getRequestTime() << std::endl << std::endl;
-		requestNum++;
-		}
-
-		outputFile << std::endl << "Vehicle Information:" << std::endl << std::endl;
-
-		outputFile.close();
-		}*/
-
 	inline void update(float fixedTimestep, const std::string& testName){
 		for (Vehicle* vehicle : vehicles[testName]){
 			vehicle->updateForRendering(fixedTimestep);
 		}
-	}
-
-	inline void handleInput(const Uint8* input, SDL_Event input2){
 	}
 
 	inline void render(ShaderProgram* program, float elapsed, float framesPerSecond, int scaleX, int scaleY, const std::string& testName){
@@ -586,6 +511,8 @@ protected:
 				glDisableVertexAttribArray(program->positionAttribute);
 				glDisableVertexAttribArray(program->texCoordAttribute);
 			}
+		}
+		for (Vehicle* vehicle : vehicles[testName]){
 			modelMatrix.identity();
 			modelMatrix.Translate(vehicle->getCurrentRenderingLocation().second, vehicle->getCurrentRenderingLocation().first, 0);
 			modelMatrix.Scale(scaleX + 0.5, scaleY + 0.5, 0);
@@ -651,63 +578,52 @@ protected:
 	}
 
 	inline bool runTest(int testNum){
-		auto x = std::this_thread::get_id();
-		std::cout << "Test " + std::to_string(testNum + 1) + " of " + std::to_string(tests.size());
+		std::cout << "Test " << std::to_string(testNum + 1) << " of " + std::to_string(tests.size()) << " started..." << std::endl;
 		int currentTime = 1;
-		//currentTest = tests[testNum];
 		std::string testName = tests[testNum];
-		char resultsFile[360] = RESOURCE_FOLDER"Results/";
-		strcat_s(resultsFile, testName.c_str());
-		strcat_s(resultsFile, ".txt");
 		std::ofstream outputFile;
-		outputFile.open(resultsFile);
-		//outputFile << "Test " << testName << '\n';
-		//outputFile << "Parameters:" << '\n';
-		//outputFile << '\t' << "Weight of Distance of Request: " << weightOfDistanceOfTrip[testName] << '\n';
-		//outputFile << '\t' << "Minimum Search Radius: " << radiusMin[testName] << '\n';
-		//outputFile << '\t' << "Maximum Search Radius: " << radiusMax[testName] << '\n';
-		//outputFile << '\t' << "Radius Increment Value: " << radiusStep[testName] << '\n';
-		//outputFile << '\t' << "Time Radius: " << timeRadius[testName] << '\n';
-		//outputFile << '\t' << "Minimum Score: " << minimumScore[testName] << '\n';
-		//outputFile << '\t' << "Times to run: " << timesToRun[testName] << '\n' << '\n';
-		outputFile << testName << " Data:" << std::endl << std::endl;
+		if (!runningRanged){
+			char resultsFile[360] = RESOURCE_FOLDER"Results/";
+			strcat_s(resultsFile, testName.c_str());
+			strcat_s(resultsFile, ".txt");
+			outputFile.open(resultsFile);
+			outputFile << testName << " Data:" << std::endl << std::endl;
 
-		outputFile << "Testing Parameters:" << std::endl << std::endl;
-		outputFile << "\tTimes to run: " << std::to_string(timesToRun[testName]) << std::endl << std::endl;
+			outputFile << "Testing Parameters:" << std::endl << std::endl;
+			outputFile << "\tTimes to run: " << std::to_string(timesToRun[testName]) << std::endl << std::endl;
 
-		outputFile << "\tMinimum Search Radius: " << std::to_string(radiusMin[testName]) << std::endl;
-		outputFile << "\tSearch Radius Step: " << std::to_string(radiusStep[testName]) << std::endl;
-		outputFile << "\tMaximum Search Radius: " << std::to_string(radiusMax[testName]) << std::endl << std::endl;
+			outputFile << "\tMinimum Search Radius: " << std::to_string(radiusMin[testName]) << std::endl;
+			outputFile << "\tSearch Radius Step: " << std::to_string(radiusStep[testName]) << std::endl;
+			outputFile << "\tMaximum Search Radius: " << std::to_string(radiusMax[testName]) << std::endl << std::endl;
 
-		outputFile << "\tTime Radius: " << std::to_string(timeRadius[testName]) << std::endl << std::endl;
+			outputFile << "\tTime Radius: " << std::to_string(timeRadius[testName]) << std::endl << std::endl;
 
-		outputFile << "\tRide Request Score Calculations: " << std::endl << std::endl;
-		outputFile << "\t\tDistance Calculated by: Pythagorean Theorem" << std::endl;
-		outputFile << "\t\tTime To Distance Ratio: 1:1" << std::endl << std::endl;
+			outputFile << "\tRide Request Score Calculations: " << std::endl << std::endl;
+			outputFile << "\t\tDistance Calculated by: Pythagorean Theorem" << std::endl;
+			outputFile << "\t\tTime To Distance Ratio: 1:1" << std::endl << std::endl;
 
-		outputFile << "\t\tPickup_Distance = Distance from car to pickup point (could also use time to arrive at pickup)" << std::endl;
-		outputFile << "\t\tRide_Distance = Distance from pickup to the car's destination (could also use time to arrive at destination)" << std::endl;
-		outputFile << "\t\tRequests_At_Destination = Requests projected to exist at the destination point + Requests scheduled near destination at arrival time" << std::endl << std::endl;
+			outputFile << "\t\tPickup_Distance = Distance from car to pickup point (could also use time to arrive at pickup)" << std::endl;
+			outputFile << "\t\tRide_Distance = Distance from pickup to the car's destination (could also use time to arrive at destination)" << std::endl;
+			outputFile << "\t\tRequests_At_Destination = Requests projected to exist at the destination point + Requests scheduled near destination at arrival time" << std::endl << std::endl;
 
-		outputFile << "\t\tRequests_At_Destination_Ceiling = Minimum number of requests available at destination to result in no penalty to score = " << std::to_string(maxRideRequests[testName]) << std::endl;
-		outputFile << "\t\tRide_Distance_Weight = Coeficient used to determine relative value of the distance of the trip = " << std::to_string(weightOfDistanceOfTrip[testName]) << std::endl << std::endl;
+			outputFile << "\t\tRequests_At_Destination_Ceiling = Minimum number of requests available at destination to result in no penalty to score = " << std::to_string(maxRideRequests[testName]) << std::endl;
+			outputFile << "\t\tRide_Distance_Weight = Coeficient used to determine relative value of the distance of the trip = " << std::to_string(weightOfDistanceOfTrip[testName]) << std::endl << std::endl;
 
-		outputFile << "\t\tPercentageValueOfTrip = ((Ride_Distance)/(Ride_Distance + Pickup_Distance)) * 10" << std::endl;
-		outputFile << "\t\tValueOfTripDistance = (Ride_Distance * Ride_Distance_Weight) * 10" << std::endl;
-		outputFile << "\t\tDestinationPenalty:" << std::endl;
-		outputFile << "\t\t\tIf Requests_At_Destination > Requests_At_Destination_Saturation, DestinationPenalty = 0" << std::endl;
-		outputFile << "\t\t\tOtherwise, DestinationPenalty = -3 + (Requests_At_Destination * (3/Requests_At_Destination_Ceiling))" << std::endl << std::endl;
+			outputFile << "\t\tPercentageValueOfTrip = ((Ride_Distance)/(Ride_Distance + Pickup_Distance)) * 10" << std::endl;
+			outputFile << "\t\tValueOfTripDistance = (Ride_Distance * Ride_Distance_Weight) * 10" << std::endl;
+			outputFile << "\t\tDestinationPenalty:" << std::endl;
+			outputFile << "\t\t\tIf Requests_At_Destination > Requests_At_Destination_Saturation, DestinationPenalty = 0" << std::endl;
+			outputFile << "\t\t\tOtherwise, DestinationPenalty = -3 + (Requests_At_Destination * (3/Requests_At_Destination_Ceiling))" << std::endl << std::endl;
 
-		outputFile << "\t\tRequest_Score = PercentageValueOfTrip + ValueOfTripLength + DestinationPenalty" << std::endl << std::endl;
+			outputFile << "\t\tRequest_Score = PercentageValueOfTrip + ValueOfTripLength + DestinationPenalty" << std::endl << std::endl;
+		}
+		else{
+			numberOfCompletedRequests[testNum] = 0;
+		}
 		for (int i = 1; i <= timesToRun[testName]; i++){
-			//std::cout << "Test loop " << i << " of " << timesToRun[testName] << '\n' << '\n';
-			std::cout << '.';
-			//outputFile << "Test loop " << i << " of " << timesToRun[testName] << '\n' << '\n';
 			int vehicleNum = 1;
 			for (Vehicle* vehicle : vehicles[testName]){
 				float topScore = 0;
-				//std::cout << "Vehicle: " << vehicleNum << '\n';
-				//outputFile << "\tVehicle: " << vehicleNum << '\n';
 				vehicle->update(currentTime, timeRadius[testName]);
 				std::pair<long, long> vehicleLocation = vehicle->getCurrentLocation();
 				std::pair<long, long> radiusLookUp, radiusLookLeft, radiusLookRight, radiusLookDown;
@@ -715,13 +631,11 @@ protected:
 				if (vehicle->getTopRequest() == nullptr || (vehicle->getTopRequest() != nullptr && (vehicleLocation.first == vehicle->getTopRequest()->getDestination().first && vehicleLocation.second == vehicle->getTopRequest()->getDestination().second))){
 					if (vehicle->getTopRequest() != nullptr && (vehicleLocation.first == vehicle->getTopRequest()->getDestination().first && vehicleLocation.second == vehicle->getTopRequest()->getDestination().second)){
 						vehicle->setHasPassenger(false);
-						//std::cout << "\t\tVehicle dropped off request at Latitude: " << vehicleLocation.first << " and Longitude: " << vehicleLocation.second << " at T = " << currentTime << '\n';
-						//outputFile << "\t\tVehicle dropped off request at Latitude: " << vehicleLocation.first << " and Longitude: " << vehicleLocation.second << " at T = " << currentTime << '\n';
 						vehicle->popTopRequest();
 						vehicle->addToRoutingLog(i, vehicleLocation);
+						numberOfCompletedRequests[testNum]++;
 					}
 					for (int x = radiusMin[testName]; x <= radiusMax[testName]; x += radiusStep[testName]){
-						/*std::vector<RideRequest*>::iterator highestScorer;*/
 						RideRequest* highestScorer = nullptr;
 						radiusLookUp = radiusLookLeft = radiusLookRight = radiusLookDown = vehicleLocation;
 						radiusLookUp.first += x;
@@ -784,15 +698,6 @@ protected:
 								timeToUse = vehicle->getTopRequest()->getRequestTime() + vehicle->getTopRequest()->getDistanceOfRequest();
 							}
 							vehicle->addRequest(highestScorer);
-							//outputFile << "\t\tAdded passenger to vehicle " << vehicleNum << "'s queue at T = " << currentTime << ". Passenger info:" << '\n';
-							//outputFile << '\t' << "\t\tPickup Location: " << (highestScorer)->getLocation().first << ", " << (highestScorer)->getLocation().second << '\n';
-							//outputFile << '\t' << "\t\tPickup Time: " << (highestScorer)->getRequestTime() << '\n';
-							//outputFile << '\t' << "\t\tDestination Location: " << (highestScorer)->getDestination().first << ", " << (highestScorer)->getDestination().second << '\n';
-							//outputFile << '\t' << "\t\tDistance to pickup from next location: " << (highestScorer)->getDistanceToRequest() << '\n';
-							//outputFile << '\t' << "\t\tDistance from pickup to dropoff: " << (highestScorer)->getDistanceOfRequest() << '\n';
-							//outputFile << '\t' << "\t\tDropoff at T = " << (highestScorer)->getDistanceOfRequest() + (highestScorer)->getRequestTime() << '\n';
-							//outputFile << '\t' << "\t\tRequests available at destination: " << (highestScorer)->getRequestsAtDestination() << '\n';
-							//outputFile << '\t' << "\t\tRequest Score: " << topScore << '\n';
 							(highestScorer)->setMatchedToVehicle(true);
 							(highestScorer)->setTimeMatched(i);
 							break;
@@ -840,30 +745,45 @@ protected:
 			//outputFile << '\n';
 		}
 
-		outputFile << '\n';
-		outputFile << "-------------------------------------------------------------------" << '\n';
-		outputFile << "Complete Test Results:" << '\n' << '\n';
+		if (!runningRanged){
+			outputFile << '\n';
+			outputFile << "-------------------------------------------------------------------" << '\n';
+			outputFile << "Complete Test Results:" << '\n' << '\n';
+		}
 		int vehicleNum = 1;
 		float distanceWithPassenger = 0;
 		float distanceWithoutPassenger = 0;
 		float percentUtilization = 100;
 		for (Vehicle* vehicle : vehicles[testName]){
-			outputFile << "Vehicle: " << vehicleNum << '\n';
-			outputFile << '\t' << "Distance travelled with a passenger: " << vehicle->getDistanceWithPassenger() << '\n';
-			outputFile << '\t' << "Distance travelled without a passenger: " << vehicle->getDistanceWithoutPassenger() << '\n';
-			outputFile << '\n' << '\n';
+			if (!runningRanged){
+				outputFile << "Vehicle: " << vehicleNum << '\n';
+				outputFile << '\t' << "Distance travelled with a passenger: " << vehicle->getDistanceWithPassenger() << '\n';
+				outputFile << '\t' << "Distance travelled without a passenger: " << vehicle->getDistanceWithoutPassenger() << '\n';
+				outputFile << '\n' << '\n';
+			}
 			distanceWithPassenger += vehicle->getDistanceWithPassenger();
 			distanceWithoutPassenger += vehicle->getDistanceWithoutPassenger();
 			vehicleNum++;
 		}
-		percentUtilization = (distanceWithPassenger) / (distanceWithoutPassenger + distanceWithPassenger);
-		percentUtilization *= 100;
-		outputFile << "Fleet utilization is: " << percentUtilization << "%.";
-		outputFile.close();
-		std::cout << "\n\n";
-		if (runningRanged){
-			results[testName] = percentUtilization;
+		if (distanceWithPassenger + distanceWithoutPassenger != 0){
+			percentUtilization = (distanceWithPassenger) / (distanceWithoutPassenger + distanceWithPassenger);
 		}
+		else{
+			percentUtilization = 0;
+		}
+		//percentUtilization *= 100;
+		if (!runningRanged){
+			outputFile << "Fleet utilization is: " << percentUtilization << "%.";
+			outputFile << "\nTotal distance travelled with passengers: " << distanceWithoutPassenger << ".";
+			outputFile.close();
+		}
+		//std::cout << "\n\n";
+		if (runningRanged){
+			results[testNum] = percentUtilization;
+			totalDistanceWithPassenger[testNum] = distanceWithPassenger;
+			totalDistanceWithoutPassenger[testNum] = distanceWithoutPassenger;
+		}
+		std::cout << "Test " << std::to_string(testNum + 1) << " of " << std::to_string(tests.size()) << " Completed." << std::endl;
 		return true;
 	}
 
@@ -871,7 +791,7 @@ protected:
 		BasicExcelCell* cell;
 		size_t row = 0;
 		size_t column = 0;
-		std::vector<const char*> columnNames = { "Trip Distance Weight", "Minimum Search Radius", "Maximum Search Radius", "Time Radius", "Minimum Score", "Maximum Destination Requests", "Percent Utilization" };
+		std::vector<const char*> columnNames = { "Trip Distance Weight", "Minimum Search Radius", "Maximum Search Radius", "Time Radius", "Minimum Score", "Maximum Destination Requests", "Distance Travelled with Passenger", "Distance Travelled Without Passenger", "Requests Completed", "Percent Utilization" };
 		for (; column < columnNames.size(); column++){
 			cell = worksheet->Cell(row, column);
 			cell->SetString(columnNames[column]);
@@ -901,7 +821,7 @@ protected:
 			cell->SetInteger(radiusMin[testName]);
 
 			cell = resultsWorksheet->Cell(row, column++);
-			cell->SetInteger(radiusMin[testName] + radiusMax[testName] * radiusStep[testName]);
+			cell->SetInteger(radiusMax[testName]);
 
 			cell = resultsWorksheet->Cell(row, column++);
 			cell->SetInteger(timeRadius[testName]);
@@ -912,8 +832,17 @@ protected:
 			cell = resultsWorksheet->Cell(row, column++);
 			cell->SetInteger(maxRideRequests[testName]);
 
+			cell = resultsWorksheet->Cell(row, column++);
+			cell->SetInteger(totalDistanceWithPassenger[i]);
+
+			cell = resultsWorksheet->Cell(row, column++);
+			cell->SetInteger(totalDistanceWithoutPassenger[i]);
+
+			cell = resultsWorksheet->Cell(row, column++);
+			cell->SetInteger(numberOfCompletedRequests[i]);
+			
 			cell = resultsWorksheet->Cell(row++, column);
-			cell->SetInteger(results[testName]);
+			cell->SetDouble(results[i]);
 		}
 
 		outputFile.SaveAs(saveLocation.c_str());
@@ -932,41 +861,16 @@ public:
 	}
 
 	inline void runTests(){
-		//std::queue<std::future<bool>> testThreads;
-		//for (size_t j = 0; j < tests.size(); j++){
-		//	std::future<bool> test = std::async(&Simulator::runTest, this, j);
-		//	//test->detach();
-		//	testThreads.push(std::move(test));
-		//}
-		//while (testThreads.size() != 0){
-		//	while (testThreads.front().wait_for(std::chrono::seconds(0)) != std::future_status::ready){
-		//		std::cout << "Running..." << std::endl;
-		//	}
-		//	testThreads.pop();
-		//}
-		//for (size_t j = 0; j < tests.size(); j++){
-		//	runTest(j);
-		//}
 		std::queue<std::future<bool>> testThreads;
 		for (size_t testNum = 0; testNum < tests.size(); testNum++){
-			if (testThreads.size() < 10){
-				std::future<bool> test = std::async(&Simulator::runTest, this, testNum);
-				testThreads.push(std::move(test));
-			}
-			else{
-				while (testThreads.size() != 0){
-					while (testThreads.front().wait_for(std::chrono::seconds(0)) != std::future_status::ready){
-						std::cout << "Running..." << std::endl;
-					}
-					testThreads.pop();
-				}
-			}
+			std::future<bool> test = std::async(&Simulator::runTest, this, testNum);
+			testThreads.push(std::move(test));
 		}
+		std::cout << std::endl << std::endl;
 		while (testThreads.size() != 0){
-			while (testThreads.front().wait_for(std::chrono::seconds(0)) != std::future_status::ready){
-				std::cout << "Running..." << std::endl;
+			if (testThreads.front().wait_for(std::chrono::seconds(0)) == std::future_status::ready){
+				testThreads.pop();
 			}
-			testThreads.pop();
 		}
 		if (runningRanged){
 			outputToExcelFile();
@@ -991,18 +895,23 @@ public:
 	inline void visualize(float elapsed, const Uint8* input, SDL_Event input2, ShaderProgram* program, const std::string& testName, SDL_Window* displayWindow){
 		glClear(GL_COLOR_BUFFER_BIT);
 		Matrix viewMatrix;
-		handleInput(input, input2);
 		//viewMatrix.Scale((float)managers[testName]->getSectionRadius() / (float)managers[testName]->getMaxCoords().second, ((float)managers[testName]->getSectionRadius() / (float)managers[testName]->getMaxCoords().first)/2, 0);
 		//viewMatrix.Translate(-(managers[testName]->getSectionRadius() * 2)-((managers[testName]->getMaxCoords().first) / managers[testName]->getMaxCoords().second), -(managers[testName]->getSectionRadius() * 2) -(managers[testName]->getMaxCoords().second / managers[testName]->getMaxCoords().first), 0);
-		float scaleX = (float)managers[testName]->getSectionRadius() / (float)managers[testName]->getMaxCoords().second;
-		float scaleY = (float)managers[testName]->getSectionRadius() / (float)managers[testName]->getMaxCoords().first;
-		float translateX = -(managers[testName]->getSectionRadius() * 2) - ((managers[testName]->getMaxCoords().second / managers[testName]->getMaxCoords().first));
-		float translateY = -(managers[testName]->getSectionRadius() * 2) - ((managers[testName]->getMaxCoords().first / managers[testName]->getMaxCoords().first));
+		int scaleXCoeff = (managers[testName]->getMaxCoords().first / managers[testName]->getSectionRadius()) % managers[testName]->getSectionRadius();
+		if (scaleXCoeff == 0 || scaleXCoeff == 4){
+			scaleXCoeff = 1;
+		}
+		int scaleYCoeff = (managers[testName]->getMaxCoords().second / managers[testName]->getSectionRadius()) % managers[testName]->getSectionRadius();
+		if (scaleYCoeff == 0 || scaleYCoeff == 4){
+			scaleYCoeff = 1;
+		}
+		float scaleX = (float)managers[testName]->getSectionRadius() / (float)managers[testName]->getMaxCoords().second * scaleXCoeff;
+		float scaleY = (float)managers[testName]->getSectionRadius() / (float)managers[testName]->getMaxCoords().first * scaleYCoeff;
+		float translateX = -(((float)managers[testName]->getMaxCoords().second / (float)managers[testName]->getSectionRadius()) * 2) - ((managers[testName]->getMaxCoords().second / managers[testName]->getMaxCoords().first) * 2);
+		float translateY = -(((float)managers[testName]->getMaxCoords().first / (float)managers[testName]->getSectionRadius()) * 2) - ((managers[testName]->getMaxCoords().second / managers[testName]->getMaxCoords().first) * 2);
 		windowSizeOffsetX = getMaxCoords(testName).second;
 		windowSizeOffsetY = getMaxCoords(testName).first;
 		viewMatrix.Scale(scaleX + scaleOffsetX, scaleY + scaleOffsetY, 0);
-		//offsetX = -15;
-		//offsetY = -15;
 		viewMatrix.Translate(translateX + offsetX, translateY + offsetY, 0);
 		SDL_SetWindowSize(displayWindow, 720, 800);
 		glViewport(0, 0, 720, 800);
@@ -1035,15 +944,16 @@ public:
 
 	inline void freeMemory(){
 		delete lineTexture;
-		//delete venueTexture;
 		delete vehicleTexture;
 		delete requestTexture;
 		delete destinationTexture;
+		delete textSheet;
 		lineTexture = nullptr;
-		//venueTexture = nullptr;
 		vehicleTexture = nullptr;
 		requestTexture = nullptr;
 		destinationTexture = nullptr;
+		gridTexture = nullptr;
+		textSheet = nullptr;
 		for (std::unordered_map<std::string, RequestManager*>::iterator itr = managers.begin(); itr != managers.end(); itr++){
 			itr->second->freeMemory();
 			delete itr->second;
